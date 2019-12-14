@@ -1231,7 +1231,7 @@ def dk_helper ():#line:1271
     else :#line:1403
         sys .exit ()#line:1404
     print ("DK Helper loaded")#line:1406
-    O00OO00O0O0000O0O =PIL .Image .open (requests .get ('https://raw.githubusercontent.com/bgbgbg123/dk/master/1.jpg',stream =True ).raw )#line:1409
+    O00OO00O0O0000O0O =PIL .Image .open (requests .get ('https://github.com/anonydev003/dh/raw/master/1.jpg',stream =True ).raw )#line:1409
     O00OO00O0O0000O0O =ImageTk .PhotoImage (O00OO00O0O0000O0O )#line:1411
     OOO0OO0O000OOOO0O =O00OO00O0O0000O0O #line:1412
     O0O00OOO0O00O0000 =Label (OOO00OO00OOO00O00 ,image =OOO0OO0O000OOOO0O ).grid (row =9 ,column =1 ,columnspan =2 ,sticky =N +E +W +S )#line:1413
