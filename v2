@@ -9,7 +9,8 @@ from ctypes .wintypes import *#line:8
 from io import BytesIO #line:9
 from scapy .all import *#line:10
 import binascii ,random #line:11
-from colorama import Fore #line:12
+from colorama import init, Fore
+init(convert=True)
 from winreg import *#line:13
 import os ,signal ,subprocess ,PIL .Image #line:14
 from pynput .keyboard import Key ,Listener #line:15
