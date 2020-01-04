@@ -26,1072 +26,1072 @@ os .system ('cls')#line:25
 """########################################################################"""#line:33
 """########################################################################"""#line:35
 """########################################################################"""#line:37
-def item_reader (OOO000OOO0OO0O0O0 ):#line:38
+def item_reader (O0OOOOO0O000OOO0O ):#line:38
     global find_item_space #line:39
-    OOOOOOOOOOOOOOO00 =0 #line:40
+    OOOO0O0OOO0000OOO =0 #line:40
     find_item_space =False #line:43
-    def O0O000OO0O0000OO0 ():#line:46
-        OO000O00000O00O00 =r'Console'#line:47
-        O0O00000O0OO00OO0 =OpenKey (HKEY_CURRENT_USER ,OO000O00000O00O00 ,0 ,KEY_ALL_ACCESS )#line:48
-        SetValueEx (O0O00000O0OO00OO0 ,"VirtualTerminalLevel",0 ,REG_DWORD ,1 )#line:49
+    def O0OO00OOO0O00OO00 ():#line:46
+        OO000000OOO0O0O0O =r'Console'#line:47
+        O0O0O00OO00000O0O =OpenKey (HKEY_CURRENT_USER ,OO000000OOO0O0O0O ,0 ,KEY_ALL_ACCESS )#line:48
+        SetValueEx (O0O0O00OO00000O0O ,"VirtualTerminalLevel",0 ,REG_DWORD ,1 )#line:49
         return #line:50
-    def O0OOOO00OO0000000 ():#line:53
-        for OOOO000000OO000OO in psutil .process_iter ():#line:54
-            if OOO000OOO0OO0O0O0 =="Inter.":#line:55
-                O0O0O00000OOOO000 ="darkeden.exe"#line:56
-            elif OOO000OOO0OO0O0O0 =="Chn.":#line:57
-                O0O0O00000OOOO000 ="DarkEden.exe"#line:58
-            if O0O0O00000OOOO000 in str (OOOO000000OO000OO .name ):#line:59
-                return OOOO000000OO000OO .pid #line:60
-    def OO0O0000OO0O00O00 (_O0OOOOO0O000000OO ,_O00O00OOO0OO0OOO0 ):#line:62
-        OOO0OO0O0O00OO000 =0x0010 #line:63
-        OOOO0OO0O0OOOOO00 =WinDLL ('kernel32')#line:64
-        OOOO0OO0O0OOOOO00 .OpenProcess .argtypes =DWORD ,BOOL ,DWORD #line:65
-        OOOO0OO0O0OOOOO00 .OpenProcess .restype =HANDLE #line:66
-        OOOO0OO0O0OOOOO00 .ReadProcessMemory .argtypes =HANDLE ,LPVOID ,LPVOID ,c_size_t ,POINTER (c_size_t )#line:67
-        OOOO0OO0O0OOOOO00 .ReadProcessMemory .restype =BOOL #line:68
-        O000O00000OOOOOOO =OOOO0OO0O0OOOOO00 .OpenProcess (OOO0OO0O0O00OO000 ,0 ,_O00O00OOO0OO0OOO0 )#line:69
-        OO0OOOO0OO00O0O0O =create_string_buffer (4 )#line:70
-        OO0000OO00OO000OO =c_size_t ()#line:71
-        if OOOO0OO0O0OOOOO00 .ReadProcessMemory (O000O00000OOOOOOO ,_O0OOOOO0O000000OO ,OO0OOOO0OO00O0O0O ,4 ,ctypes .byref (OO0000OO00OO000OO )):#line:72
-            OO00O0O00O0000O00 =0 #line:73
-            OO00O0O00O0000O00 +=OO0OOOO0OO00O0O0O .raw [0 ]<<8 *0 #line:74
-            OO00O0O00O0000O00 +=OO0OOOO0OO00O0O0O .raw [1 ]<<8 *1 #line:75
-            OO00O0O00O0000O00 +=OO0OOOO0OO00O0O0O .raw [2 ]<<8 *2 #line:76
-            OO00O0O00O0000O00 +=OO0OOOO0OO00O0O0O .raw [3 ]<<8 *3 #line:77
-            return OO00O0O00O0000O00 #line:78
+    def OOO0O0O00000OO0OO ():#line:53
+        for O000000OOOO0OO0O0 in psutil .process_iter ():#line:54
+            if O0OOOOO0O000OOO0O =="Inter.":#line:55
+                OO0O0O00O00000O00 ="darkeden.exe"#line:56
+            elif O0OOOOO0O000OOO0O =="Chn.":#line:57
+                OO0O0O00O00000O00 ="DarkEden.exe"#line:58
+            if OO0O0O00O00000O00 in str (O000000OOOO0OO0O0 .name ):#line:59
+                return O000000OOOO0OO0O0 .pid #line:60
+    def OOO000O0O00OOOO0O (_O000OOO0000OO0O00 ,_O000OOOO000O0000O ):#line:62
+        O00OOOO0O00O0OOO0 =0x0010 #line:63
+        O00O0OO00OOOO0O0O =WinDLL ('kernel32')#line:64
+        O00O0OO00OOOO0O0O .OpenProcess .argtypes =DWORD ,BOOL ,DWORD #line:65
+        O00O0OO00OOOO0O0O .OpenProcess .restype =HANDLE #line:66
+        O00O0OO00OOOO0O0O .ReadProcessMemory .argtypes =HANDLE ,LPVOID ,LPVOID ,c_size_t ,POINTER (c_size_t )#line:67
+        O00O0OO00OOOO0O0O .ReadProcessMemory .restype =BOOL #line:68
+        OOOO0OOO0OO0OOO00 =O00O0OO00OOOO0O0O .OpenProcess (O00OOOO0O00O0OOO0 ,0 ,_O000OOOO000O0000O )#line:69
+        O0OOO0O00OOO00OOO =create_string_buffer (4 )#line:70
+        OOO00O000OOOOOOO0 =c_size_t ()#line:71
+        if O00O0OO00OOOO0O0O .ReadProcessMemory (OOOO0OOO0OO0OOO00 ,_O000OOO0000OO0O00 ,O0OOO0O00OOO00OOO ,4 ,ctypes .byref (OOO00O000OOOOOOO0 )):#line:72
+            O0OO00O00O0000O0O =0 #line:73
+            O0OO00O00O0000O0O +=O0OOO0O00OOO00OOO .raw [0 ]<<8 *0 #line:74
+            O0OO00O00O0000O0O +=O0OOO0O00OOO00OOO .raw [1 ]<<8 *1 #line:75
+            O0OO00O00O0000O0O +=O0OOO0O00OOO00OOO .raw [2 ]<<8 *2 #line:76
+            O0OO00O00O0000O0O +=O0OOO0O00OOO00OOO .raw [3 ]<<8 *3 #line:77
+            return O0OO00O00O0000O0O #line:78
         else :#line:79
             return -1 #line:80
-    def O00000OO00O000OOO (_OO0O00OO00OO0O00O ):#line:83
-        OO00OOOOO000O0OOO =OO0O0000OO0O00O00 (0x400000 +0x00781258 ,_OO0O00OO00OO0O00O )#line:84
-        OO00OOOOO000O0OOO =OO0O0000OO0O00O00 (OO00OOOOO000O0OOO +0x1C ,_OO0O00OO00OO0O00O )#line:85
-        OO00OOOOO000O0OOO =OO0O0000OO0O00O00 (OO00OOOOO000O0OOO +0x28 ,_OO0O00OO00OO0O00O )#line:86
-        return OO00OOOOO000O0OOO #line:87
-    def OO0OO0O000OO0OO00 (_O00OOO00OO00OO00O ):#line:90
-        O000OOOO0O000O000 =OO0O0000OO0O00O00 (0x00A22588 ,_O00OOO00OO00OO00O )#line:91
-        return O000OOOO0O000O000 #line:92
-    def O00OOO0O000000O0O (_OO00OO0000OOO0OOO ):#line:95
-        OOOO00OOO00000OO0 =OO0O0000OO0O00O00 (0x00A2258C ,_OO00OO0000OOO0OOO )#line:96
-        return OOOO00OOO00000OO0 #line:97
-    def OOO0O00OO000O00OO (_O0O0OO0OO0OOO0O00 ,_O0OO00OOO000O00OO ):#line:100
-        O0OO0OO000000OOO0 =O00000OO00O000OOO (OOOOOOOOOOOOOOO00 )#line:101
-        OOO0O00OO000O000O =O0OO0OO000000OOO0 %5 #line:102
-        O0O00O000000OOOOO ={'x':0 ,'y':0 ,'class':0 ,'type':0 }#line:103
-        if OOO0O00OO000O000O ==0 :#line:105
-            O0O00O000000OOOOO ['x']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -5 ]^O0OO0OO000000OOO0 #line:106
-            O0O00O000000OOOOO ['y']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -4 ]^O0OO0OO000000OOO0 #line:107
-            O0O00O000000OOOOO ['class']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -3 ]^O0OO0OO000000OOO0 #line:108
-            O0O00O000000OOOOO ['type']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -2 ]^O0OO0OO000000OOO0 #line:109
-        elif OOO0O00OO000O000O ==1 :#line:110
-            O0O00O000000OOOOO ['x']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -9 ]^O0OO0OO000000OOO0 #line:111
-            O0O00O000000OOOOO ['y']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -8 ]^O0OO0OO000000OOO0 #line:112
-            O0O00O000000OOOOO ['class']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -7 ]^O0OO0OO000000OOO0 #line:113
-            O0O00O000000OOOOO ['type']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -6 ]^O0OO0OO000000OOO0 #line:114
-        elif OOO0O00OO000O000O ==2 :#line:115
-            O0O00O000000OOOOO ['x']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -1 ]^O0OO0OO000000OOO0 #line:116
-            O0O00O000000OOOOO ['y']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -9 ]^O0OO0OO000000OOO0 #line:117
-            O0O00O000000OOOOO ['class']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -8 ]^O0OO0OO000000OOO0 #line:118
-            O0O00O000000OOOOO ['type']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -7 ]^O0OO0OO000000OOO0 #line:119
-        elif OOO0O00OO000O000O ==3 :#line:120
-            O0O00O000000OOOOO ['x']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -6 ]^O0OO0OO000000OOO0 #line:121
-            O0O00O000000OOOOO ['y']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -1 ]^O0OO0OO000000OOO0 #line:122
-            O0O00O000000OOOOO ['class']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -9 ]^O0OO0OO000000OOO0 #line:123
-            O0O00O000000OOOOO ['type']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -8 ]^O0OO0OO000000OOO0 #line:124
-        elif OOO0O00OO000O000O ==4 :#line:125
-            O0O00O000000OOOOO ['x']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -1 ]^O0OO0OO000000OOO0 #line:126
-            O0O00O000000OOOOO ['y']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -7 ]^O0OO0OO000000OOO0 #line:127
-            O0O00O000000OOOOO ['class']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -6 ]^O0OO0OO000000OOO0 #line:128
-            O0O00O000000OOOOO ['type']=_O0O0OO0OO0OOO0O00 [_O0OO00OOO000O00OO -9 ]^O0OO0OO000000OOO0 #line:129
-        return O0O00O000000OOOOO #line:131
-    def O0OOO0O0OO000O0OO (_OOOOOOOOOO0O0000O ,_OO0O0000O0O00OOO0 ):#line:134
-        O0OOOOOO000OO000O =''#line:135
-        if _OOOOOOOOOO0O0000O ==8 :#line:136
-            if _OO0O0000O0O00OOO0 ==0 :#line:137
-                O0OOOOOO000OO000O ="브론즈 링(1)"#line:138
-            elif _OO0O0000O0O00OOO0 ==1 :#line:139
-                O0OOOOOO000OO000O ="블랙 링(2)"#line:140
-            elif _OO0O0000O0O00OOO0 ==2 :#line:141
-                O0OOOOOO000OO000O ="프리스트 링(3)"#line:142
-            elif _OO0O0000O0O00OOO0 ==3 :#line:143
-                O0OOOOOO000OO000O ="골드 링(4)"#line:144
-            elif _OO0O0000O0O00OOO0 ==4 :#line:145
-                O0OOOOOO000OO000O ="오러스 링(5)"#line:146
-            elif _OO0O0000O0O00OOO0 ==5 :#line:147
-                O0OOOOOO000OO000O ="행운의 반지(6)"#line:148
-            elif _OO0O0000O0O00OOO0 ==6 :#line:149
-                O0OOOOOO000OO000O ="로자리오(7)"#line:150
-            elif _OO0O0000O0O00OOO0 ==7 :#line:151
-                O0OOOOOO000OO000O ="골든 다이아몬드 링(8)"#line:152
-            elif _OO0O0000O0O00OOO0 ==8 :#line:153
-                O0OOOOOO000OO000O ="플래티넘 스파이럴(9)"#line:154
-            elif _OO0O0000O0O00OOO0 ==9 :#line:155
-                O0OOOOOO000OO000O ="앵크 링(10)"#line:156
-            elif _OO0O0000O0O00OOO0 ==10 :#line:157
-                O0OOOOOO000OO000O ="이스팀 링(11)"#line:158
-            elif _OO0O0000O0O00OOO0 ==11 :#line:159
-                O0OOOOOO000OO000O ="케볼레타(12)"#line:160
-            elif _OO0O0000O0O00OOO0 ==12 :#line:161
-                O0OOOOOO000OO000O ="볼라시오(13)"#line:162
-        elif _OOOOOOOOOO0O0000O ==9 :#line:163
-            if _OO0O0000O0O00OOO0 ==0 :#line:164
-                O0OOOOOO000OO000O ="메탈 브레이슬릿(1)"#line:165
-            elif _OO0O0000O0O00OOO0 ==1 :#line:166
-                O0OOOOOO000OO000O ="스틸 브레이슬릿(2)"#line:167
-            elif _OO0O0000O0O00OOO0 ==2 :#line:168
-                O0OOOOOO000OO000O ="링 브레이슬릿(3)"#line:169
-            elif _OO0O0000O0O00OOO0 ==3 :#line:170
-                O0OOOOOO000OO000O ="플레이트 브레이슬릿(4)"#line:171
-            elif _OO0O0000O0O00OOO0 ==4 :#line:172
-                O0OOOOOO000OO000O ="오러스 브레이슬릿(5)"#line:173
-            elif _OO0O0000O0O00OOO0 ==5 :#line:174
-                O0OOOOOO000OO000O ="로럴 브레이슬릿(6)"#line:175
-            elif _OO0O0000O0O00OOO0 ==6 :#line:176
-                O0OOOOOO000OO000O ="욥의 팔찌(7)"#line:177
-            elif _OO0O0000O0O00OOO0 ==7 :#line:178
-                O0OOOOOO000OO000O ="슬레이브 뱅글(8)"#line:179
-            elif _OO0O0000O0O00OOO0 ==8 :#line:180
-                O0OOOOOO000OO000O ="크로스 브레이슬릿(9)"#line:181
-            elif _OO0O0000O0O00OOO0 ==9 :#line:182
-                O0OOOOOO000OO000O ="홀리 스피리트(10)"#line:183
-            elif _OO0O0000O0O00OOO0 ==10 :#line:184
-                O0OOOOOO000OO000O ="솔리스 브레이슬릿(11)"#line:185
-            elif _OO0O0000O0O00OOO0 ==11 :#line:186
-                O0OOOOOO000OO000O ="담피르 브레이슬릿(12)"#line:187
-            elif _OO0O0000O0O00OOO0 ==12 :#line:188
-                O0OOOOOO000OO000O ="크루소닉 브레이슬릿(13)"#line:189
-        elif _OOOOOOOOOO0O0000O ==10 :#line:190
-            if _OO0O0000O0O00OOO0 ==0 :#line:191
-                O0OOOOOO000OO000O ="크로스 팬던트(1)"#line:192
-            elif _OO0O0000O0O00OOO0 ==1 :#line:193
-                O0OOOOOO000OO000O ="에메럴드 팬던트(2)"#line:194
-            elif _OO0O0000O0O00OOO0 ==2 :#line:195
-                O0OOOOOO000OO000O ="플래티넘 팬던트(3)"#line:196
-            elif _OO0O0000O0O00OOO0 ==3 :#line:197
-                O0OOOOOO000OO000O ="오러스 팬던트(4)"#line:198
-            elif _OO0O0000O0O00OOO0 ==4 :#line:199
-                O0OOOOOO000OO000O ="크레센트 팬던트(5)"#line:200
-            elif _OO0O0000O0O00OOO0 ==5 :#line:201
-                O0OOOOOO000OO000O ="블루 센스(6)"#line:202
-            elif _OO0O0000O0O00OOO0 ==6 :#line:203
-                O0OOOOOO000OO000O ="인리 크로스(7)"#line:204
-            elif _OO0O0000O0O00OOO0 ==7 :#line:205
-                O0OOOOOO000OO000O ="부활의 별(8)"#line:206
-            elif _OO0O0000O0O00OOO0 ==8 :#line:207
-                O0OOOOOO000OO000O ="블러드 크로스(9)"#line:208
-            elif _OO0O0000O0O00OOO0 ==9 :#line:209
-                O0OOOOOO000OO000O ="실버 네크리스(10)"#line:210
-            elif _OO0O0000O0O00OOO0 ==10 :#line:211
-                O0OOOOOO000OO000O ="트리니티 네크리스(11)"#line:212
-            elif _OO0O0000O0O00OOO0 ==11 :#line:213
-                O0OOOOOO000OO000O ="모건 르 페이(12)"#line:214
-            elif _OO0O0000O0O00OOO0 ==12 :#line:215
-                O0OOOOOO000OO000O ="라마스 네크리스(13)"#line:216
-        elif _OOOOOOOOOO0O0000O ==11 :#line:217
-            if _OO0O0000O0O00OOO0 ==0 :#line:218
-                O0OOOOOO000OO000O ="플랙 재킷 남(1)"#line:219
-            elif _OO0O0000O0O00OOO0 ==1 :#line:220
-                O0OOOOOO000OO000O ="플랙 재킷 여(1)"#line:221
-            elif _OO0O0000O0O00OOO0 ==2 :#line:222
-                O0OOOOOO000OO000O ="베스트 남(2)"#line:223
-            elif _OO0O0000O0O00OOO0 ==3 :#line:224
-                O0OOOOOO000OO000O ="베스트 여(2)"#line:225
-            elif _OO0O0000O0O00OOO0 ==4 :#line:226
-                O0OOOOOO000OO000O ="배틀슈트 남(3)"#line:227
-            elif _OO0O0000O0O00OOO0 ==5 :#line:228
-                O0OOOOOO000OO000O ="배틀슈트 여(3)"#line:229
-            elif _OO0O0000O0O00OOO0 ==6 :#line:230
-                O0OOOOOO000OO000O ="컴뱃슈트 남(4)"#line:231
-            elif _OO0O0000O0O00OOO0 ==7 :#line:232
-                O0OOOOOO000OO000O ="컴뱃슈트 여(4)"#line:233
-            elif _OO0O0000O0O00OOO0 ==8 :#line:234
-                O0OOOOOO000OO000O ="배틀메일 남(5)"#line:235
-            elif _OO0O0000O0O00OOO0 ==9 :#line:236
-                O0OOOOOO000OO000O ="배틀메일 여(5)"#line:237
-            elif _OO0O0000O0O00OOO0 ==10 :#line:238
-                O0OOOOOO000OO000O ="컴뱃메일 남(6)"#line:239
-            elif _OO0O0000O0O00OOO0 ==11 :#line:240
-                O0OOOOOO000OO000O ="컴뱃메일 여(6)"#line:241
-            elif _OO0O0000O0O00OOO0 ==12 :#line:242
-                O0OOOOOO000OO000O ="컴뱃 아머 남(7)"#line:243
-            elif _OO0O0000O0O00OOO0 ==13 :#line:244
-                O0OOOOOO000OO000O ="컴뱃 아머 여(7)"#line:245
-            elif _OO0O0000O0O00OOO0 ==14 :#line:246
-                O0OOOOOO000OO000O ="워 아머 남(8)"#line:247
-            elif _OO0O0000O0O00OOO0 ==15 :#line:248
-                O0OOOOOO000OO000O ="워 아머 여(8)"#line:249
-            elif _OO0O0000O0O00OOO0 ==18 :#line:250
-                O0OOOOOO000OO000O ="카라만 아머 남(9)"#line:251
-            elif _OO0O0000O0O00OOO0 ==19 :#line:252
-                O0OOOOOO000OO000O ="카라만 아머 여(9)"#line:253
-            elif _OO0O0000O0O00OOO0 ==20 :#line:254
-                O0OOOOOO000OO000O ="쿼러시어 아머 남(10)"#line:255
-            elif _OO0O0000O0O00OOO0 ==21 :#line:256
-                O0OOOOOO000OO000O ="쿼러시어 아머 여(10)"#line:257
-            elif _OO0O0000O0O00OOO0 ==22 :#line:258
-                O0OOOOOO000OO000O ="토너먼트 아머 남(10)"#line:259
-            elif _OO0O0000O0O00OOO0 ==23 :#line:260
-                O0OOOOOO000OO000O ="토너먼트 아머 여(10)"#line:261
-        elif _OOOOOOOOOO0O0000O ==12 :#line:262
-            if _OO0O0000O0O00OOO0 ==0 :#line:263
-                O0OOOOOO000OO000O ="슬랙 남(1)"#line:264
-            elif _OO0O0000O0O00OOO0 ==1 :#line:265
-                O0OOOOOO000OO000O ="슬랙 여(1)"#line:266
-            elif _OO0O0000O0O00OOO0 ==2 :#line:267
-                O0OOOOOO000OO000O ="트라우저 남(2)"#line:268
-            elif _OO0O0000O0O00OOO0 ==3 :#line:269
-                O0OOOOOO000OO000O ="트라우저 여(2)"#line:270
-            elif _OO0O0000O0O00OOO0 ==4 :#line:271
-                O0OOOOOO000OO000O ="레깅즈 남(3)"#line:272
-            elif _OO0O0000O0O00OOO0 ==5 :#line:273
-                O0OOOOOO000OO000O ="레깅즈 여(3)"#line:274
-            elif _OO0O0000O0O00OOO0 ==6 :#line:275
-                O0OOOOOO000OO000O ="배틀 레깅즈 남(4)"#line:276
-            elif _OO0O0000O0O00OOO0 ==7 :#line:277
-                O0OOOOOO000OO000O ="배틀 레깅즈 여(4)"#line:278
-            elif _OO0O0000O0O00OOO0 ==8 :#line:279
-                O0OOOOOO000OO000O ="배틀 게이터 남(5)"#line:280
-            elif _OO0O0000O0O00OOO0 ==9 :#line:281
-                O0OOOOOO000OO000O ="배틀 게이터 여(5)"#line:282
-            elif _OO0O0000O0O00OOO0 ==10 :#line:283
-                O0OOOOOO000OO000O ="컴뱃 게이터 남(6)"#line:284
-            elif _OO0O0000O0O00OOO0 ==11 :#line:285
-                O0OOOOOO000OO000O ="컴뱃 게이터 여(6)"#line:286
-            elif _OO0O0000O0O00OOO0 ==12 :#line:287
-                O0OOOOOO000OO000O ="컴뱃 가드 남(7)"#line:288
-            elif _OO0O0000O0O00OOO0 ==13 :#line:289
-                O0OOOOOO000OO000O ="컴뱃 가드 여(7)"#line:290
-            elif _OO0O0000O0O00OOO0 ==14 :#line:291
-                O0OOOOOO000OO000O ="워 가드 남(8)"#line:292
-            elif _OO0O0000O0O00OOO0 ==15 :#line:293
-                O0OOOOOO000OO000O ="워 가드 여(8)"#line:294
-            elif _OO0O0000O0O00OOO0 ==18 :#line:295
-                O0OOOOOO000OO000O ="카라만 가드 남(9)"#line:296
-            elif _OO0O0000O0O00OOO0 ==19 :#line:297
-                O0OOOOOO000OO000O ="카라만 가드 여(9)"#line:298
-            elif _OO0O0000O0O00OOO0 ==20 :#line:299
-                O0OOOOOO000OO000O ="쿼러시어 쿼스 남(10)"#line:300
-            elif _OO0O0000O0O00OOO0 ==21 :#line:301
-                O0OOOOOO000OO000O ="쿼러시어 쿼스 여(10)"#line:302
-            elif _OO0O0000O0O00OOO0 ==22 :#line:303
-                O0OOOOOO000OO000O ="토너먼트 쿼스 남(10)"#line:304
-            elif _OO0O0000O0O00OOO0 ==23 :#line:305
-                O0OOOOOO000OO000O ="토너먼트 쿼스 여(10)"#line:306
-        elif _OOOOOOOOOO0O0000O ==13 :#line:307
-            if _OO0O0000O0O00OOO0 ==0 :#line:308
-                O0OOOOOO000OO000O ="라이트 슈즈(1)"#line:309
-            elif _OO0O0000O0O00OOO0 ==1 :#line:310
-                O0OOOOOO000OO000O ="레더 슈즈(2)"#line:311
-            elif _OO0O0000O0O00OOO0 ==2 :#line:312
-                O0OOOOOO000OO000O ="스틸 슈즈(3)"#line:313
-            elif _OO0O0000O0O00OOO0 ==3 :#line:314
-                O0OOOOOO000OO000O ="컴뱃 슈즈(4)"#line:315
-            elif _OO0O0000O0O00OOO0 ==4 :#line:316
-                O0OOOOOO000OO000O ="어설트 부츠(5)"#line:317
-            elif _OO0O0000O0O00OOO0 ==5 :#line:318
-                O0OOOOOO000OO000O ="사란 부츠(6)"#line:319
-            elif _OO0O0000O0O00OOO0 ==6 :#line:320
-                O0OOOOOO000OO000O ="워 부츠(7)"#line:321
-            elif _OO0O0000O0O00OOO0 ==8 :#line:322
-                O0OOOOOO000OO000O ="솔 부츠(8)"#line:323
-            elif _OO0O0000O0O00OOO0 ==9 :#line:324
-                O0OOOOOO000OO000O ="서배튼 부츠(9)"#line:325
-            elif _OO0O0000O0O00OOO0 ==10 :#line:326
-                O0OOOOOO000OO000O ="살러릿부츠(10)"#line:327
-        elif _OOOOOOOOOO0O0000O ==14 :#line:328
-            if _OO0O0000O0O00OOO0 ==0 :#line:329
-                O0OOOOOO000OO000O ="라이트 소드(1)"#line:330
-            elif _OO0O0000O0O00OOO0 ==1 :#line:331
-                O0OOOOOO000OO000O ="워 소드(2)"#line:332
-            elif _OO0O0000O0O00OOO0 ==2 :#line:333
-                O0OOOOOO000OO000O ="브로드 소드(3)"#line:334
-            elif _OO0O0000O0O00OOO0 ==3 :#line:335
-                O0OOOOOO000OO000O ="바스타드 소드(4)"#line:336
-            elif _OO0O0000O0O00OOO0 ==4 :#line:337
-                O0OOOOOO000OO000O ="브로드 레이피어(5)"#line:338
-            elif _OO0O0000O0O00OOO0 ==5 :#line:339
-                O0OOOOOO000OO000O ="고딕 소드(6)"#line:340
-            elif _OO0O0000O0O00OOO0 ==6 :#line:341
-                O0OOOOOO000OO000O ="크루세이더 소드(7)"#line:342
-            elif _OO0O0000O0O00OOO0 ==7 :#line:343
-                O0OOOOOO000OO000O ="그레이트 소드(8)"#line:344
-            elif _OO0O0000O0O00OOO0 ==8 :#line:345
-                O0OOOOOO000OO000O ="클레이모어(9)"#line:346
-            elif _OO0O0000O0O00OOO0 ==9 :#line:347
-                O0OOOOOO000OO000O ="소드 오브 가디스(10)"#line:348
-            elif _OO0O0000O0O00OOO0 ==11 :#line:349
-                O0OOOOOO000OO000O ="바실리스크 소드(11)"#line:350
-            elif _OO0O0000O0O00OOO0 ==12 :#line:351
-                O0OOOOOO000OO000O ="글라디우스(12)"#line:352
-            elif _OO0O0000O0O00OOO0 ==13 :#line:353
-                O0OOOOOO000OO000O ="츠바이한더(12)"#line:354
-        elif _OOOOOOOOOO0O0000O ==15 :#line:355
-            if _OO0O0000O0O00OOO0 ==0 :#line:356
-                O0OOOOOO000OO000O ="커틀래스(1)"#line:357
-            elif _OO0O0000O0O00OOO0 ==1 :#line:358
-                O0OOOOOO000OO000O ="롱 샴셔(2)"#line:359
-            elif _OO0O0000O0O00OOO0 ==2 :#line:360
-                O0OOOOOO000OO000O ="펄천(3)"#line:361
-            elif _OO0O0000O0O00OOO0 ==3 :#line:362
-                O0OOOOOO000OO000O ="세버드 블레이드(4)"#line:363
-            elif _OO0O0000O0O00OOO0 ==4 :#line:364
-                O0OOOOOO000OO000O ="문 블레이드(5)"#line:365
-            elif _OO0O0000O0O00OOO0 ==5 :#line:366
-                O0OOOOOO000OO000O ="세이버(6)"#line:367
-            elif _OO0O0000O0O00OOO0 ==6 :#line:368
-                O0OOOOOO000OO000O ="링 블레이드(7)"#line:369
-            elif _OO0O0000O0O00OOO0 ==7 :#line:370
-                O0OOOOOO000OO000O ="시미터(8)"#line:371
-            elif _OO0O0000O0O00OOO0 ==8 :#line:372
-                O0OOOOOO000OO000O ="코페쉬(9)"#line:373
-            elif _OO0O0000O0O00OOO0 ==9 :#line:374
-                O0OOOOOO000OO000O ="카타나(10)"#line:375
-            elif _OO0O0000O0O00OOO0 ==11 :#line:376
-                O0OOOOOO000OO000O ="코라(11)"#line:377
-            elif _OO0O0000O0O00OOO0 ==12 :#line:378
-                O0OOOOOO000OO000O ="롬파이아(12)"#line:379
-        elif _OOOOOOOOOO0O0000O ==16 :#line:380
-            if _OO0O0000O0O00OOO0 ==0 :#line:381
-                O0OOOOOO000OO000O ="라운드 쉴드(1)"#line:382
-            elif _OO0O0000O0O00OOO0 ==1 :#line:383
-                O0OOOOOO000OO000O ="브론즈 쉴드(2)"#line:384
-            elif _OO0O0000O0O00OOO0 ==2 :#line:385
-                O0OOOOOO000OO000O ="휠 실드(3)"#line:386
-            elif _OO0O0000O0O00OOO0 ==3 :#line:387
-                O0OOOOOO000OO000O ="스네이크 쉴드(4)"#line:388
-            elif _OO0O0000O0O00OOO0 ==4 :#line:389
-                O0OOOOOO000OO000O ="소드 쉴드(5)"#line:390
-            elif _OO0O0000O0O00OOO0 ==5 :#line:391
-                O0OOOOOO000OO000O ="드래곤 쉴드(6)"#line:392
-            elif _OO0O0000O0O00OOO0 ==6 :#line:393
-                O0OOOOOO000OO000O ="아그리파 방패(7)"#line:394
-            elif _OO0O0000O0O00OOO0 ==7 :#line:395
-                O0OOOOOO000OO000O ="유니콘 쉴드(8)"#line:396
-            elif _OO0O0000O0O00OOO0 ==8 :#line:397
-                O0OOOOOO000OO000O ="레오 쉴드(8)"#line:398
-            elif _OO0O0000O0O00OOO0 ==10 :#line:399
-                O0OOOOOO000OO000O ="오블롱 쉴드(9)"#line:400
-            elif _OO0O0000O0O00OOO0 ==11 :#line:401
-                O0OOOOOO000OO000O ="호플론 쉴드(10)"#line:402
-            elif _OO0O0000O0O00OOO0 ==12 :#line:403
-                O0OOOOOO000OO000O ="아스피스 쉴드(11)"#line:404
-        elif _OOOOOOOOOO0O0000O ==17 :#line:405
-            if _OO0O0000O0O00OOO0 ==0 :#line:406
-                O0OOOOOO000OO000O ="실버 크로스(1)"#line:407
-            elif _OO0O0000O0O00OOO0 ==1 :#line:408
-                O0OOOOOO000OO000O ="라틴 크로스(2)"#line:409
-            elif _OO0O0000O0O00OOO0 ==2 :#line:410
-                O0OOOOOO000OO000O ="패션 크로스(3)"#line:411
-            elif _OO0O0000O0O00OOO0 ==3 :#line:412
-                O0OOOOOO000OO000O ="기리시단 크로스(4)"#line:413
-            elif _OO0O0000O0O00OOO0 ==4 :#line:414
-                O0OOOOOO000OO000O ="에피스코펄 크로스(5)"#line:415
-            elif _OO0O0000O0O00OOO0 ==5 :#line:416
-                O0OOOOOO000OO000O ="칼바리아 크로스(6)"#line:417
-            elif _OO0O0000O0O00OOO0 ==6 :#line:418
-                O0OOOOOO000OO000O ="광배의 십자가(7)"#line:419
-            elif _OO0O0000O0O00OOO0 ==7 :#line:420
-                O0OOOOOO000OO000O ="성녀 헬레나의 십자가(8)"#line:421
-            elif _OO0O0000O0O00OOO0 ==9 :#line:422
-                O0OOOOOO000OO000O ="페이펄 십자가(8)"#line:423
-            elif _OO0O0000O0O00OOO0 ==10 :#line:424
-                O0OOOOOO000OO000O ="로렌의 십자가(9)"#line:425
-            elif _OO0O0000O0O00OOO0 ==11 :#line:426
-                O0OOOOOO000OO000O ="카타리나의 십자가(10)"#line:427
-        elif _OOOOOOOOOO0O0000O ==18 :#line:428
-            if _OO0O0000O0O00OOO0 ==0 :#line:429
-                O0OOOOOO000OO000O ="블랙 글러브(1)"#line:430
-            elif _OO0O0000O0O00OOO0 ==1 :#line:431
-                O0OOOOOO000OO000O ="브론즈 건틀렛(2)"#line:432
-            elif _OO0O0000O0O00OOO0 ==2 :#line:433
-                O0OOOOOO000OO000O ="프리스트 글러브(3)"#line:434
-            elif _OO0O0000O0O00OOO0 ==3 :#line:435
-                O0OOOOOO000OO000O ="나이트 건틀렛(4)"#line:436
-            elif _OO0O0000O0O00OOO0 ==4 :#line:437
-                O0OOOOOO000OO000O ="세스터스(5)"#line:438
-            elif _OO0O0000O0O00OOO0 ==5 :#line:439
-                O0OOOOOO000OO000O ="씬플레이트 건틀렛(6)"#line:440
-            elif _OO0O0000O0O00OOO0 ==6 :#line:441
-                O0OOOOOO000OO000O ="액티브 글러브(7)"#line:442
-            elif _OO0O0000O0O00OOO0 ==7 :#line:443
-                O0OOOOOO000OO000O ="건틀렛 오브 토르(8)"#line:444
-            elif _OO0O0000O0O00OOO0 ==9 :#line:445
-                O0OOOOOO000OO000O ="R-에너제틱 글로브(9)"#line:446
-            elif _OO0O0000O0O00OOO0 ==10 :#line:447
-                O0OOOOOO000OO000O ="쿼러시어 건틀렛(10)"#line:448
-        elif _OOOOOOOOOO0O0000O ==19 :#line:449
-            if _OO0O0000O0O00OOO0 ==0 :#line:450
-                O0OOOOOO000OO000O ="후드(1)"#line:451
-            elif _OO0O0000O0O00OOO0 ==1 :#line:452
-                O0OOOOOO000OO000O ="아이언 헬멧(2)"#line:453
-            elif _OO0O0000O0O00OOO0 ==2 :#line:454
-                O0OOOOOO000OO000O ="인프라레드 헬멧(3)"#line:455
-            elif _OO0O0000O0O00OOO0 ==3 :#line:456
-                O0OOOOOO000OO000O ="에임 헬멧(4)"#line:457
-            elif _OO0O0000O0O00OOO0 ==4 :#line:458
-                O0OOOOOO000OO000O ="컴뱃 헬멧(5)"#line:459
-            elif _OO0O0000O0O00OOO0 ==5 :#line:460
-                O0OOOOOO000OO000O ="헤드기어(6)"#line:461
-            elif _OO0O0000O0O00OOO0 ==6 :#line:462
-                O0OOOOOO000OO000O ="컴뱃 헤드기어(7)"#line:463
-            elif _OO0O0000O0O00OOO0 ==7 :#line:464
-                O0OOOOOO000OO000O ="인프라레드 스캐닝 헬멧(8)"#line:465
-            elif _OO0O0000O0O00OOO0 ==8 :#line:466
-                O0OOOOOO000OO000O ="워 플레이트 헬름(9)"#line:467
-            elif _OO0O0000O0O00OOO0 ==10 :#line:468
-                O0OOOOOO000OO000O ="컴비네이션 컴벳 헬름(10)"#line:469
-            elif _OO0O0000O0O00OOO0 ==11 :#line:470
-                O0OOOOOO000OO000O ="스팡겐 헬멧(11)"#line:471
-            elif _OO0O0000O0O00OOO0 ==12 :#line:472
-                O0OOOOOO000OO000O ="버거넷 헬멧(12)"#line:473
-        elif _OOOOOOOOOO0O0000O ==20 :#line:474
-            if _OO0O0000O0O00OOO0 ==0 :#line:475
-                O0OOOOOO000OO000O ="MT-10 슈팅 스타(1)"#line:476
-            elif _OO0O0000O0O00OOO0 ==1 :#line:477
-                O0OOOOOO000OO000O ="MT-21 자이언트 스타(2)"#line:478
-            elif _OO0O0000O0O00OOO0 ==2 :#line:479
-                O0OOOOOO000OO000O ="MTB-11 코멧 테일(3)"#line:480
-            elif _OO0O0000O0O00OOO0 ==3 :#line:481
-                O0OOOOOO000OO000O ="AM-99 맘모스99(4)"#line:482
-            elif _OO0O0000O0O00OOO0 ==4 :#line:483
-                O0OOOOOO000OO000O ="TND-5 아이언피스트(5)"#line:484
-            elif _OO0O0000O0O00OOO0 ==5 :#line:485
-                O0OOOOOO000OO000O ="SS-10 노크다운(6)"#line:486
-            elif _OO0O0000O0O00OOO0 ==6 :#line:487
-                O0OOOOOO000OO000O ="RESS-1 데모니악(7)"#line:488
-            elif _OO0O0000O0O00OOO0 ==7 :#line:489
-                O0OOOOOO000OO000O ="캐스케이드(8)"#line:490
-            elif _OO0O0000O0O00OOO0 ==8 :#line:491
-                O0OOOOOO000OO000O ="RESS-4a 앨리게이터(9)"#line:492
-            elif _OO0O0000O0O00OOO0 ==9 :#line:493
-                O0OOOOOO000OO000O ="S-200 스톰(10)"#line:494
-            elif _OO0O0000O0O00OOO0 ==11 :#line:495
-                O0OOOOOO000OO000O ="Spas-12 하이바인더(11)"#line:496
-            elif _OO0O0000O0O00OOO0 ==12 :#line:497
-                O0OOOOOO000OO000O ="S-EV11 익스플로전(12)"#line:498
-            elif _OO0O0000O0O00OOO0 ==13 :#line:499
-                O0OOOOOO000OO000O ="PG-13 로크(13)"#line:500
-        elif _OOOOOOOOOO0O0000O ==21 :#line:501
-            if _OO0O0000O0O00OOO0 ==0 :#line:502
-                O0OOOOOO000OO000O ="MD-4(1)"#line:503
-            elif _OO0O0000O0O00OOO0 ==1 :#line:504
-                O0OOOOOO000OO000O ="IS-100 지그(2)"#line:505
-            elif _OO0O0000O0O00OOO0 ==2 :#line:506
-                O0OOOOOO000OO000O ="M-INTER(3)"#line:507
-            elif _OO0O0000O0O00OOO0 ==3 :#line:508
-                O0OOOOOO000OO000O ="B-INTER(4)"#line:509
-            elif _OO0O0000O0O00OOO0 ==4 :#line:510
-                O0OOOOOO000OO000O ="VK-45 드래곤플라이(5)"#line:511
-            elif _OO0O0000O0O00OOO0 ==5 :#line:512
-                O0OOOOOO000OO000O ="MD-9 스콜피언(6)"#line:513
-            elif _OO0O0000O0O00OOO0 ==6 :#line:514
-                O0OOOOOO000OO000O ="Smith 바이러스(7)"#line:515
-            elif _OO0O0000O0O00OOO0 ==7 :#line:516
-                O0OOOOOO000OO000O ="P2K 이지라이더(8)"#line:517
-            elif _OO0O0000O0O00OOO0 ==8 :#line:518
-                O0OOOOOO000OO000O ="MD-Z 제타(9)"#line:519
-            elif _OO0O0000O0O00OOO0 ==9 :#line:520
-                O0OOOOOO000OO000O ="MD-000 레비아탄(10)"#line:521
-            elif _OO0O0000O0O00OOO0 ==11 :#line:522
-                O0OOOOOO000OO000O ="플린저(11)"#line:523
-            elif _OO0O0000O0O00OOO0 ==12 :#line:524
-                O0OOOOOO000OO000O ="KH-03A1 뫼비우스(12)"#line:525
-            elif _OO0O0000O0O00OOO0 ==13 :#line:526
-                O0OOOOOO000OO000O ="MG-90 실프(13)"#line:527
-        elif _OOOOOOOOOO0O0000O ==22 :#line:528
-            if _OO0O0000O0O00OOO0 ==0 :#line:529
-                O0OOOOOO000OO000O ="MK-74 비셔스(1)"#line:530
-            elif _OO0O0000O0O00OOO0 ==1 :#line:531
-                O0OOOOOO000OO000O ="P-1A 폴란(2)"#line:532
-            elif _OO0O0000O0O00OOO0 ==2 :#line:533
-                O0OOOOOO000OO000O ="MK-101 구스(3)"#line:534
-            elif _OO0O0000O0O00OOO0 ==3 :#line:535
-                O0OOOOOO000OO000O ="MK-2 G2(4)"#line:536
-            elif _OO0O0000O0O00OOO0 ==4 :#line:537
-                O0OOOOOO000OO000O ="MK-2000 G2000(5)"#line:538
-            elif _OO0O0000O0O00OOO0 ==5 :#line:539
-                O0OOOOOO000OO000O ="P-G1S 미네르바(6)"#line:540
-            elif _OO0O0000O0O00OOO0 ==6 :#line:541
-                O0OOOOOO000OO000O ="IS-200 퓨리(7)"#line:542
-            elif _OO0O0000O0O00OOO0 ==7 :#line:543
-                O0OOOOOO000OO000O ="MK-2002 워해머(8)"#line:544
-            elif _OO0O0000O0O00OOO0 ==8 :#line:545
-                O0OOOOOO000OO000O ="P-38 소돔(9)"#line:546
-            elif _OO0O0000O0O00OOO0 ==9 :#line:547
-                O0OOOOOO000OO000O ="P-40 엘 캐슬(10)"#line:548
-            elif _OO0O0000O0O00OOO0 ==11 :#line:549
-                O0OOOOOO000OO000O ="파이어버그(11)"#line:550
-            elif _OO0O0000O0O00OOO0 ==12 :#line:551
-                O0OOOOOO000OO000O ="EA-V1 앤젤 가드(12)"#line:552
-            elif _OO0O0000O0O00OOO0 ==13 :#line:553
-                O0OOOOOO000OO000O ="LM-700 카라(13)"#line:554
-        elif _OOOOOOOOOO0O0000O ==23 :#line:555
-            if _OO0O0000O0O00OOO0 ==0 :#line:557
-                O0OOOOOO000OO000O ="X-31M 밀라노(1)"#line:558
-            elif _OO0O0000O0O00OOO0 ==1 :#line:559
-                O0OOOOOO000OO000O ="X-55 V2(2)"#line:560
-            elif _OO0O0000O0O00OOO0 ==2 :#line:561
-                O0OOOOOO000OO000O ="페룬(3)"#line:562
-            elif _OO0O0000O0O00OOO0 ==3 :#line:563
-                O0OOOOOO000OO000O ="X-45T 토마호크(4)"#line:564
-            elif _OO0O0000O0O00OOO0 ==4 :#line:565
-                O0OOOOOO000OO000O ="IS-99 하피(5)"#line:566
-            elif _OO0O0000O0O00OOO0 ==5 :#line:567
-                O0OOOOOO000OO000O ="SR-1 톨스토이(6)"#line:568
-            elif _OO0O0000O0O00OOO0 ==6 :#line:569
-                O0OOOOOO000OO000O ="GX90 홀트(7)"#line:570
-            elif _OO0O0000O0O00OOO0 ==7 :#line:571
-                O0OOOOOO000OO000O ="톰보이(8)"#line:572
-            elif _OO0O0000O0O00OOO0 ==8 :#line:573
-                O0OOOOOO000OO000O ="하야부사(9)"#line:574
-            elif _OO0O0000O0O00OOO0 ==9 :#line:575
-                O0OOOOOO000OO000O ="IS-101 모데라토(10)"#line:576
-            elif _OO0O0000O0O00OOO0 ==11 :#line:577
-                O0OOOOOO000OO000O ="BFG-50 데쓰니들(11)"#line:578
-            elif _OO0O0000O0O00OOO0 ==12 :#line:579
-                O0OOOOOO000OO000O ="T-03 나이트메어(12)"#line:580
-            elif _OO0O0000O0O00OOO0 ==13 :#line:581
-                O0OOOOOO000OO000O ="V-03 케모스(13)"#line:582
-        elif _OOOOOOOOOO0O0000O ==26 :#line:583
-            if _OO0O0000O0O00OOO0 ==0 :#line:584
-                O0OOOOOO000OO000O ="라이트 벨트(1)"#line:585
-            elif _OO0O0000O0O00OOO0 ==1 :#line:586
-                O0OOOOOO000OO000O ="벨트(2)"#line:587
-            elif _OO0O0000O0O00OOO0 ==2 :#line:588
-                O0OOOOOO000OO000O ="미디엄 벨트(3)"#line:589
-            elif _OO0O0000O0O00OOO0 ==3 :#line:590
-                O0OOOOOO000OO000O ="헤비 벨트(4)"#line:591
-            elif _OO0O0000O0O00OOO0 ==5 :#line:592
-                O0OOOOOO000OO000O ="워 벨트(5)"#line:593
-            elif _OO0O0000O0O00OOO0 ==6 :#line:594
-                O0OOOOOO000OO000O ="숄더 벨트(6)"#line:595
-            elif _OO0O0000O0O00OOO0 ==7 :#line:596
-                O0OOOOOO000OO000O ="웨스턴 벨트(7)"#line:597
-        elif _OOOOOOOOOO0O0000O ==35 :#line:598
-            if _OO0O0000O0O00OOO0 ==0 :#line:599
-                O0OOOOOO000OO000O ="아이언 메이스(1)"#line:600
-            elif _OO0O0000O0O00OOO0 ==1 :#line:601
-                O0OOOOOO000OO000O ="실버 메이스(2)"#line:602
-            elif _OO0O0000O0O00OOO0 ==2 :#line:603
-                O0OOOOOO000OO000O ="그릭 메이스(3)"#line:604
-            elif _OO0O0000O0O00OOO0 ==3 :#line:605
-                O0OOOOOO000OO000O ="아크비숍 메이스(4)"#line:606
-            elif _OO0O0000O0O00OOO0 ==4 :#line:607
-                O0OOOOOO000OO000O ="폰티프 메이스(5)"#line:608
-            elif _OO0O0000O0O00OOO0 ==5 :#line:609
-                O0OOOOOO000OO000O ="코크휠 메이스(6)"#line:610
-            elif _OO0O0000O0O00OOO0 ==6 :#line:611
-                O0OOOOOO000OO000O ="케파 메이스(7)"#line:612
-            elif _OO0O0000O0O00OOO0 ==7 :#line:613
-                O0OOOOOO000OO000O ="칼릭스 메이스(8)"#line:614
-            elif _OO0O0000O0O00OOO0 ==9 :#line:615
-                O0OOOOOO000OO000O ="푼고 메이스(9)"#line:616
-            elif _OO0O0000O0O00OOO0 ==10 :#line:617
-                O0OOOOOO000OO000O ="부라와 메이스(10)"#line:618
-            elif _OO0O0000O0O00OOO0 ==11 :#line:619
-                O0OOOOOO000OO000O ="구르즈 메이스(11)"#line:620
-        elif _OOOOOOOOOO0O0000O ==30 :#line:622
-            if _OO0O0000O0O00OOO0 ==0 :#line:623
-                O0OOOOOO000OO000O ="Iron Ring(1)"#line:624
-            elif _OO0O0000O0O00OOO0 ==1 :#line:625
-                O0OOOOOO000OO000O ="Silver Ring(2)"#line:626
-            elif _OO0O0000O0O00OOO0 ==2 :#line:627
-                O0OOOOOO000OO000O ="Winkle Ring(3)"#line:628
-            elif _OO0O0000O0O00OOO0 ==3 :#line:629
-                O0OOOOOO000OO000O ="Gilt Ring(4)"#line:630
-            elif _OO0O0000O0O00OOO0 ==4 :#line:631
-                O0OOOOOO000OO000O ="Anti-Sun Ring(5)"#line:632
-            elif _OO0O0000O0O00OOO0 ==5 :#line:633
-                O0OOOOOO000OO000O ="Blue Seduction(6)"#line:634
-            elif _OO0O0000O0O00OOO0 ==6 :#line:635
-                O0OOOOOO000OO000O ="Blood Sucker(7)"#line:636
-            elif _OO0O0000O0O00OOO0 ==7 :#line:637
-                O0OOOOOO000OO000O ="Unholy Shield(8)"#line:638
-            elif _OO0O0000O0O00OOO0 ==8 :#line:639
-                O0OOOOOO000OO000O ="Ring of Skulls(9)"#line:640
-            elif _OO0O0000O0O00OOO0 ==9 :#line:641
-                O0OOOOOO000OO000O ="Spider Eyes(10)"#line:642
-            elif _OO0O0000O0O00OOO0 ==10 :#line:643
-                O0OOOOOO000OO000O ="Mortal Ring(11)"#line:644
-            elif _OO0O0000O0O00OOO0 ==11 :#line:645
-                O0OOOOOO000OO000O ="Fenrir Ring(12)"#line:646
-            elif _OO0O0000O0O00OOO0 ==12 :#line:647
-                O0OOOOOO000OO000O ="Asp Ring(13)"#line:648
-            elif _OO0O0000O0O00OOO0 ==13 :#line:649
-                O0OOOOOO000OO000O ="Alexandrite(14)"#line:650
-        elif _OOOOOOOOOO0O0000O ==31 :#line:652
-            if _OO0O0000O0O00OOO0 ==0 :#line:653
-                O0OOOOOO000OO000O ="Lace Bracelet(1)"#line:654
-            elif _OO0O0000O0O00OOO0 ==1 :#line:655
-                O0OOOOOO000OO000O ="Armorial Bracelet(2)"#line:656
-            elif _OO0O0000O0O00OOO0 ==2 :#line:657
-                O0OOOOOO000OO000O ="Jewel Bracelet(3)"#line:658
-            elif _OO0O0000O0O00OOO0 ==3 :#line:659
-                O0OOOOOO000OO000O ="Master Bracelet(4)"#line:660
-            elif _OO0O0000O0O00OOO0 ==4 :#line:661
-                O0OOOOOO000OO000O ="Morganite Bracelet(5)"#line:662
-            elif _OO0O0000O0O00OOO0 ==5 :#line:663
-                O0OOOOOO000OO000O ="Blue Monoeye(6)"#line:664
-            elif _OO0O0000O0O00OOO0 ==6 :#line:665
-                O0OOOOOO000OO000O ="Blue Water(7)"#line:666
-            elif _OO0O0000O0O00OOO0 ==7 :#line:667
-                O0OOOOOO000OO000O ="Viper Bracelet(8)"#line:668
-            elif _OO0O0000O0O00OOO0 ==8 :#line:669
-                O0OOOOOO000OO000O ="the Abyss(9)"#line:670
-            elif _OO0O0000O0O00OOO0 ==9 :#line:671
-                O0OOOOOO000OO000O ="Keen Bracelet(10)"#line:672
-            elif _OO0O0000O0O00OOO0 ==10 :#line:673
-                O0OOOOOO000OO000O ="Lapis Lazuli(11)"#line:674
-            elif _OO0O0000O0O00OOO0 ==11 :#line:675
-                O0OOOOOO000OO000O ="Belladonna(12)"#line:676
-        elif _OOOOOOOOOO0O0000O ==32 :#line:678
-            if _OO0O0000O0O00OOO0 ==0 :#line:679
-                O0OOOOOO000OO000O ="Boomerang Necklace(1)"#line:680
-            elif _OO0O0000O0O00OOO0 ==1 :#line:681
-                O0OOOOOO000OO000O ="Skull Necklace(2)"#line:682
-            elif _OO0O0000O0O00OOO0 ==2 :#line:683
-                O0OOOOOO000OO000O ="Cuspid Necklace(3)"#line:684
-            elif _OO0O0000O0O00OOO0 ==3 :#line:685
-                O0OOOOOO000OO000O ="Jet Necklace(4)"#line:686
-            elif _OO0O0000O0O00OOO0 ==4 :#line:687
-                O0OOOOOO000OO000O ="Idol Pendant(5)"#line:688
-            elif _OO0O0000O0O00OOO0 ==5 :#line:689
-                O0OOOOOO000OO000O ="Anti-cross(6)"#line:690
-            elif _OO0O0000O0O00OOO0 ==6 :#line:691
-                O0OOOOOO000OO000O ="Death Star(7)"#line:692
-            elif _OO0O0000O0O00OOO0 ==7 :#line:693
-                O0OOOOOO000OO000O ="Amulet of Omen(8)"#line:694
-            elif _OO0O0000O0O00OOO0 ==8 :#line:695
-                O0OOOOOO000OO000O ="Wing of the Dead(9)"#line:696
-            elif _OO0O0000O0O00OOO0 ==9 :#line:697
-                O0OOOOOO000OO000O ="Golden Wings(10)"#line:698
-            elif _OO0O0000O0O00OOO0 ==10 :#line:699
-                O0OOOOOO000OO000O ="Evil Eye(11)"#line:700
-            elif _OO0O0000O0O00OOO0 ==11 :#line:701
-                O0OOOOOO000OO000O ="Fefnir Necklace(12)"#line:702
-            elif _OO0O0000O0O00OOO0 ==12 :#line:703
-                O0OOOOOO000OO000O ="Uzat Necklace(13)"#line:704
-        elif _OOOOOOOOOO0O0000O ==33 :#line:706
-            if _OO0O0000O0O00OOO0 ==0 :#line:707
-                O0OOOOOO000OO000O ="Swing Coat(1)"#line:708
-            elif _OO0O0000O0O00OOO0 ==1 :#line:709
-                O0OOOOOO000OO000O ="Body Suit(2)"#line:710
-            elif _OO0O0000O0O00OOO0 ==2 :#line:711
-                O0OOOOOO000OO000O ="Frock Coat(3)"#line:712
-            elif _OO0O0000O0O00OOO0 ==3 :#line:713
-                O0OOOOOO000OO000O ="Slipery Robe(4)"#line:714
-            elif _OO0O0000O0O00OOO0 ==4 :#line:715
-                O0OOOOOO000OO000O ="Plume Cloak(5)"#line:716
-            elif _OO0O0000O0O00OOO0 ==5 :#line:717
-                O0OOOOOO000OO000O ="Hiding Robe(6)"#line:718
-            elif _OO0O0000O0O00OOO0 ==6 :#line:719
-                O0OOOOOO000OO000O ="Levitate Cloak(7)"#line:720
-            elif _OO0O0000O0O00OOO0 ==7 :#line:721
-                O0OOOOOO000OO000O ="Anti-Sun Pall(8)"#line:722
-            elif _OO0O0000O0O00OOO0 ==8 :#line:723
-                O0OOOOOO000OO000O ="Anti-Sun Cope(9)"#line:724
-            elif _OO0O0000O0O00OOO0 ==9 :#line:725
-                O0OOOOOO000OO000O ="Master Pall(10)"#line:726
-            elif _OO0O0000O0O00OOO0 ==10 :#line:727
-                O0OOOOOO000OO000O ="Master Cope(11)"#line:728
-            elif _OO0O0000O0O00OOO0 ==11 :#line:729
-                O0OOOOOO000OO000O ="Commander Coat M(12)"#line:730
-            elif _OO0O0000O0O00OOO0 ==12 :#line:731
-                O0OOOOOO000OO000O ="Commander Coat W(12)"#line:732
-            elif _OO0O0000O0O00OOO0 ==13 :#line:733
-                O0OOOOOO000OO000O ="Blood Pall(14)"#line:734
-            elif _OO0O0000O0O00OOO0 ==14 :#line:735
-                O0OOOOOO000OO000O ="Blood Cope(15)"#line:736
-            elif _OO0O0000O0O00OOO0 ==15 :#line:737
-                O0OOOOOO000OO000O ="Lorica Coat M(16)"#line:738
-            elif _OO0O0000O0O00OOO0 ==16 :#line:739
-                O0OOOOOO000OO000O ="Lorica Coat W(16)"#line:740
-            elif _OO0O0000O0O00OOO0 ==17 :#line:741
-                O0OOOOOO000OO000O ="Aqueton Coat M(17)"#line:742
-            elif _OO0O0000O0O00OOO0 ==18 :#line:743
-                O0OOOOOO000OO000O ="Aqueton Coat W(17)"#line:744
-            elif _OO0O0000O0O00OOO0 ==19 :#line:745
-                O0OOOOOO000OO000O ="Defiance Cloak(18)"#line:746
-            elif _OO0O0000O0O00OOO0 ==20 :#line:747
-                O0OOOOOO000OO000O ="Allure Apparel(19)"#line:748
-            elif _OO0O0000O0O00OOO0 ==21 :#line:749
-                O0OOOOOO000OO000O ="Immoral Cloak(20)"#line:750
-            elif _OO0O0000O0O00OOO0 ==22 :#line:751
-                O0OOOOOO000OO000O ="Proud Appare(21)"#line:752
-        elif _OOOOOOOOOO0O0000O ==42 :#line:754
-            if _OO0O0000O0O00OOO0 ==0 :#line:755
-                O0OOOOOO000OO000O ="Broze Earring(1)"#line:756
-            elif _OO0O0000O0O00OOO0 ==1 :#line:757
-                O0OOOOOO000OO000O ="Silver Earring(2)"#line:758
-            elif _OO0O0000O0O00OOO0 ==2 :#line:759
-                O0OOOOOO000OO000O ="Gold Earring(3)"#line:760
-            elif _OO0O0000O0O00OOO0 ==3 :#line:761
-                O0OOOOOO000OO000O ="Death Sun Earring(4)"#line:762
-            elif _OO0O0000O0O00OOO0 ==4 :#line:763
-                O0OOOOOO000OO000O ="Bats Circle Earring(5)"#line:764
-            elif _OO0O0000O0O00OOO0 ==5 :#line:765
-                O0OOOOOO000OO000O ="Shield of Darkness(6)"#line:766
-            elif _OO0O0000O0O00OOO0 ==6 :#line:767
-                O0OOOOOO000OO000O ="Bloody Feast(7)"#line:768
-            elif _OO0O0000O0O00OOO0 ==7 :#line:769
-                O0OOOOOO000OO000O ="Earring of Eternal Life(8)"#line:770
-            elif _OO0O0000O0O00OOO0 ==8 :#line:771
-                O0OOOOOO000OO000O ="The Cats Eyes(9)"#line:772
-            elif _OO0O0000O0O00OOO0 ==9 :#line:773
-                O0OOOOOO000OO000O ="Skull of Destruction(10)"#line:774
-            elif _OO0O0000O0O00OOO0 ==10 :#line:775
-                O0OOOOOO000OO000O ="The Oath of Harmony(11)"#line:776
-            elif _OO0O0000O0O00OOO0 ==11 :#line:777
-                O0OOOOOO000OO000O ="Hyacinth(12)"#line:778
-            elif _OO0O0000O0O00OOO0 ==12 :#line:779
-                O0OOOOOO000OO000O ="Carnelian(13)"#line:780
-        elif _OOOOOOOOOO0O0000O ==44 :#line:782
-            if _OO0O0000O0O00OOO0 ==0 :#line:783
-                O0OOOOOO000OO000O ="Knuckle Part(1)"#line:784
-            elif _OO0O0000O0O00OOO0 ==1 :#line:785
-                O0OOOOOO000OO000O ="Thumb Grab(2)"#line:786
-            elif _OO0O0000O0O00OOO0 ==2 :#line:787
-                O0OOOOOO000OO000O ="Force Knuckle(3)"#line:788
-            elif _OO0O0000O0O00OOO0 ==3 :#line:789
-                O0OOOOOO000OO000O ="Geminal Ring Knuckle(4)"#line:790
-            elif _OO0O0000O0O00OOO0 ==4 :#line:791
-                O0OOOOOO000OO000O ="Yeti's Craw(5)"#line:792
-            elif _OO0O0000O0O00OOO0 ==5 :#line:793
-                O0OOOOOO000OO000O ="Cat's Craw(6)"#line:794
-            elif _OO0O0000O0O00OOO0 ==6 :#line:795
-                O0OOOOOO000OO000O ="Fist Knuckle(7)"#line:796
-            elif _OO0O0000O0O00OOO0 ==7 :#line:797
-                O0OOOOOO000OO000O ="APE Knuckle(8)"#line:798
-            elif _OO0O0000O0O00OOO0 ==8 :#line:799
-                O0OOOOOO000OO000O ="SAV Knuckle(9)"#line:800
-            elif _OO0O0000O0O00OOO0 ==9 :#line:801
-                O0OOOOOO000OO000O ="Sif's Hand Knuckle(10)"#line:802
-            elif _OO0O0000O0O00OOO0 ==10 :#line:803
-                O0OOOOOO000OO000O ="Loon Diver Knuckle(11)"#line:804
-            elif _OO0O0000O0O00OOO0 ==11 :#line:805
-                O0OOOOOO000OO000O ="Might Knuckle(12)"#line:806
-            elif _OO0O0000O0O00OOO0 ==12 :#line:807
-                O0OOOOOO000OO000O ="Zamadar(13)"#line:808
-            elif _OO0O0000O0O00OOO0 ==13 :#line:809
-                O0OOOOOO000OO000O ="Katar(14)"#line:810
-            elif _OO0O0000O0O00OOO0 ==14 :#line:811
-                O0OOOOOO000OO000O ="Amemet's Craw(15)"#line:812
-            elif _OO0O0000O0O00OOO0 ==15 :#line:813
-                O0OOOOOO000OO000O ="MARAX(16)"#line:814
-            elif _OO0O0000O0O00OOO0 ==16 :#line:815
-                O0OOOOOO000OO000O ="Zagan(17)"#line:816
-            elif _OO0O0000O0O00OOO0 ==17 :#line:817
-                O0OOOOOO000OO000O ="Bagh Nakh(18)"#line:818
-            elif _OO0O0000O0O00OOO0 ==18 :#line:819
-                O0OOOOOO000OO000O ="Khanja Crow(19)"#line:820
-            elif _OO0O0000O0O00OOO0 ==19 :#line:821
-                O0OOOOOO000OO000O ="Acies Nail(20)"#line:822
-            elif _OO0O0000O0O00OOO0 ==20 :#line:823
-                O0OOOOOO000OO000O ="Bone Cleave(21)"#line:824
-        elif _OOOOOOOOOO0O0000O ==45 :#line:826
-            if _OO0O0000O0O00OOO0 ==0 :#line:827
-                O0OOOOOO000OO000O ="Rad(1)"#line:828
-            elif _OO0O0000O0O00OOO0 ==1 :#line:829
-                O0OOOOOO000OO000O ="Ken(2)"#line:830
-            elif _OO0O0000O0O00OOO0 ==2 :#line:831
-                O0OOOOOO000OO000O ="Jera(3)"#line:832
-            elif _OO0O0000O0O00OOO0 ==3 :#line:833
-                O0OOOOOO000OO000O ="Eolh(4)"#line:834
-            elif _OO0O0000O0O00OOO0 ==4 :#line:835
-                O0OOOOOO000OO000O ="Man(5)"#line:836
-            elif _OO0O0000O0O00OOO0 ==5 :#line:837
-                O0OOOOOO000OO000O ="Bu Man(6)"#line:838
-            elif _OO0O0000O0O00OOO0 ==6 :#line:839
-                O0OOOOOO000OO000O ="Ing(7)"#line:840
-            elif _OO0O0000O0O00OOO0 ==7 :#line:841
-                O0OOOOOO000OO000O ="Othel(8)"#line:842
-            elif _OO0O0000O0O00OOO0 ==8 :#line:843
-                O0OOOOOO000OO000O ="Odal(9)"#line:844
-            elif _OO0O0000O0O00OOO0 ==9 :#line:845
-                O0OOOOOO000OO000O ="Daeg(10)"#line:846
-            elif _OO0O0000O0O00OOO0 ==10 :#line:847
-                O0OOOOOO000OO000O ="Sigel(11)"#line:848
-            elif _OO0O0000O0O00OOO0 ==11 :#line:849
-                O0OOOOOO000OO000O ="Is(12)"#line:850
-            elif _OO0O0000O0O00OOO0 ==12 :#line:851
-                O0OOOOOO000OO000O ="Feoh(13)"#line:852
-            elif _OO0O0000O0O00OOO0 ==13 :#line:853
-                O0OOOOOO000OO000O ="Nied(14)"#line:854
-        return O0OOOOOO000OO000O #line:856
-    def OO00O0OO000O0O00O (_O0O000O0O0O00OOOO ):#line:858
-        O0000000OOOO0O0OO =''#line:859
-        if _O0O000O0O0O00OOOO ==1 :#line:861
-            O0000000OOOO0O0OO ="STR +1"#line:862
-        elif _O0O000O0O0O00OOOO ==2 :#line:863
-            O0000000OOOO0O0OO ="STR +2"#line:864
-        elif _O0O000O0O0O00OOOO ==3 :#line:865
-            O0000000OOOO0O0OO ="STR +3"#line:866
-        elif _O0O000O0O0O00OOOO ==4 :#line:867
-            O0000000OOOO0O0OO ="STR +4"#line:868
-        elif _O0O000O0O0O00OOOO ==5 :#line:869
-            O0000000OOOO0O0OO ="STR +5"#line:870
-        elif _O0O000O0O0O00OOOO ==6 :#line:871
-            O0000000OOOO0O0OO ="DEX +1"#line:872
-        elif _O0O000O0O0O00OOOO ==7 :#line:873
-            O0000000OOOO0O0OO ="DEX +2"#line:874
-        elif _O0O000O0O0O00OOOO ==8 :#line:875
-            O0000000OOOO0O0OO ="DEX +3"#line:876
-        elif _O0O000O0O0O00OOOO ==9 :#line:877
-            O0000000OOOO0O0OO ="DEX +4"#line:878
-        elif _O0O000O0O0O00OOOO ==10 :#line:879
-            O0000000OOOO0O0OO ="DEX +5"#line:880
-        elif _O0O000O0O0O00OOOO ==11 :#line:881
-            O0000000OOOO0O0OO ="INT +1"#line:882
-        elif _O0O000O0O0O00OOOO ==12 :#line:883
-            O0000000OOOO0O0OO ="INT +2"#line:884
-        elif _O0O000O0O0O00OOOO ==13 :#line:885
-            O0000000OOOO0O0OO ="INT +3"#line:886
-        elif _O0O000O0O0O00OOOO ==14 :#line:887
-            O0000000OOOO0O0OO ="INT +4"#line:888
-        elif _O0O000O0O0O00OOOO ==15 :#line:889
-            O0000000OOOO0O0OO ="INT +5"#line:890
-        elif _O0O000O0O0O00OOOO ==16 :#line:891
-            O0000000OOOO0O0OO ="HP +3"#line:892
-        elif _O0O000O0O0O00OOOO ==17 :#line:893
-            O0000000OOOO0O0OO ="HP +6"#line:894
-        elif _O0O000O0O0O00OOOO ==18 :#line:895
-            O0000000OOOO0O0OO ="HP +9"#line:896
-        elif _O0O000O0O0O00OOOO ==19 :#line:897
-            O0000000OOOO0O0OO ="HP +12"#line:898
-        elif _O0O000O0O0O00OOOO ==20 :#line:899
-            O0000000OOOO0O0OO ="HP +15"#line:900
-        elif _O0O000O0O0O00OOOO ==21 :#line:901
-            O0000000OOOO0O0OO ="MP +5"#line:902
-        elif _O0O000O0O0O00OOOO ==22 :#line:903
-            O0000000OOOO0O0OO ="MP +10"#line:904
-        elif _O0O000O0O0O00OOOO ==23 :#line:905
-            O0000000OOOO0O0OO ="MP +15"#line:906
-        elif _O0O000O0O0O00OOOO ==24 :#line:907
-            O0000000OOOO0O0OO ="MP +20"#line:908
-        elif _O0O000O0O0O00OOOO ==25 :#line:909
-            O0000000OOOO0O0OO ="MP +25"#line:910
-        elif _O0O000O0O0O00OOOO ==26 :#line:911
-            O0000000OOOO0O0OO ="HP흡수 +1"#line:912
-        elif _O0O000O0O0O00OOOO ==27 :#line:913
-            O0000000OOOO0O0OO ="HP흡수 +2"#line:914
-        elif _O0O000O0O0O00OOOO ==28 :#line:915
-            O0000000OOOO0O0OO ="HP흡수 +3"#line:916
-        elif _O0O000O0O0O00OOOO ==29 :#line:917
-            O0000000OOOO0O0OO ="MP흡수 +1"#line:918
-        elif _O0O000O0O0O00OOOO ==30 :#line:919
-            O0000000OOOO0O0OO ="MP흡수 +2"#line:920
-        elif _O0O000O0O0O00OOOO ==31 :#line:921
-            O0000000OOOO0O0OO ="MP흡수 +3"#line:922
-        elif _O0O000O0O0O00OOOO ==38 :#line:923
-            O0000000OOOO0O0OO ="명중률 +1"#line:924
-        elif _O0O000O0O0O00OOOO ==39 :#line:925
-            O0000000OOOO0O0OO ="명중률 +2"#line:926
-        elif _O0O000O0O0O00OOOO ==40 :#line:927
-            O0000000OOOO0O0OO ="명중률 +3"#line:928
-        elif _O0O000O0O0O00OOOO ==41 :#line:929
-            O0000000OOOO0O0OO ="명중률 +4"#line:930
-        elif _O0O000O0O0O00OOOO ==42 :#line:931
-            O0000000OOOO0O0OO ="명중률 +5"#line:932
-        elif _O0O000O0O0O00OOOO ==43 :#line:933
-            O0000000OOOO0O0OO ="디펜스 +1"#line:934
-        elif _O0O000O0O0O00OOOO ==44 :#line:935
-            O0000000OOOO0O0OO ="디펜스 +2"#line:936
-        elif _O0O000O0O0O00OOOO ==45 :#line:937
-            O0000000OOOO0O0OO ="디펜스 +3"#line:938
-        elif _O0O000O0O0O00OOOO ==46 :#line:939
-            O0000000OOOO0O0OO ="디펜스 +4"#line:940
-        elif _O0O000O0O0O00OOOO ==47 :#line:941
-            O0000000OOOO0O0OO ="디펜스 +5"#line:942
-        elif _O0O000O0O0O00OOOO ==48 :#line:943
-            O0000000OOOO0O0OO ="데미지 +1"#line:944
-        elif _O0O000O0O0O00OOOO ==49 :#line:945
-            O0000000OOOO0O0OO ="데미지 +2"#line:946
-        elif _O0O000O0O0O00OOOO ==50 :#line:947
-            O0000000OOOO0O0OO ="데미지 +3"#line:948
-        elif _O0O000O0O0O00OOOO ==51 :#line:949
-            O0000000OOOO0O0OO ="데미지 +4"#line:950
-        elif _O0O000O0O0O00OOOO ==52 :#line:951
-            O0000000OOOO0O0OO ="데미지 +5"#line:952
-        elif _O0O000O0O0O00OOOO ==53 :#line:953
-            O0000000OOOO0O0OO ="프로텍션 +1"#line:954
-        elif _O0O000O0O0O00OOOO ==54 :#line:955
-            O0000000OOOO0O0OO ="프로텍션 +2"#line:956
-        elif _O0O000O0O0O00OOOO ==55 :#line:957
-            O0000000OOOO0O0OO ="프로텍션 +3"#line:958
-        elif _O0O000O0O0O00OOOO ==56 :#line:959
-            O0000000OOOO0O0OO ="프로텍션 +4"#line:960
-        elif _O0O000O0O0O00OOOO ==57 :#line:961
-            O0000000OOOO0O0OO ="프로텍션 +5"#line:962
-        elif _O0O000O0O0O00OOOO ==58 :#line:963
-            O0000000OOOO0O0OO ="내구성 +20%"#line:964
-        elif _O0O000O0O0O00OOOO ==59 :#line:965
-            O0000000OOOO0O0OO ="내구성 +40%"#line:966
-        elif _O0O000O0O0O00OOOO ==60 :#line:967
-            O0000000OOOO0O0OO ="내구성 +60%"#line:968
-        elif _O0O000O0O0O00OOOO ==61 :#line:969
-            O0000000OOOO0O0OO ="내구성 +80%"#line:970
-        elif _O0O000O0O0O00OOOO ==62 :#line:971
-            O0000000OOOO0O0OO ="내구성 +100%"#line:972
-        elif _O0O000O0O0O00OOOO ==63 :#line:973
-            O0000000OOOO0O0OO ="독 저항력 +5"#line:974
-        elif _O0O000O0O0O00OOOO ==64 :#line:975
-            O0000000OOOO0O0OO ="독 저항력 +10"#line:976
-        elif _O0O000O0O0O00OOOO ==65 :#line:977
-            O0000000OOOO0O0OO ="독 저항력 +15"#line:978
-        elif _O0O000O0O0O00OOOO ==66 :#line:979
-            O0000000OOOO0O0OO ="산 저항력 +5"#line:980
-        elif _O0O000O0O0O00OOOO ==67 :#line:981
-            O0000000OOOO0O0OO ="산 저항력 +10"#line:982
-        elif _O0O000O0O0O00OOOO ==68 :#line:983
-            O0000000OOOO0O0OO ="산 저항력 +15"#line:984
-        elif _O0O000O0O0O00OOOO ==69 :#line:985
-            O0000000OOOO0O0OO ="저주 저항력 +5"#line:986
-        elif _O0O000O0O0O00OOOO ==70 :#line:987
-            O0000000OOOO0O0OO ="저주 저항력 +10"#line:988
-        elif _O0O000O0O0O00OOOO ==71 :#line:989
-            O0000000OOOO0O0OO ="저주 저항력 +15"#line:990
-        elif _O0O000O0O0O00OOOO ==72 :#line:991
-            O0000000OOOO0O0OO ="블러드 저항력 +5"#line:992
-        elif _O0O000O0O0O00OOOO ==73 :#line:993
-            O0000000OOOO0O0OO ="블러드 저항력 +10"#line:994
-        elif _O0O000O0O0O00OOOO ==74 :#line:995
-            O0000000OOOO0O0OO ="블러드 저항력 +15"#line:996
-        elif _O0O000O0O0O00OOOO ==75 :#line:997
-            O0000000OOOO0O0OO ="시야 +1"#line:998
-        elif _O0O000O0O0O00OOOO ==76 :#line:999
-            O0000000OOOO0O0OO ="시야 +2"#line:1000
-        elif _O0O000O0O0O00OOOO ==77 :#line:1001
-            O0000000OOOO0O0OO ="시야 +3"#line:1002
-        elif _O0O000O0O0O00OOOO ==78 :#line:1003
-            O0000000OOOO0O0OO ="공격 속도 +5"#line:1004
-        elif _O0O000O0O0O00OOOO ==79 :#line:1005
-            O0000000OOOO0O0OO ="공격 속도 +10"#line:1006
-        elif _O0O000O0O0O00OOOO ==80 :#line:1007
-            O0000000OOOO0O0OO ="공격 속도 +15"#line:1008
-        elif _O0O000O0O0O00OOOO ==81 :#line:1009
-            O0000000OOOO0O0OO ="공격 속도 +20"#line:1010
-        elif _O0O000O0O0O00OOOO ==82 :#line:1011
-            O0000000OOOO0O0OO ="공격 속도 +25"#line:1012
-        elif _O0O000O0O0O00OOOO ==83 :#line:1013
-            O0000000OOOO0O0OO ="크리티컬 히트 +2"#line:1014
-        elif _O0O000O0O0O00OOOO ==84 :#line:1015
-            O0000000OOOO0O0OO ="크리티컬 히트 +4"#line:1016
-        elif _O0O000O0O0O00OOOO ==85 :#line:1017
-            O0000000OOOO0O0OO ="크리티컬 히트 +6"#line:1018
-        elif _O0O000O0O0O00OOOO ==86 :#line:1019
-            O0000000OOOO0O0OO ="크리티컬 히트 +8"#line:1020
-        elif _O0O000O0O0O00OOOO ==87 :#line:1021
-            O0000000OOOO0O0OO ="크리티컬 히트 +10"#line:1022
-        elif _O0O000O0O0O00OOOO ==175 :#line:1023
-            O0000000OOOO0O0OO ="행운 +1"#line:1024
-        elif _O0O000O0O0O00OOOO ==176 :#line:1025
-            O0000000OOOO0O0OO ="행운 +2"#line:1026
-        elif _O0O000O0O0O00OOOO ==177 :#line:1027
-            O0000000OOOO0O0OO ="행운 +3"#line:1028
-        elif _O0O000O0O0O00OOOO ==178 :#line:1029
-            O0000000OOOO0O0OO ="모든 저항력 +1"#line:1030
-        elif _O0O000O0O0O00OOOO ==179 :#line:1031
-            O0000000OOOO0O0OO ="모든 저항력 +3"#line:1032
-        elif _O0O000O0O0O00OOOO ==180 :#line:1033
-            O0000000OOOO0O0OO ="모든 저항력 +5"#line:1034
-        elif _O0O000O0O0O00OOOO ==181 :#line:1035
-            O0000000OOOO0O0OO ="모든 저항력 +7"#line:1036
-        elif _O0O000O0O0O00OOOO ==182 :#line:1037
-            O0000000OOOO0O0OO ="모든 저항력 +9"#line:1038
-        elif _O0O000O0O0O00OOOO ==183 :#line:1039
-            O0000000OOOO0O0OO ="모든 능력치 +1"#line:1040
-        elif _O0O000O0O0O00OOOO ==184 :#line:1041
-            O0000000OOOO0O0OO ="모든 능력치 +2"#line:1042
-        elif _O0O000O0O0O00OOOO ==185 :#line:1043
-            O0000000OOOO0O0OO ="모든 능력치 +3"#line:1044
-        return O0000000OOOO0O0OO #line:1046
-    def OOO0OO00O0O00O0O0 (_OO0O0OO0O0O0OO0O0 ):#line:1050
-        OOO0000000OO0O00O =''#line:1051
-        if _OO0O0OO0O0O0OO0O0 <10 :#line:1052
-            OOO0000000OO0O00O ="0"+str (_OO0O0OO0O0O0OO0O0 )#line:1053
+    def OOOO00000OO00O00O (_O0OOO0O00O00OO00O ):#line:83
+        OO000000O000O0OO0 =OOO000O0O00OOOO0O (0x400000 +0x00781258 ,_O0OOO0O00O00OO00O )#line:84
+        OO000000O000O0OO0 =OOO000O0O00OOOO0O (OO000000O000O0OO0 +0x1C ,_O0OOO0O00O00OO00O )#line:85
+        OO000000O000O0OO0 =OOO000O0O00OOOO0O (OO000000O000O0OO0 +0x28 ,_O0OOO0O00O00OO00O )#line:86
+        return OO000000O000O0OO0 #line:87
+    def O0OO0OOOO0O000000 (_O00O000OOO0O0OOOO ):#line:90
+        O000OOOO0O000O0O0 =OOO000O0O00OOOO0O (0x00A22588 ,_O00O000OOO0O0OOOO )#line:91
+        return O000OOOO0O000O0O0 #line:92
+    def OO0O0OOO000000000 (_O0000OOOOO0OO000O ):#line:95
+        O0OO000OO0000O000 =OOO000O0O00OOOO0O (0x00A2258C ,_O0000OOOOO0OO000O )#line:96
+        return O0OO000OO0000O000 #line:97
+    def OOOOOO0OO0OO0OO0O (_O0OOO000O0OOO000O ,_O0OO000O0OOO0O00O ):#line:100
+        OOO0O0O00OO000O0O =OOOO00000OO00O00O (OOOO0O0OOO0000OOO )#line:101
+        OO0O000O0O0OO0000 =OOO0O0O00OO000O0O %5 #line:102
+        O00OO0O00O000OO00 ={'x':0 ,'y':0 ,'class':0 ,'type':0 }#line:103
+        if OO0O000O0O0OO0000 ==0 :#line:105
+            O00OO0O00O000OO00 ['x']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -5 ]^OOO0O0O00OO000O0O #line:106
+            O00OO0O00O000OO00 ['y']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -4 ]^OOO0O0O00OO000O0O #line:107
+            O00OO0O00O000OO00 ['class']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -3 ]^OOO0O0O00OO000O0O #line:108
+            O00OO0O00O000OO00 ['type']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -2 ]^OOO0O0O00OO000O0O #line:109
+        elif OO0O000O0O0OO0000 ==1 :#line:110
+            O00OO0O00O000OO00 ['x']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -9 ]^OOO0O0O00OO000O0O #line:111
+            O00OO0O00O000OO00 ['y']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -8 ]^OOO0O0O00OO000O0O #line:112
+            O00OO0O00O000OO00 ['class']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -7 ]^OOO0O0O00OO000O0O #line:113
+            O00OO0O00O000OO00 ['type']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -6 ]^OOO0O0O00OO000O0O #line:114
+        elif OO0O000O0O0OO0000 ==2 :#line:115
+            O00OO0O00O000OO00 ['x']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -1 ]^OOO0O0O00OO000O0O #line:116
+            O00OO0O00O000OO00 ['y']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -9 ]^OOO0O0O00OO000O0O #line:117
+            O00OO0O00O000OO00 ['class']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -8 ]^OOO0O0O00OO000O0O #line:118
+            O00OO0O00O000OO00 ['type']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -7 ]^OOO0O0O00OO000O0O #line:119
+        elif OO0O000O0O0OO0000 ==3 :#line:120
+            O00OO0O00O000OO00 ['x']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -6 ]^OOO0O0O00OO000O0O #line:121
+            O00OO0O00O000OO00 ['y']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -1 ]^OOO0O0O00OO000O0O #line:122
+            O00OO0O00O000OO00 ['class']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -9 ]^OOO0O0O00OO000O0O #line:123
+            O00OO0O00O000OO00 ['type']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -8 ]^OOO0O0O00OO000O0O #line:124
+        elif OO0O000O0O0OO0000 ==4 :#line:125
+            O00OO0O00O000OO00 ['x']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -1 ]^OOO0O0O00OO000O0O #line:126
+            O00OO0O00O000OO00 ['y']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -7 ]^OOO0O0O00OO000O0O #line:127
+            O00OO0O00O000OO00 ['class']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -6 ]^OOO0O0O00OO000O0O #line:128
+            O00OO0O00O000OO00 ['type']=_O0OOO000O0OOO000O [_O0OO000O0OOO0O00O -9 ]^OOO0O0O00OO000O0O #line:129
+        return O00OO0O00O000OO00 #line:131
+    def O00O0O00OOOOOOOOO (_O00000OOO0O00O0OO ,_OO0OO0OOOOOOOO000 ):#line:134
+        OOOOOO00O0000000O =''#line:135
+        if _O00000OOO0O00O0OO ==8 :#line:136
+            if _OO0OO0OOOOOOOO000 ==0 :#line:137
+                OOOOOO00O0000000O ="브론즈 링(1)"#line:138
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:139
+                OOOOOO00O0000000O ="블랙 링(2)"#line:140
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:141
+                OOOOOO00O0000000O ="프리스트 링(3)"#line:142
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:143
+                OOOOOO00O0000000O ="골드 링(4)"#line:144
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:145
+                OOOOOO00O0000000O ="오러스 링(5)"#line:146
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:147
+                OOOOOO00O0000000O ="행운의 반지(6)"#line:148
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:149
+                OOOOOO00O0000000O ="로자리오(7)"#line:150
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:151
+                OOOOOO00O0000000O ="골든 다이아몬드 링(8)"#line:152
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:153
+                OOOOOO00O0000000O ="플래티넘 스파이럴(9)"#line:154
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:155
+                OOOOOO00O0000000O ="앵크 링(10)"#line:156
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:157
+                OOOOOO00O0000000O ="이스팀 링(11)"#line:158
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:159
+                OOOOOO00O0000000O ="케볼레타(12)"#line:160
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:161
+                OOOOOO00O0000000O ="볼라시오(13)"#line:162
+        elif _O00000OOO0O00O0OO ==9 :#line:163
+            if _OO0OO0OOOOOOOO000 ==0 :#line:164
+                OOOOOO00O0000000O ="메탈 브레이슬릿(1)"#line:165
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:166
+                OOOOOO00O0000000O ="스틸 브레이슬릿(2)"#line:167
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:168
+                OOOOOO00O0000000O ="링 브레이슬릿(3)"#line:169
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:170
+                OOOOOO00O0000000O ="플레이트 브레이슬릿(4)"#line:171
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:172
+                OOOOOO00O0000000O ="오러스 브레이슬릿(5)"#line:173
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:174
+                OOOOOO00O0000000O ="로럴 브레이슬릿(6)"#line:175
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:176
+                OOOOOO00O0000000O ="욥의 팔찌(7)"#line:177
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:178
+                OOOOOO00O0000000O ="슬레이브 뱅글(8)"#line:179
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:180
+                OOOOOO00O0000000O ="크로스 브레이슬릿(9)"#line:181
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:182
+                OOOOOO00O0000000O ="홀리 스피리트(10)"#line:183
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:184
+                OOOOOO00O0000000O ="솔리스 브레이슬릿(11)"#line:185
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:186
+                OOOOOO00O0000000O ="담피르 브레이슬릿(12)"#line:187
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:188
+                OOOOOO00O0000000O ="크루소닉 브레이슬릿(13)"#line:189
+        elif _O00000OOO0O00O0OO ==10 :#line:190
+            if _OO0OO0OOOOOOOO000 ==0 :#line:191
+                OOOOOO00O0000000O ="크로스 팬던트(1)"#line:192
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:193
+                OOOOOO00O0000000O ="에메럴드 팬던트(2)"#line:194
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:195
+                OOOOOO00O0000000O ="플래티넘 팬던트(3)"#line:196
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:197
+                OOOOOO00O0000000O ="오러스 팬던트(4)"#line:198
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:199
+                OOOOOO00O0000000O ="크레센트 팬던트(5)"#line:200
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:201
+                OOOOOO00O0000000O ="블루 센스(6)"#line:202
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:203
+                OOOOOO00O0000000O ="인리 크로스(7)"#line:204
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:205
+                OOOOOO00O0000000O ="부활의 별(8)"#line:206
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:207
+                OOOOOO00O0000000O ="블러드 크로스(9)"#line:208
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:209
+                OOOOOO00O0000000O ="실버 네크리스(10)"#line:210
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:211
+                OOOOOO00O0000000O ="트리니티 네크리스(11)"#line:212
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:213
+                OOOOOO00O0000000O ="모건 르 페이(12)"#line:214
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:215
+                OOOOOO00O0000000O ="라마스 네크리스(13)"#line:216
+        elif _O00000OOO0O00O0OO ==11 :#line:217
+            if _OO0OO0OOOOOOOO000 ==0 :#line:218
+                OOOOOO00O0000000O ="플랙 재킷 남(1)"#line:219
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:220
+                OOOOOO00O0000000O ="플랙 재킷 여(1)"#line:221
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:222
+                OOOOOO00O0000000O ="베스트 남(2)"#line:223
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:224
+                OOOOOO00O0000000O ="베스트 여(2)"#line:225
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:226
+                OOOOOO00O0000000O ="배틀슈트 남(3)"#line:227
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:228
+                OOOOOO00O0000000O ="배틀슈트 여(3)"#line:229
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:230
+                OOOOOO00O0000000O ="컴뱃슈트 남(4)"#line:231
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:232
+                OOOOOO00O0000000O ="컴뱃슈트 여(4)"#line:233
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:234
+                OOOOOO00O0000000O ="배틀메일 남(5)"#line:235
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:236
+                OOOOOO00O0000000O ="배틀메일 여(5)"#line:237
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:238
+                OOOOOO00O0000000O ="컴뱃메일 남(6)"#line:239
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:240
+                OOOOOO00O0000000O ="컴뱃메일 여(6)"#line:241
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:242
+                OOOOOO00O0000000O ="컴뱃 아머 남(7)"#line:243
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:244
+                OOOOOO00O0000000O ="컴뱃 아머 여(7)"#line:245
+            elif _OO0OO0OOOOOOOO000 ==14 :#line:246
+                OOOOOO00O0000000O ="워 아머 남(8)"#line:247
+            elif _OO0OO0OOOOOOOO000 ==15 :#line:248
+                OOOOOO00O0000000O ="워 아머 여(8)"#line:249
+            elif _OO0OO0OOOOOOOO000 ==18 :#line:250
+                OOOOOO00O0000000O ="카라만 아머 남(9)"#line:251
+            elif _OO0OO0OOOOOOOO000 ==19 :#line:252
+                OOOOOO00O0000000O ="카라만 아머 여(9)"#line:253
+            elif _OO0OO0OOOOOOOO000 ==20 :#line:254
+                OOOOOO00O0000000O ="쿼러시어 아머 남(10)"#line:255
+            elif _OO0OO0OOOOOOOO000 ==21 :#line:256
+                OOOOOO00O0000000O ="쿼러시어 아머 여(10)"#line:257
+            elif _OO0OO0OOOOOOOO000 ==22 :#line:258
+                OOOOOO00O0000000O ="토너먼트 아머 남(10)"#line:259
+            elif _OO0OO0OOOOOOOO000 ==23 :#line:260
+                OOOOOO00O0000000O ="토너먼트 아머 여(10)"#line:261
+        elif _O00000OOO0O00O0OO ==12 :#line:262
+            if _OO0OO0OOOOOOOO000 ==0 :#line:263
+                OOOOOO00O0000000O ="슬랙 남(1)"#line:264
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:265
+                OOOOOO00O0000000O ="슬랙 여(1)"#line:266
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:267
+                OOOOOO00O0000000O ="트라우저 남(2)"#line:268
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:269
+                OOOOOO00O0000000O ="트라우저 여(2)"#line:270
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:271
+                OOOOOO00O0000000O ="레깅즈 남(3)"#line:272
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:273
+                OOOOOO00O0000000O ="레깅즈 여(3)"#line:274
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:275
+                OOOOOO00O0000000O ="배틀 레깅즈 남(4)"#line:276
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:277
+                OOOOOO00O0000000O ="배틀 레깅즈 여(4)"#line:278
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:279
+                OOOOOO00O0000000O ="배틀 게이터 남(5)"#line:280
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:281
+                OOOOOO00O0000000O ="배틀 게이터 여(5)"#line:282
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:283
+                OOOOOO00O0000000O ="컴뱃 게이터 남(6)"#line:284
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:285
+                OOOOOO00O0000000O ="컴뱃 게이터 여(6)"#line:286
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:287
+                OOOOOO00O0000000O ="컴뱃 가드 남(7)"#line:288
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:289
+                OOOOOO00O0000000O ="컴뱃 가드 여(7)"#line:290
+            elif _OO0OO0OOOOOOOO000 ==14 :#line:291
+                OOOOOO00O0000000O ="워 가드 남(8)"#line:292
+            elif _OO0OO0OOOOOOOO000 ==15 :#line:293
+                OOOOOO00O0000000O ="워 가드 여(8)"#line:294
+            elif _OO0OO0OOOOOOOO000 ==18 :#line:295
+                OOOOOO00O0000000O ="카라만 가드 남(9)"#line:296
+            elif _OO0OO0OOOOOOOO000 ==19 :#line:297
+                OOOOOO00O0000000O ="카라만 가드 여(9)"#line:298
+            elif _OO0OO0OOOOOOOO000 ==20 :#line:299
+                OOOOOO00O0000000O ="쿼러시어 쿼스 남(10)"#line:300
+            elif _OO0OO0OOOOOOOO000 ==21 :#line:301
+                OOOOOO00O0000000O ="쿼러시어 쿼스 여(10)"#line:302
+            elif _OO0OO0OOOOOOOO000 ==22 :#line:303
+                OOOOOO00O0000000O ="토너먼트 쿼스 남(10)"#line:304
+            elif _OO0OO0OOOOOOOO000 ==23 :#line:305
+                OOOOOO00O0000000O ="토너먼트 쿼스 여(10)"#line:306
+        elif _O00000OOO0O00O0OO ==13 :#line:307
+            if _OO0OO0OOOOOOOO000 ==0 :#line:308
+                OOOOOO00O0000000O ="라이트 슈즈(1)"#line:309
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:310
+                OOOOOO00O0000000O ="레더 슈즈(2)"#line:311
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:312
+                OOOOOO00O0000000O ="스틸 슈즈(3)"#line:313
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:314
+                OOOOOO00O0000000O ="컴뱃 슈즈(4)"#line:315
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:316
+                OOOOOO00O0000000O ="어설트 부츠(5)"#line:317
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:318
+                OOOOOO00O0000000O ="사란 부츠(6)"#line:319
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:320
+                OOOOOO00O0000000O ="워 부츠(7)"#line:321
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:322
+                OOOOOO00O0000000O ="솔 부츠(8)"#line:323
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:324
+                OOOOOO00O0000000O ="서배튼 부츠(9)"#line:325
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:326
+                OOOOOO00O0000000O ="살러릿부츠(10)"#line:327
+        elif _O00000OOO0O00O0OO ==14 :#line:328
+            if _OO0OO0OOOOOOOO000 ==0 :#line:329
+                OOOOOO00O0000000O ="라이트 소드(1)"#line:330
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:331
+                OOOOOO00O0000000O ="워 소드(2)"#line:332
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:333
+                OOOOOO00O0000000O ="브로드 소드(3)"#line:334
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:335
+                OOOOOO00O0000000O ="바스타드 소드(4)"#line:336
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:337
+                OOOOOO00O0000000O ="브로드 레이피어(5)"#line:338
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:339
+                OOOOOO00O0000000O ="고딕 소드(6)"#line:340
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:341
+                OOOOOO00O0000000O ="크루세이더 소드(7)"#line:342
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:343
+                OOOOOO00O0000000O ="그레이트 소드(8)"#line:344
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:345
+                OOOOOO00O0000000O ="클레이모어(9)"#line:346
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:347
+                OOOOOO00O0000000O ="소드 오브 가디스(10)"#line:348
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:349
+                OOOOOO00O0000000O ="바실리스크 소드(11)"#line:350
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:351
+                OOOOOO00O0000000O ="글라디우스(12)"#line:352
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:353
+                OOOOOO00O0000000O ="츠바이한더(12)"#line:354
+        elif _O00000OOO0O00O0OO ==15 :#line:355
+            if _OO0OO0OOOOOOOO000 ==0 :#line:356
+                OOOOOO00O0000000O ="커틀래스(1)"#line:357
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:358
+                OOOOOO00O0000000O ="롱 샴셔(2)"#line:359
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:360
+                OOOOOO00O0000000O ="펄천(3)"#line:361
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:362
+                OOOOOO00O0000000O ="세버드 블레이드(4)"#line:363
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:364
+                OOOOOO00O0000000O ="문 블레이드(5)"#line:365
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:366
+                OOOOOO00O0000000O ="세이버(6)"#line:367
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:368
+                OOOOOO00O0000000O ="링 블레이드(7)"#line:369
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:370
+                OOOOOO00O0000000O ="시미터(8)"#line:371
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:372
+                OOOOOO00O0000000O ="코페쉬(9)"#line:373
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:374
+                OOOOOO00O0000000O ="카타나(10)"#line:375
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:376
+                OOOOOO00O0000000O ="코라(11)"#line:377
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:378
+                OOOOOO00O0000000O ="롬파이아(12)"#line:379
+        elif _O00000OOO0O00O0OO ==16 :#line:380
+            if _OO0OO0OOOOOOOO000 ==0 :#line:381
+                OOOOOO00O0000000O ="라운드 쉴드(1)"#line:382
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:383
+                OOOOOO00O0000000O ="브론즈 쉴드(2)"#line:384
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:385
+                OOOOOO00O0000000O ="휠 실드(3)"#line:386
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:387
+                OOOOOO00O0000000O ="스네이크 쉴드(4)"#line:388
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:389
+                OOOOOO00O0000000O ="소드 쉴드(5)"#line:390
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:391
+                OOOOOO00O0000000O ="드래곤 쉴드(6)"#line:392
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:393
+                OOOOOO00O0000000O ="아그리파 방패(7)"#line:394
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:395
+                OOOOOO00O0000000O ="유니콘 쉴드(8)"#line:396
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:397
+                OOOOOO00O0000000O ="레오 쉴드(8)"#line:398
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:399
+                OOOOOO00O0000000O ="오블롱 쉴드(9)"#line:400
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:401
+                OOOOOO00O0000000O ="호플론 쉴드(10)"#line:402
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:403
+                OOOOOO00O0000000O ="아스피스 쉴드(11)"#line:404
+        elif _O00000OOO0O00O0OO ==17 :#line:405
+            if _OO0OO0OOOOOOOO000 ==0 :#line:406
+                OOOOOO00O0000000O ="실버 크로스(1)"#line:407
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:408
+                OOOOOO00O0000000O ="라틴 크로스(2)"#line:409
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:410
+                OOOOOO00O0000000O ="패션 크로스(3)"#line:411
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:412
+                OOOOOO00O0000000O ="기리시단 크로스(4)"#line:413
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:414
+                OOOOOO00O0000000O ="에피스코펄 크로스(5)"#line:415
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:416
+                OOOOOO00O0000000O ="칼바리아 크로스(6)"#line:417
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:418
+                OOOOOO00O0000000O ="광배의 십자가(7)"#line:419
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:420
+                OOOOOO00O0000000O ="성녀 헬레나의 십자가(8)"#line:421
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:422
+                OOOOOO00O0000000O ="페이펄 십자가(8)"#line:423
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:424
+                OOOOOO00O0000000O ="로렌의 십자가(9)"#line:425
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:426
+                OOOOOO00O0000000O ="카타리나의 십자가(10)"#line:427
+        elif _O00000OOO0O00O0OO ==18 :#line:428
+            if _OO0OO0OOOOOOOO000 ==0 :#line:429
+                OOOOOO00O0000000O ="블랙 글러브(1)"#line:430
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:431
+                OOOOOO00O0000000O ="브론즈 건틀렛(2)"#line:432
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:433
+                OOOOOO00O0000000O ="프리스트 글러브(3)"#line:434
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:435
+                OOOOOO00O0000000O ="나이트 건틀렛(4)"#line:436
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:437
+                OOOOOO00O0000000O ="세스터스(5)"#line:438
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:439
+                OOOOOO00O0000000O ="씬플레이트 건틀렛(6)"#line:440
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:441
+                OOOOOO00O0000000O ="액티브 글러브(7)"#line:442
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:443
+                OOOOOO00O0000000O ="건틀렛 오브 토르(8)"#line:444
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:445
+                OOOOOO00O0000000O ="R-에너제틱 글로브(9)"#line:446
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:447
+                OOOOOO00O0000000O ="쿼러시어 건틀렛(10)"#line:448
+        elif _O00000OOO0O00O0OO ==19 :#line:449
+            if _OO0OO0OOOOOOOO000 ==0 :#line:450
+                OOOOOO00O0000000O ="후드(1)"#line:451
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:452
+                OOOOOO00O0000000O ="아이언 헬멧(2)"#line:453
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:454
+                OOOOOO00O0000000O ="인프라레드 헬멧(3)"#line:455
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:456
+                OOOOOO00O0000000O ="에임 헬멧(4)"#line:457
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:458
+                OOOOOO00O0000000O ="컴뱃 헬멧(5)"#line:459
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:460
+                OOOOOO00O0000000O ="헤드기어(6)"#line:461
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:462
+                OOOOOO00O0000000O ="컴뱃 헤드기어(7)"#line:463
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:464
+                OOOOOO00O0000000O ="인프라레드 스캐닝 헬멧(8)"#line:465
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:466
+                OOOOOO00O0000000O ="워 플레이트 헬름(9)"#line:467
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:468
+                OOOOOO00O0000000O ="컴비네이션 컴벳 헬름(10)"#line:469
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:470
+                OOOOOO00O0000000O ="스팡겐 헬멧(11)"#line:471
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:472
+                OOOOOO00O0000000O ="버거넷 헬멧(12)"#line:473
+        elif _O00000OOO0O00O0OO ==20 :#line:474
+            if _OO0OO0OOOOOOOO000 ==0 :#line:475
+                OOOOOO00O0000000O ="MT-10 슈팅 스타(1)"#line:476
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:477
+                OOOOOO00O0000000O ="MT-21 자이언트 스타(2)"#line:478
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:479
+                OOOOOO00O0000000O ="MTB-11 코멧 테일(3)"#line:480
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:481
+                OOOOOO00O0000000O ="AM-99 맘모스99(4)"#line:482
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:483
+                OOOOOO00O0000000O ="TND-5 아이언피스트(5)"#line:484
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:485
+                OOOOOO00O0000000O ="SS-10 노크다운(6)"#line:486
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:487
+                OOOOOO00O0000000O ="RESS-1 데모니악(7)"#line:488
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:489
+                OOOOOO00O0000000O ="캐스케이드(8)"#line:490
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:491
+                OOOOOO00O0000000O ="RESS-4a 앨리게이터(9)"#line:492
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:493
+                OOOOOO00O0000000O ="S-200 스톰(10)"#line:494
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:495
+                OOOOOO00O0000000O ="Spas-12 하이바인더(11)"#line:496
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:497
+                OOOOOO00O0000000O ="S-EV11 익스플로전(12)"#line:498
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:499
+                OOOOOO00O0000000O ="PG-13 로크(13)"#line:500
+        elif _O00000OOO0O00O0OO ==21 :#line:501
+            if _OO0OO0OOOOOOOO000 ==0 :#line:502
+                OOOOOO00O0000000O ="MD-4(1)"#line:503
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:504
+                OOOOOO00O0000000O ="IS-100 지그(2)"#line:505
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:506
+                OOOOOO00O0000000O ="M-INTER(3)"#line:507
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:508
+                OOOOOO00O0000000O ="B-INTER(4)"#line:509
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:510
+                OOOOOO00O0000000O ="VK-45 드래곤플라이(5)"#line:511
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:512
+                OOOOOO00O0000000O ="MD-9 스콜피언(6)"#line:513
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:514
+                OOOOOO00O0000000O ="Smith 바이러스(7)"#line:515
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:516
+                OOOOOO00O0000000O ="P2K 이지라이더(8)"#line:517
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:518
+                OOOOOO00O0000000O ="MD-Z 제타(9)"#line:519
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:520
+                OOOOOO00O0000000O ="MD-000 레비아탄(10)"#line:521
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:522
+                OOOOOO00O0000000O ="플린저(11)"#line:523
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:524
+                OOOOOO00O0000000O ="KH-03A1 뫼비우스(12)"#line:525
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:526
+                OOOOOO00O0000000O ="MG-90 실프(13)"#line:527
+        elif _O00000OOO0O00O0OO ==22 :#line:528
+            if _OO0OO0OOOOOOOO000 ==0 :#line:529
+                OOOOOO00O0000000O ="MK-74 비셔스(1)"#line:530
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:531
+                OOOOOO00O0000000O ="P-1A 폴란(2)"#line:532
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:533
+                OOOOOO00O0000000O ="MK-101 구스(3)"#line:534
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:535
+                OOOOOO00O0000000O ="MK-2 G2(4)"#line:536
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:537
+                OOOOOO00O0000000O ="MK-2000 G2000(5)"#line:538
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:539
+                OOOOOO00O0000000O ="P-G1S 미네르바(6)"#line:540
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:541
+                OOOOOO00O0000000O ="IS-200 퓨리(7)"#line:542
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:543
+                OOOOOO00O0000000O ="MK-2002 워해머(8)"#line:544
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:545
+                OOOOOO00O0000000O ="P-38 소돔(9)"#line:546
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:547
+                OOOOOO00O0000000O ="P-40 엘 캐슬(10)"#line:548
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:549
+                OOOOOO00O0000000O ="파이어버그(11)"#line:550
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:551
+                OOOOOO00O0000000O ="EA-V1 앤젤 가드(12)"#line:552
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:553
+                OOOOOO00O0000000O ="LM-700 카라(13)"#line:554
+        elif _O00000OOO0O00O0OO ==23 :#line:555
+            if _OO0OO0OOOOOOOO000 ==0 :#line:557
+                OOOOOO00O0000000O ="X-31M 밀라노(1)"#line:558
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:559
+                OOOOOO00O0000000O ="X-55 V2(2)"#line:560
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:561
+                OOOOOO00O0000000O ="페룬(3)"#line:562
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:563
+                OOOOOO00O0000000O ="X-45T 토마호크(4)"#line:564
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:565
+                OOOOOO00O0000000O ="IS-99 하피(5)"#line:566
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:567
+                OOOOOO00O0000000O ="SR-1 톨스토이(6)"#line:568
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:569
+                OOOOOO00O0000000O ="GX90 홀트(7)"#line:570
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:571
+                OOOOOO00O0000000O ="톰보이(8)"#line:572
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:573
+                OOOOOO00O0000000O ="하야부사(9)"#line:574
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:575
+                OOOOOO00O0000000O ="IS-101 모데라토(10)"#line:576
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:577
+                OOOOOO00O0000000O ="BFG-50 데쓰니들(11)"#line:578
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:579
+                OOOOOO00O0000000O ="T-03 나이트메어(12)"#line:580
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:581
+                OOOOOO00O0000000O ="V-03 케모스(13)"#line:582
+        elif _O00000OOO0O00O0OO ==26 :#line:583
+            if _OO0OO0OOOOOOOO000 ==0 :#line:584
+                OOOOOO00O0000000O ="라이트 벨트(1)"#line:585
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:586
+                OOOOOO00O0000000O ="벨트(2)"#line:587
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:588
+                OOOOOO00O0000000O ="미디엄 벨트(3)"#line:589
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:590
+                OOOOOO00O0000000O ="헤비 벨트(4)"#line:591
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:592
+                OOOOOO00O0000000O ="워 벨트(5)"#line:593
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:594
+                OOOOOO00O0000000O ="숄더 벨트(6)"#line:595
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:596
+                OOOOOO00O0000000O ="웨스턴 벨트(7)"#line:597
+        elif _O00000OOO0O00O0OO ==35 :#line:598
+            if _OO0OO0OOOOOOOO000 ==0 :#line:599
+                OOOOOO00O0000000O ="아이언 메이스(1)"#line:600
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:601
+                OOOOOO00O0000000O ="실버 메이스(2)"#line:602
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:603
+                OOOOOO00O0000000O ="그릭 메이스(3)"#line:604
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:605
+                OOOOOO00O0000000O ="아크비숍 메이스(4)"#line:606
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:607
+                OOOOOO00O0000000O ="폰티프 메이스(5)"#line:608
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:609
+                OOOOOO00O0000000O ="코크휠 메이스(6)"#line:610
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:611
+                OOOOOO00O0000000O ="케파 메이스(7)"#line:612
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:613
+                OOOOOO00O0000000O ="칼릭스 메이스(8)"#line:614
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:615
+                OOOOOO00O0000000O ="푼고 메이스(9)"#line:616
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:617
+                OOOOOO00O0000000O ="부라와 메이스(10)"#line:618
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:619
+                OOOOOO00O0000000O ="구르즈 메이스(11)"#line:620
+        elif _O00000OOO0O00O0OO ==30 :#line:622
+            if _OO0OO0OOOOOOOO000 ==0 :#line:623
+                OOOOOO00O0000000O ="Iron Ring(1)"#line:624
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:625
+                OOOOOO00O0000000O ="Silver Ring(2)"#line:626
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:627
+                OOOOOO00O0000000O ="Winkle Ring(3)"#line:628
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:629
+                OOOOOO00O0000000O ="Gilt Ring(4)"#line:630
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:631
+                OOOOOO00O0000000O ="Anti-Sun Ring(5)"#line:632
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:633
+                OOOOOO00O0000000O ="Blue Seduction(6)"#line:634
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:635
+                OOOOOO00O0000000O ="Blood Sucker(7)"#line:636
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:637
+                OOOOOO00O0000000O ="Unholy Shield(8)"#line:638
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:639
+                OOOOOO00O0000000O ="Ring of Skulls(9)"#line:640
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:641
+                OOOOOO00O0000000O ="Spider Eyes(10)"#line:642
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:643
+                OOOOOO00O0000000O ="Mortal Ring(11)"#line:644
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:645
+                OOOOOO00O0000000O ="Fenrir Ring(12)"#line:646
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:647
+                OOOOOO00O0000000O ="Asp Ring(13)"#line:648
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:649
+                OOOOOO00O0000000O ="Alexandrite(14)"#line:650
+        elif _O00000OOO0O00O0OO ==31 :#line:652
+            if _OO0OO0OOOOOOOO000 ==0 :#line:653
+                OOOOOO00O0000000O ="Lace Bracelet(1)"#line:654
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:655
+                OOOOOO00O0000000O ="Armorial Bracelet(2)"#line:656
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:657
+                OOOOOO00O0000000O ="Jewel Bracelet(3)"#line:658
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:659
+                OOOOOO00O0000000O ="Master Bracelet(4)"#line:660
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:661
+                OOOOOO00O0000000O ="Morganite Bracelet(5)"#line:662
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:663
+                OOOOOO00O0000000O ="Blue Monoeye(6)"#line:664
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:665
+                OOOOOO00O0000000O ="Blue Water(7)"#line:666
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:667
+                OOOOOO00O0000000O ="Viper Bracelet(8)"#line:668
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:669
+                OOOOOO00O0000000O ="the Abyss(9)"#line:670
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:671
+                OOOOOO00O0000000O ="Keen Bracelet(10)"#line:672
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:673
+                OOOOOO00O0000000O ="Lapis Lazuli(11)"#line:674
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:675
+                OOOOOO00O0000000O ="Belladonna(12)"#line:676
+        elif _O00000OOO0O00O0OO ==32 :#line:678
+            if _OO0OO0OOOOOOOO000 ==0 :#line:679
+                OOOOOO00O0000000O ="Boomerang Necklace(1)"#line:680
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:681
+                OOOOOO00O0000000O ="Skull Necklace(2)"#line:682
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:683
+                OOOOOO00O0000000O ="Cuspid Necklace(3)"#line:684
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:685
+                OOOOOO00O0000000O ="Jet Necklace(4)"#line:686
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:687
+                OOOOOO00O0000000O ="Idol Pendant(5)"#line:688
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:689
+                OOOOOO00O0000000O ="Anti-cross(6)"#line:690
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:691
+                OOOOOO00O0000000O ="Death Star(7)"#line:692
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:693
+                OOOOOO00O0000000O ="Amulet of Omen(8)"#line:694
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:695
+                OOOOOO00O0000000O ="Wing of the Dead(9)"#line:696
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:697
+                OOOOOO00O0000000O ="Golden Wings(10)"#line:698
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:699
+                OOOOOO00O0000000O ="Evil Eye(11)"#line:700
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:701
+                OOOOOO00O0000000O ="Fefnir Necklace(12)"#line:702
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:703
+                OOOOOO00O0000000O ="Uzat Necklace(13)"#line:704
+        elif _O00000OOO0O00O0OO ==33 :#line:706
+            if _OO0OO0OOOOOOOO000 ==0 :#line:707
+                OOOOOO00O0000000O ="Swing Coat(1)"#line:708
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:709
+                OOOOOO00O0000000O ="Body Suit(2)"#line:710
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:711
+                OOOOOO00O0000000O ="Frock Coat(3)"#line:712
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:713
+                OOOOOO00O0000000O ="Slipery Robe(4)"#line:714
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:715
+                OOOOOO00O0000000O ="Plume Cloak(5)"#line:716
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:717
+                OOOOOO00O0000000O ="Hiding Robe(6)"#line:718
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:719
+                OOOOOO00O0000000O ="Levitate Cloak(7)"#line:720
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:721
+                OOOOOO00O0000000O ="Anti-Sun Pall(8)"#line:722
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:723
+                OOOOOO00O0000000O ="Anti-Sun Cope(9)"#line:724
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:725
+                OOOOOO00O0000000O ="Master Pall(10)"#line:726
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:727
+                OOOOOO00O0000000O ="Master Cope(11)"#line:728
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:729
+                OOOOOO00O0000000O ="Commander Coat M(12)"#line:730
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:731
+                OOOOOO00O0000000O ="Commander Coat W(12)"#line:732
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:733
+                OOOOOO00O0000000O ="Blood Pall(14)"#line:734
+            elif _OO0OO0OOOOOOOO000 ==14 :#line:735
+                OOOOOO00O0000000O ="Blood Cope(15)"#line:736
+            elif _OO0OO0OOOOOOOO000 ==15 :#line:737
+                OOOOOO00O0000000O ="Lorica Coat M(16)"#line:738
+            elif _OO0OO0OOOOOOOO000 ==16 :#line:739
+                OOOOOO00O0000000O ="Lorica Coat W(16)"#line:740
+            elif _OO0OO0OOOOOOOO000 ==17 :#line:741
+                OOOOOO00O0000000O ="Aqueton Coat M(17)"#line:742
+            elif _OO0OO0OOOOOOOO000 ==18 :#line:743
+                OOOOOO00O0000000O ="Aqueton Coat W(17)"#line:744
+            elif _OO0OO0OOOOOOOO000 ==19 :#line:745
+                OOOOOO00O0000000O ="Defiance Cloak(18)"#line:746
+            elif _OO0OO0OOOOOOOO000 ==20 :#line:747
+                OOOOOO00O0000000O ="Allure Apparel(19)"#line:748
+            elif _OO0OO0OOOOOOOO000 ==21 :#line:749
+                OOOOOO00O0000000O ="Immoral Cloak(20)"#line:750
+            elif _OO0OO0OOOOOOOO000 ==22 :#line:751
+                OOOOOO00O0000000O ="Proud Appare(21)"#line:752
+        elif _O00000OOO0O00O0OO ==42 :#line:754
+            if _OO0OO0OOOOOOOO000 ==0 :#line:755
+                OOOOOO00O0000000O ="Broze Earring(1)"#line:756
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:757
+                OOOOOO00O0000000O ="Silver Earring(2)"#line:758
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:759
+                OOOOOO00O0000000O ="Gold Earring(3)"#line:760
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:761
+                OOOOOO00O0000000O ="Death Sun Earring(4)"#line:762
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:763
+                OOOOOO00O0000000O ="Bats Circle Earring(5)"#line:764
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:765
+                OOOOOO00O0000000O ="Shield of Darkness(6)"#line:766
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:767
+                OOOOOO00O0000000O ="Bloody Feast(7)"#line:768
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:769
+                OOOOOO00O0000000O ="Earring of Eternal Life(8)"#line:770
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:771
+                OOOOOO00O0000000O ="The Cats Eyes(9)"#line:772
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:773
+                OOOOOO00O0000000O ="Skull of Destruction(10)"#line:774
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:775
+                OOOOOO00O0000000O ="The Oath of Harmony(11)"#line:776
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:777
+                OOOOOO00O0000000O ="Hyacinth(12)"#line:778
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:779
+                OOOOOO00O0000000O ="Carnelian(13)"#line:780
+        elif _O00000OOO0O00O0OO ==44 :#line:782
+            if _OO0OO0OOOOOOOO000 ==0 :#line:783
+                OOOOOO00O0000000O ="Knuckle Part(1)"#line:784
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:785
+                OOOOOO00O0000000O ="Thumb Grab(2)"#line:786
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:787
+                OOOOOO00O0000000O ="Force Knuckle(3)"#line:788
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:789
+                OOOOOO00O0000000O ="Geminal Ring Knuckle(4)"#line:790
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:791
+                OOOOOO00O0000000O ="Yeti's Craw(5)"#line:792
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:793
+                OOOOOO00O0000000O ="Cat's Craw(6)"#line:794
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:795
+                OOOOOO00O0000000O ="Fist Knuckle(7)"#line:796
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:797
+                OOOOOO00O0000000O ="APE Knuckle(8)"#line:798
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:799
+                OOOOOO00O0000000O ="SAV Knuckle(9)"#line:800
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:801
+                OOOOOO00O0000000O ="Sif's Hand Knuckle(10)"#line:802
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:803
+                OOOOOO00O0000000O ="Loon Diver Knuckle(11)"#line:804
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:805
+                OOOOOO00O0000000O ="Might Knuckle(12)"#line:806
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:807
+                OOOOOO00O0000000O ="Zamadar(13)"#line:808
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:809
+                OOOOOO00O0000000O ="Katar(14)"#line:810
+            elif _OO0OO0OOOOOOOO000 ==14 :#line:811
+                OOOOOO00O0000000O ="Amemet's Craw(15)"#line:812
+            elif _OO0OO0OOOOOOOO000 ==15 :#line:813
+                OOOOOO00O0000000O ="MARAX(16)"#line:814
+            elif _OO0OO0OOOOOOOO000 ==16 :#line:815
+                OOOOOO00O0000000O ="Zagan(17)"#line:816
+            elif _OO0OO0OOOOOOOO000 ==17 :#line:817
+                OOOOOO00O0000000O ="Bagh Nakh(18)"#line:818
+            elif _OO0OO0OOOOOOOO000 ==18 :#line:819
+                OOOOOO00O0000000O ="Khanja Crow(19)"#line:820
+            elif _OO0OO0OOOOOOOO000 ==19 :#line:821
+                OOOOOO00O0000000O ="Acies Nail(20)"#line:822
+            elif _OO0OO0OOOOOOOO000 ==20 :#line:823
+                OOOOOO00O0000000O ="Bone Cleave(21)"#line:824
+        elif _O00000OOO0O00O0OO ==45 :#line:826
+            if _OO0OO0OOOOOOOO000 ==0 :#line:827
+                OOOOOO00O0000000O ="Rad(1)"#line:828
+            elif _OO0OO0OOOOOOOO000 ==1 :#line:829
+                OOOOOO00O0000000O ="Ken(2)"#line:830
+            elif _OO0OO0OOOOOOOO000 ==2 :#line:831
+                OOOOOO00O0000000O ="Jera(3)"#line:832
+            elif _OO0OO0OOOOOOOO000 ==3 :#line:833
+                OOOOOO00O0000000O ="Eolh(4)"#line:834
+            elif _OO0OO0OOOOOOOO000 ==4 :#line:835
+                OOOOOO00O0000000O ="Man(5)"#line:836
+            elif _OO0OO0OOOOOOOO000 ==5 :#line:837
+                OOOOOO00O0000000O ="Bu Man(6)"#line:838
+            elif _OO0OO0OOOOOOOO000 ==6 :#line:839
+                OOOOOO00O0000000O ="Ing(7)"#line:840
+            elif _OO0OO0OOOOOOOO000 ==7 :#line:841
+                OOOOOO00O0000000O ="Othel(8)"#line:842
+            elif _OO0OO0OOOOOOOO000 ==8 :#line:843
+                OOOOOO00O0000000O ="Odal(9)"#line:844
+            elif _OO0OO0OOOOOOOO000 ==9 :#line:845
+                OOOOOO00O0000000O ="Daeg(10)"#line:846
+            elif _OO0OO0OOOOOOOO000 ==10 :#line:847
+                OOOOOO00O0000000O ="Sigel(11)"#line:848
+            elif _OO0OO0OOOOOOOO000 ==11 :#line:849
+                OOOOOO00O0000000O ="Is(12)"#line:850
+            elif _OO0OO0OOOOOOOO000 ==12 :#line:851
+                OOOOOO00O0000000O ="Feoh(13)"#line:852
+            elif _OO0OO0OOOOOOOO000 ==13 :#line:853
+                OOOOOO00O0000000O ="Nied(14)"#line:854
+        return OOOOOO00O0000000O #line:856
+    def OO00OOOO0000OOO0O (_OOO0O0OOO0O0000OO ):#line:858
+        O00O0OOO000O00000 =''#line:859
+        if _OOO0O0OOO0O0000OO ==1 :#line:861
+            O00O0OOO000O00000 ="STR +1"#line:862
+        elif _OOO0O0OOO0O0000OO ==2 :#line:863
+            O00O0OOO000O00000 ="STR +2"#line:864
+        elif _OOO0O0OOO0O0000OO ==3 :#line:865
+            O00O0OOO000O00000 ="STR +3"#line:866
+        elif _OOO0O0OOO0O0000OO ==4 :#line:867
+            O00O0OOO000O00000 ="STR +4"#line:868
+        elif _OOO0O0OOO0O0000OO ==5 :#line:869
+            O00O0OOO000O00000 ="STR +5"#line:870
+        elif _OOO0O0OOO0O0000OO ==6 :#line:871
+            O00O0OOO000O00000 ="DEX +1"#line:872
+        elif _OOO0O0OOO0O0000OO ==7 :#line:873
+            O00O0OOO000O00000 ="DEX +2"#line:874
+        elif _OOO0O0OOO0O0000OO ==8 :#line:875
+            O00O0OOO000O00000 ="DEX +3"#line:876
+        elif _OOO0O0OOO0O0000OO ==9 :#line:877
+            O00O0OOO000O00000 ="DEX +4"#line:878
+        elif _OOO0O0OOO0O0000OO ==10 :#line:879
+            O00O0OOO000O00000 ="DEX +5"#line:880
+        elif _OOO0O0OOO0O0000OO ==11 :#line:881
+            O00O0OOO000O00000 ="INT +1"#line:882
+        elif _OOO0O0OOO0O0000OO ==12 :#line:883
+            O00O0OOO000O00000 ="INT +2"#line:884
+        elif _OOO0O0OOO0O0000OO ==13 :#line:885
+            O00O0OOO000O00000 ="INT +3"#line:886
+        elif _OOO0O0OOO0O0000OO ==14 :#line:887
+            O00O0OOO000O00000 ="INT +4"#line:888
+        elif _OOO0O0OOO0O0000OO ==15 :#line:889
+            O00O0OOO000O00000 ="INT +5"#line:890
+        elif _OOO0O0OOO0O0000OO ==16 :#line:891
+            O00O0OOO000O00000 ="HP +3"#line:892
+        elif _OOO0O0OOO0O0000OO ==17 :#line:893
+            O00O0OOO000O00000 ="HP +6"#line:894
+        elif _OOO0O0OOO0O0000OO ==18 :#line:895
+            O00O0OOO000O00000 ="HP +9"#line:896
+        elif _OOO0O0OOO0O0000OO ==19 :#line:897
+            O00O0OOO000O00000 ="HP +12"#line:898
+        elif _OOO0O0OOO0O0000OO ==20 :#line:899
+            O00O0OOO000O00000 ="HP +15"#line:900
+        elif _OOO0O0OOO0O0000OO ==21 :#line:901
+            O00O0OOO000O00000 ="MP +5"#line:902
+        elif _OOO0O0OOO0O0000OO ==22 :#line:903
+            O00O0OOO000O00000 ="MP +10"#line:904
+        elif _OOO0O0OOO0O0000OO ==23 :#line:905
+            O00O0OOO000O00000 ="MP +15"#line:906
+        elif _OOO0O0OOO0O0000OO ==24 :#line:907
+            O00O0OOO000O00000 ="MP +20"#line:908
+        elif _OOO0O0OOO0O0000OO ==25 :#line:909
+            O00O0OOO000O00000 ="MP +25"#line:910
+        elif _OOO0O0OOO0O0000OO ==26 :#line:911
+            O00O0OOO000O00000 ="HP흡수 +1"#line:912
+        elif _OOO0O0OOO0O0000OO ==27 :#line:913
+            O00O0OOO000O00000 ="HP흡수 +2"#line:914
+        elif _OOO0O0OOO0O0000OO ==28 :#line:915
+            O00O0OOO000O00000 ="HP흡수 +3"#line:916
+        elif _OOO0O0OOO0O0000OO ==29 :#line:917
+            O00O0OOO000O00000 ="MP흡수 +1"#line:918
+        elif _OOO0O0OOO0O0000OO ==30 :#line:919
+            O00O0OOO000O00000 ="MP흡수 +2"#line:920
+        elif _OOO0O0OOO0O0000OO ==31 :#line:921
+            O00O0OOO000O00000 ="MP흡수 +3"#line:922
+        elif _OOO0O0OOO0O0000OO ==38 :#line:923
+            O00O0OOO000O00000 ="명중률 +1"#line:924
+        elif _OOO0O0OOO0O0000OO ==39 :#line:925
+            O00O0OOO000O00000 ="명중률 +2"#line:926
+        elif _OOO0O0OOO0O0000OO ==40 :#line:927
+            O00O0OOO000O00000 ="명중률 +3"#line:928
+        elif _OOO0O0OOO0O0000OO ==41 :#line:929
+            O00O0OOO000O00000 ="명중률 +4"#line:930
+        elif _OOO0O0OOO0O0000OO ==42 :#line:931
+            O00O0OOO000O00000 ="명중률 +5"#line:932
+        elif _OOO0O0OOO0O0000OO ==43 :#line:933
+            O00O0OOO000O00000 ="디펜스 +1"#line:934
+        elif _OOO0O0OOO0O0000OO ==44 :#line:935
+            O00O0OOO000O00000 ="디펜스 +2"#line:936
+        elif _OOO0O0OOO0O0000OO ==45 :#line:937
+            O00O0OOO000O00000 ="디펜스 +3"#line:938
+        elif _OOO0O0OOO0O0000OO ==46 :#line:939
+            O00O0OOO000O00000 ="디펜스 +4"#line:940
+        elif _OOO0O0OOO0O0000OO ==47 :#line:941
+            O00O0OOO000O00000 ="디펜스 +5"#line:942
+        elif _OOO0O0OOO0O0000OO ==48 :#line:943
+            O00O0OOO000O00000 ="데미지 +1"#line:944
+        elif _OOO0O0OOO0O0000OO ==49 :#line:945
+            O00O0OOO000O00000 ="데미지 +2"#line:946
+        elif _OOO0O0OOO0O0000OO ==50 :#line:947
+            O00O0OOO000O00000 ="데미지 +3"#line:948
+        elif _OOO0O0OOO0O0000OO ==51 :#line:949
+            O00O0OOO000O00000 ="데미지 +4"#line:950
+        elif _OOO0O0OOO0O0000OO ==52 :#line:951
+            O00O0OOO000O00000 ="데미지 +5"#line:952
+        elif _OOO0O0OOO0O0000OO ==53 :#line:953
+            O00O0OOO000O00000 ="프로텍션 +1"#line:954
+        elif _OOO0O0OOO0O0000OO ==54 :#line:955
+            O00O0OOO000O00000 ="프로텍션 +2"#line:956
+        elif _OOO0O0OOO0O0000OO ==55 :#line:957
+            O00O0OOO000O00000 ="프로텍션 +3"#line:958
+        elif _OOO0O0OOO0O0000OO ==56 :#line:959
+            O00O0OOO000O00000 ="프로텍션 +4"#line:960
+        elif _OOO0O0OOO0O0000OO ==57 :#line:961
+            O00O0OOO000O00000 ="프로텍션 +5"#line:962
+        elif _OOO0O0OOO0O0000OO ==58 :#line:963
+            O00O0OOO000O00000 ="내구성 +20%"#line:964
+        elif _OOO0O0OOO0O0000OO ==59 :#line:965
+            O00O0OOO000O00000 ="내구성 +40%"#line:966
+        elif _OOO0O0OOO0O0000OO ==60 :#line:967
+            O00O0OOO000O00000 ="내구성 +60%"#line:968
+        elif _OOO0O0OOO0O0000OO ==61 :#line:969
+            O00O0OOO000O00000 ="내구성 +80%"#line:970
+        elif _OOO0O0OOO0O0000OO ==62 :#line:971
+            O00O0OOO000O00000 ="내구성 +100%"#line:972
+        elif _OOO0O0OOO0O0000OO ==63 :#line:973
+            O00O0OOO000O00000 ="독 저항력 +5"#line:974
+        elif _OOO0O0OOO0O0000OO ==64 :#line:975
+            O00O0OOO000O00000 ="독 저항력 +10"#line:976
+        elif _OOO0O0OOO0O0000OO ==65 :#line:977
+            O00O0OOO000O00000 ="독 저항력 +15"#line:978
+        elif _OOO0O0OOO0O0000OO ==66 :#line:979
+            O00O0OOO000O00000 ="산 저항력 +5"#line:980
+        elif _OOO0O0OOO0O0000OO ==67 :#line:981
+            O00O0OOO000O00000 ="산 저항력 +10"#line:982
+        elif _OOO0O0OOO0O0000OO ==68 :#line:983
+            O00O0OOO000O00000 ="산 저항력 +15"#line:984
+        elif _OOO0O0OOO0O0000OO ==69 :#line:985
+            O00O0OOO000O00000 ="저주 저항력 +5"#line:986
+        elif _OOO0O0OOO0O0000OO ==70 :#line:987
+            O00O0OOO000O00000 ="저주 저항력 +10"#line:988
+        elif _OOO0O0OOO0O0000OO ==71 :#line:989
+            O00O0OOO000O00000 ="저주 저항력 +15"#line:990
+        elif _OOO0O0OOO0O0000OO ==72 :#line:991
+            O00O0OOO000O00000 ="블러드 저항력 +5"#line:992
+        elif _OOO0O0OOO0O0000OO ==73 :#line:993
+            O00O0OOO000O00000 ="블러드 저항력 +10"#line:994
+        elif _OOO0O0OOO0O0000OO ==74 :#line:995
+            O00O0OOO000O00000 ="블러드 저항력 +15"#line:996
+        elif _OOO0O0OOO0O0000OO ==75 :#line:997
+            O00O0OOO000O00000 ="시야 +1"#line:998
+        elif _OOO0O0OOO0O0000OO ==76 :#line:999
+            O00O0OOO000O00000 ="시야 +2"#line:1000
+        elif _OOO0O0OOO0O0000OO ==77 :#line:1001
+            O00O0OOO000O00000 ="시야 +3"#line:1002
+        elif _OOO0O0OOO0O0000OO ==78 :#line:1003
+            O00O0OOO000O00000 ="공격 속도 +5"#line:1004
+        elif _OOO0O0OOO0O0000OO ==79 :#line:1005
+            O00O0OOO000O00000 ="공격 속도 +10"#line:1006
+        elif _OOO0O0OOO0O0000OO ==80 :#line:1007
+            O00O0OOO000O00000 ="공격 속도 +15"#line:1008
+        elif _OOO0O0OOO0O0000OO ==81 :#line:1009
+            O00O0OOO000O00000 ="공격 속도 +20"#line:1010
+        elif _OOO0O0OOO0O0000OO ==82 :#line:1011
+            O00O0OOO000O00000 ="공격 속도 +25"#line:1012
+        elif _OOO0O0OOO0O0000OO ==83 :#line:1013
+            O00O0OOO000O00000 ="크리티컬 히트 +2"#line:1014
+        elif _OOO0O0OOO0O0000OO ==84 :#line:1015
+            O00O0OOO000O00000 ="크리티컬 히트 +4"#line:1016
+        elif _OOO0O0OOO0O0000OO ==85 :#line:1017
+            O00O0OOO000O00000 ="크리티컬 히트 +6"#line:1018
+        elif _OOO0O0OOO0O0000OO ==86 :#line:1019
+            O00O0OOO000O00000 ="크리티컬 히트 +8"#line:1020
+        elif _OOO0O0OOO0O0000OO ==87 :#line:1021
+            O00O0OOO000O00000 ="크리티컬 히트 +10"#line:1022
+        elif _OOO0O0OOO0O0000OO ==175 :#line:1023
+            O00O0OOO000O00000 ="행운 +1"#line:1024
+        elif _OOO0O0OOO0O0000OO ==176 :#line:1025
+            O00O0OOO000O00000 ="행운 +2"#line:1026
+        elif _OOO0O0OOO0O0000OO ==177 :#line:1027
+            O00O0OOO000O00000 ="행운 +3"#line:1028
+        elif _OOO0O0OOO0O0000OO ==178 :#line:1029
+            O00O0OOO000O00000 ="모든 저항력 +1"#line:1030
+        elif _OOO0O0OOO0O0000OO ==179 :#line:1031
+            O00O0OOO000O00000 ="모든 저항력 +3"#line:1032
+        elif _OOO0O0OOO0O0000OO ==180 :#line:1033
+            O00O0OOO000O00000 ="모든 저항력 +5"#line:1034
+        elif _OOO0O0OOO0O0000OO ==181 :#line:1035
+            O00O0OOO000O00000 ="모든 저항력 +7"#line:1036
+        elif _OOO0O0OOO0O0000OO ==182 :#line:1037
+            O00O0OOO000O00000 ="모든 저항력 +9"#line:1038
+        elif _OOO0O0OOO0O0000OO ==183 :#line:1039
+            O00O0OOO000O00000 ="모든 능력치 +1"#line:1040
+        elif _OOO0O0OOO0O0000OO ==184 :#line:1041
+            O00O0OOO000O00000 ="모든 능력치 +2"#line:1042
+        elif _OOO0O0OOO0O0000OO ==185 :#line:1043
+            O00O0OOO000O00000 ="모든 능력치 +3"#line:1044
+        return O00O0OOO000O00000 #line:1046
+    def OOOOO0O0O0O0O00OO (_O0OOO00OO0OOOOO00 ):#line:1050
+        OOO00000O0000OOOO =''#line:1051
+        if _O0OOO00OO0OOOOO00 <10 :#line:1052
+            OOO00000O0000OOOO ="0"+str (_O0OOO00OO0OOOOO00 )#line:1053
         else :#line:1054
-            OOO0000000OO0O00O =str (_OO0O0OO0O0O0OO0O0 )#line:1055
-        return OOO0000000OO0O00O #line:1056
-    def OOOOOOOOOO0O0OO0O (_O00OOO00OO000O000 ,OO00O0O00O00OO0O0 ):#line:1059
-        sniff (iface =_O00OOO00OO000O000 ,filter =OO00O0O00O00OO0O0 ,prn =OOOOO0O00O0O0O0OO ,count =0 )#line:1060
+            OOO00000O0000OOOO =str (_O0OOO00OO0OOOOO00 )#line:1055
+        return OOO00000O0000OOOO #line:1056
+    def O0O000O0O00O0000O (_O00OOO0OOO0000OOO ,O0000000OOO00000O ):#line:1059
+        sniff (iface =_O00OOO0OOO0000OOO ,filter =O0000000OOO00000O ,prn =OO000O0OO00OOOOO0 ,count =0 )#line:1060
         return #line:1061
-    def OOOOO0O00O0O0O0OO (O000O00O000OOOO0O ):#line:1065
-        for O000O00O000OOOO0O in O000O00O000OOOO0O :#line:1066
-            if O000O00O000OOOO0O .getlayer (Raw ):#line:1067
-                O0OOOO0OOOOOOO000 =O000O00O000OOOO0O .getlayer (Raw )#line:1068
-                O0OO0OOO0OO0O0OO0 =Raw (O0OOOO0OOOOOOO000 )#line:1069
-                OO0OOO000OOOO00OO =binascii .b2a_hex (bytes (O0OO0OOO0OO0O0OO0 ))#line:1071
-                OOO0O00OOOOOOO000 =str (OO0OOO000OOOO00OO ,'ascii')#line:1072
-                O0OO0O0OO000000O0 =[]#line:1074
-                O0O0000000OO00OOO =1 #line:1076
-                while O0O0000000OO00OOO <=len (O0OO0OOO0OO0O0OO0 ):#line:1077
-                    O0OO0O0OO000000O0 .append (int (OOO0O00OOOOOOO000 [2 *O0O0000000OO00OOO -2 :2 *O0O0000000OO00OOO ],16 ))#line:1078
-                    O0O0000000OO00OOO +=1 #line:1079
-                O0OO00O0OO0OOO000 (O0OO0O0OO000000O0 )#line:1081
-    def O0OO00O0OO0OOO000 (_OO00OOOO000OO0OOO ):#line:1085
+    def OO000O0OO00OOOOO0 (OO00O0OO000O00OOO ):#line:1065
+        for OO00O0OO000O00OOO in OO00O0OO000O00OOO :#line:1066
+            if OO00O0OO000O00OOO .getlayer (Raw ):#line:1067
+                OOOOOO0O00000OOO0 =OO00O0OO000O00OOO .getlayer (Raw )#line:1068
+                O00O0OO00O00OO00O =Raw (OOOOOO0O00000OOO0 )#line:1069
+                OOO0O00OOO0OO00OO =binascii .b2a_hex (bytes (O00O0OO00O00OO00O ))#line:1071
+                O0O0OO0OO0OOOO0OO =str (OOO0O00OOO0OO00OO ,'ascii')#line:1072
+                OOO0O0O0O0OO0O0O0 =[]#line:1074
+                O00OOOO00000O0OO0 =1 #line:1076
+                while O00OOOO00000O0OO0 <=len (O00O0OO00O00OO00O ):#line:1077
+                    OOO0O0O0O0OO0O0O0 .append (int (O0O0OO0OO0OOOO0OO [2 *O00OOOO00000O0OO0 -2 :2 *O00OOOO00000O0OO0 ],16 ))#line:1078
+                    O00OOOO00000O0OO0 +=1 #line:1079
+                OO0OOO0O0OOOO00O0 (OOO0O0O0O0OO0O0O0 )#line:1081
+    def OO0OOO0O0OOOO00O0 (_OOOOOO00OO0000O00 ):#line:1085
         global find_item_space #line:1086
-        O0OOO00O0OOOOO000 ={'optionNum':0 ,'option':0 ,'option2':0 }#line:1087
-        O00O0OOO0OO0OO0O0 =0 #line:1089
-        while O00O0OOO0OO0OO0O0 <len (_OO00OOOO000OO0OOO ):#line:1090
+        OOO0OO00000000000 ={'optionNum':0 ,'option':0 ,'option2':0 }#line:1087
+        OO00O00O00OOO00OO =0 #line:1089
+        while OO00O00O00OOO00OO <len (_OOOOOO00OO0000O00 ):#line:1090
             try :#line:1091
-                if 14 >O00O0OOO0OO0OO0O0 :#line:1093
-                    O00O0OOO0OO0OO0O0 +=1 #line:1094
+                if 14 >OO00O00O00OOO00OO :#line:1093
+                    OO00O00O00OOO00OO +=1 #line:1094
                     continue #line:1095
-                if O00O0OOO0OO0OO0O0 +5 <=len (_OO00OOOO000OO0OOO ):#line:1098
-                    OO00O00000O0OO0OO =False #line:1099
-                    if _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +1 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +2 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +3 ]==4 :#line:1101
-                        OO00O00000O0OO0OO =False #line:1103
-                    elif _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 ]==1 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +1 ]>0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +2 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +3 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +4 ]==4 :#line:1107
-                        OO00O00000O0OO0OO =True #line:1108
-                    elif _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 ]==2 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +1 ]>0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +2 ]>0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +3 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +4 ]==0 and _OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +5 ]==4 :#line:1112
-                        OO00O00000O0OO0OO =True #line:1113
-                if OO00O00000O0OO0OO :#line:1116
-                    O0OOO00O0OOOOO000 ['optionNum']=_OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 ]#line:1119
-                    O0OOO00O0OOOOO000 ['option']=_OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +1 ]#line:1120
-                    O0OOO00O0OOOOO000 ['option2']=_OO00OOOO000OO0OOO [O00O0OOO0OO0OO0O0 +2 ]#line:1121
-                    O00O0OO00O0O00OOO =OOO0O00OO000O00OO (_OO00OOOO000OO0OOO ,O00O0OOO0OO0OO0O0 )#line:1122
-                    OOOOO0OOOOOOOO000 =OO0OO0O000OO0OO00 (OOOOOOOOOOOOOOO00 )#line:1125
-                    OOO0O0OO0OO0OOO00 =O00OOO0O000000O0O (OOOOOOOOOOOOOOO00 )#line:1126
-                    OO00O0O0OOOOOOOO0 =13 #line:1127
-                    if (OOOOO0OOOOOOOO000 -OO00O0O0OOOOOOOO0 )<=O00O0OO00O0O00OOO ['x']<=(OOOOO0OOOOOOOO000 +OO00O0O0OOOOOOOO0 )and (OOO0O0OO0OO0OOO00 -OO00O0O0OOOOOOOO0 )<=O00O0OO00O0O00OOO ['y']<=(OOO0O0OO0OO0OOO00 +OO00O0O0OOOOOOOO0 ):#line:1129
+                if OO00O00O00OOO00OO +5 <=len (_OOOOOO00OO0000O00 ):#line:1098
+                    O00000O000OOOOOOO =False #line:1099
+                    if _OOOOOO00OO0000O00 [OO00O00O00OOO00OO ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +1 ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +2 ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +3 ]==4 :#line:1101
+                        O00000O000OOOOOOO =False #line:1103
+                    elif _OOOOOO00OO0000O00 [OO00O00O00OOO00OO ]==1 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +1 ]>0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +2 ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +3 ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +4 ]==4 :#line:1107
+                        O00000O000OOOOOOO =True #line:1108
+                    elif _OOOOOO00OO0000O00 [OO00O00O00OOO00OO ]==2 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +1 ]>0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +2 ]>0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +3 ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +4 ]==0 and _OOOOOO00OO0000O00 [OO00O00O00OOO00OO +5 ]==4 :#line:1112
+                        O00000O000OOOOOOO =True #line:1113
+                if O00000O000OOOOOOO :#line:1116
+                    OOO0OO00000000000 ['optionNum']=_OOOOOO00OO0000O00 [OO00O00O00OOO00OO ]#line:1119
+                    OOO0OO00000000000 ['option']=_OOOOOO00OO0000O00 [OO00O00O00OOO00OO +1 ]#line:1120
+                    OOO0OO00000000000 ['option2']=_OOOOOO00OO0000O00 [OO00O00O00OOO00OO +2 ]#line:1121
+                    OO00OOO0O0000OOOO =OOOOOO0OO0OO0OO0O (_OOOOOO00OO0000O00 ,OO00O00O00OOO00OO )#line:1122
+                    OOOOOO0OOO0OO0000 =O0OO0OOOO0O000000 (OOOO0O0OOO0000OOO )#line:1125
+                    O0OO0O000O00O000O =OO0O0OOO000000000 (OOOO0O0OOO0000OOO )#line:1126
+                    O000000000000OO00 =13 #line:1127
+                    if (OOOOOO0OOO0OO0000 -O000000000000OO00 )<=OO00OOO0O0000OOOO ['x']<=(OOOOOO0OOO0OO0000 +O000000000000OO00 )and (O0OO0O000O00O000O -O000000000000OO00 )<=OO00OOO0O0000OOOO ['y']<=(O0OO0O000O00O000O +O000000000000OO00 ):#line:1129
                         find_item_space =True #line:1131
-                        O00OO0OO000OOO00O (O0OOO00O0OOOOO000 ,O00O0OO00O0O00OOO )#line:1133
-                O00O0OOO0OO0OO0O0 +=1 #line:1136
+                        O0OOOO00OO00OO00O (OOO0OO00000000000 ,OO00OOO0O0000OOOO )#line:1133
+                OO00O00O00OOO00OO +=1 #line:1136
             except :#line:1137
-                O00O0OOO0OO0OO0O0 +=1 #line:1138
+                OO00O00O00OOO00OO +=1 #line:1138
         if find_item_space :#line:1140
             print ("")#line:1141
             find_item_space =False #line:1142
         return #line:1143
-    def O00OO0OO000OOO00O (_O00O00O0OO0OO00OO ,_O00OO00O0OOOO0OO0 ):#line:1146
-        OOO00OOOOO0O0000O =time .localtime ()#line:1147
-        O00OO000O00O00000 =OOO0OO00O0O00O0O0 (OOO00OOOOO0O0000O .tm_hour )#line:1148
-        OOO0OO00O00O00000 =OOO0OO00O0O00O0O0 (OOO00OOOOO0O0000O .tm_min )#line:1149
-        OO000OO00OOO0OOOO =OOO0OO00O0O00O0O0 (OOO00OOOOO0O0000O .tm_sec )#line:1150
-        OOOO00O0000OOOOOO ={'itemName':O0OOO0O0OO000O0OO (_O00OO00O0OOOO0OO0 ['class'],_O00OO00O0OOOO0OO0 ['type']),'optionNum':_O00O00O0OO0OO00OO ['optionNum'],'x':_O00OO00O0OOOO0OO0 ['x'],'y':_O00OO00O0OOOO0OO0 ['y'],'option':OO00O0OO000O0O00O (_O00O00O0OO0OO00OO ['option']),'option2':OO00O0OO000O0O00O (_O00O00O0OO0OO00OO ['option2'])}#line:1154
-        if OOOO00O0000OOOOOO ['optionNum']==1 :#line:1156
-            print ("["+O00OO000O00O00000 +":"+OOO0OO00O00O00000 +":"+OO000OO00OOO0OOOO +"] "+Fore .YELLOW +OOOO00O0000OOOOOO ['itemName']+Fore .RESET +": "+OOOO00O0000OOOOOO ['option']+" "+("(x: "+str (OOOO00O0000OOOOOO ['x'])+", y: "+str (OOOO00O0000OOOOOO ['y'])+")"))#line:1160
-        elif OOOO00O0000OOOOOO ['optionNum']==2 :#line:1162
-            print ("["+O00OO000O00O00000 +":"+OOO0OO00O00O00000 +":"+OO000OO00OOO0OOOO +"] "+Fore .CYAN +OOOO00O0000OOOOOO ['itemName']+Fore .RESET +": "+OOOO00O0000OOOOOO ['option']+", "+OOOO00O0000OOOOOO ['option2']+" "+("(x: "+str (OOOO00O0000OOOOOO ['x'])+", y: "+str (OOOO00O0000OOOOOO ['y'])+")"))#line:1166
+    def O0OOOO00OO00OO00O (_O00O0O0000O0OO0OO ,_OOO00OOOOOO0OO000 ):#line:1146
+        OOO0000O000OOO000 =time .localtime ()#line:1147
+        O0O00OO0000OOO0OO =OOOOO0O0O0O0O00OO (OOO0000O000OOO000 .tm_hour )#line:1148
+        OO0000O00OO00OO00 =OOOOO0O0O0O0O00OO (OOO0000O000OOO000 .tm_min )#line:1149
+        OOO0O00OO0OOO00O0 =OOOOO0O0O0O0O00OO (OOO0000O000OOO000 .tm_sec )#line:1150
+        OO00O0000O00O000O ={'itemName':O00O0O00OOOOOOOOO (_OOO00OOOOOO0OO000 ['class'],_OOO00OOOOOO0OO000 ['type']),'optionNum':_O00O0O0000O0OO0OO ['optionNum'],'x':_OOO00OOOOOO0OO000 ['x'],'y':_OOO00OOOOOO0OO000 ['y'],'option':OO00OOOO0000OOO0O (_O00O0O0000O0OO0OO ['option']),'option2':OO00OOOO0000OOO0O (_O00O0O0000O0OO0OO ['option2'])}#line:1154
+        if OO00O0000O00O000O ['optionNum']==1 :#line:1156
+            print ("["+O0O00OO0000OOO0OO +":"+OO0000O00OO00OO00 +":"+OOO0O00OO0OOO00O0 +"] "+Fore .YELLOW +OO00O0000O00O000O ['itemName']+Fore .RESET +": "+OO00O0000O00O000O ['option']+" "+("(x: "+str (OO00O0000O00O000O ['x'])+", y: "+str (OO00O0000O00O000O ['y'])+")"))#line:1160
+        elif OO00O0000O00O000O ['optionNum']==2 :#line:1162
+            print ("["+O0O00OO0000OOO0OO +":"+OO0000O00OO00OO00 +":"+OOO0O00OO0OOO00O0 +"] "+Fore .CYAN +OO00O0000O00O000O ['itemName']+Fore .RESET +": "+OO00O0000O00O000O ['option']+", "+OO00O0000O00O000O ['option2']+" "+("(x: "+str (OO00O0000O00O000O ['x'])+", y: "+str (OO00O0000O00O000O ['y'])+")"))#line:1166
         return #line:1168
-    O0O000OO0O0000OO0 ()#line:1171
+    O0OO00OOO0O00OO00 ()#line:1171
     import wmi #line:1174
-    OOOOOOO0000O0O0OO =wmi .WMI ()#line:1175
-    O00OOO00000OO00OO ="select Name from Win32_NetworkAdapter where NetEnabled=True and NetConnectionStatus=2"#line:1176
-    O0OOOO00000OOOO00 =[O0OO0OOO0OOOOOO0O .Name for O0OO0OOO0OOOOOO0O in OOOOOOO0000O0O0OO .query (O00OOO00000OO00OO )]#line:1177
-    OOO0000OO0O000OOO =[]#line:1178
-    for OO0O0OO00OO00O000 in O0OOOO00000OOOO00 :#line:1179
-        if "VMware"not in OO0O0OO00OO00O000 :#line:1180
-            if "Virtual"not in OO0O0OO00OO00O000 :#line:1181
-                OOO0000OO0O000OOO .append (OO0O0OO00OO00O000 )#line:1182
-    OOOOOOOOOOOOOOO00 =O0OOOO00OO0000000 ()#line:1185
-    if OOO000OOO0OO0O0O0 =="Inter.":#line:1186
-        O000O00OOOOO0OOO0 ='ip src 193.108.117.31'#line:1187
-    elif OOO000OOO0OO0O0O0 =="Chn.":#line:1188
-        O000O00OOOOO0OOO0 ='ip src 122.114.158.52'#line:1189
-    O00O0O00O0O0OOOO0 =O000O00OOOOO0OOO0 #line:1190
+    OOO0OOOOOOOOOO0O0 =wmi .WMI ()#line:1175
+    OOOO0O0O00OO0OOO0 ="select Name from Win32_NetworkAdapter where NetEnabled=True and NetConnectionStatus=2"#line:1176
+    OOO00OOO0000OO000 =[O000O0OOOO000000O .Name for O000O0OOOO000000O in OOO0OOOOOOOOOO0O0 .query (OOOO0O0O00OO0OOO0 )]#line:1177
+    O0O0000OO00OO0OO0 =[]#line:1178
+    for O00O0O0OOOO00O0OO in OOO00OOO0000OO000 :#line:1179
+        if "VMware"not in O00O0O0OOOO00O0OO :#line:1180
+            if "Virtual"not in O00O0O0OOOO00O0OO :#line:1181
+                O0O0000OO00OO0OO0 .append (O00O0O0OOOO00O0OO )#line:1182
+    OOOO0O0OOO0000OOO =OOO0O0O00000OO0OO ()#line:1185
+    if O0OOOOO0O000OOO0O =="Inter.":#line:1186
+        O000000OOOO000O0O ='ip src 193.108.117.31'#line:1187
+    elif O0OOOOO0O000OOO0O =="Chn.":#line:1188
+        O000000OOOO000O0O ='ip src 122.114.158.52'#line:1189
+    OOOOOOO000O00OOO0 =O000000OOOO000O0O #line:1190
     print ("Item Viewer - credit.KiBou")#line:1191
     print ("")#line:1192
-    OOOOOOOOOO0O0OO0O (OOO0000OO0O000OOO [0 ],O00O0O00O0O0OOOO0 )#line:1193
+    O0O000O0O00O0000O (O0O0000OO00OO0OO0 [0 ],OOOOOOO000O00OOO0 )#line:1193
 """########################################################################"""#line:1222
 """########################################################################"""#line:1224
 """########################################################################"""#line:1226
@@ -1108,7 +1108,7 @@ vip_dict ={"admin":"wlsdud8574"}#line:1246
 vip_dict ["ㅎㅎ"]="4604";vip_dict ["영덴하누"]="0987";vip_dict ["익명(220.82)"]="kang3533"#line:1247
 vip_dict ["바토리하녀"]="P@ssw0rd";vip_dict ["0000삐따기"]="1029"#line:1248
 vip_dict ["KiBou"]="kibou123";vip_dict ["중덴 THX"]="801345"#line:1249
-vip_list =[OO0000OO0000000O0 for OO0000OO0000000O0 in vip_dict .values ()]#line:1250
+vip_list =[O0000OOO0OOOOOOO0 for O0000OOO0OOOOOOO0 in vip_dict .values ()]#line:1250
 admin_list =["asd142536"]#line:1251
 test_list =["123g24t234"]#line:1252
 user =0 #line:1253
@@ -1134,7 +1134,7 @@ def dk_helper ():#line:1273
     global login_screen ,password_verify ,password_login_entry #line:1276
     global hotkey_on ,process_id ,hp_threshold ,mp_threshold ,bullet_threshold #line:1277
     global l_text ,hp_check ,mp_check ,user_server #line:1278
-    def O0O0O0O00000OOOO0 ():#line:1280
+    def O00O00OO0OOOOO0O0 ():#line:1280
         global user_list ,user ,admin ,user2 ,test ,vip ,password1 #line:1281
         password1 =password_verify .get ()#line:1282
         password_login_entry .delete (0 ,END )#line:1283
@@ -1160,161 +1160,161 @@ def dk_helper ():#line:1273
             print ("Loading DK Helper...")#line:1303
         else :#line:1304
             Label (login_screen ,text ="Invalid password, try again",fg ="red").grid (padx =40 ,row =1 ,sticky ="NESW")#line:1305
-    def O00OO0000O000OOOO ():#line:1308
+    def O0000OO0O0O00O000 ():#line:1308
         global login_screen ,password_verify ,password_login_entry ,choice_server #line:1309
         login_screen =Tk ()#line:1310
         login_screen .title ("DK Helper Login")#line:1311
         Label (login_screen ,text ="Welcome to DK Helper").grid (padx =40 ,row =0 ,sticky ="WE")#line:1312
         Label (login_screen ,text ="").grid (padx =40 ,row =1 ,sticky ="NESW")#line:1313
-        O0O00O000000OOOO0 =Frame (login_screen )#line:1314
-        O0O00O000000OOOO0 .grid (row =2 )#line:1315
-        Label (O0O00O000000OOOO0 ,text ="Server").grid (padx =10 ,row =1 ,sticky ="NESW")#line:1316
+        O0000O0OOOO000OOO =Frame (login_screen )#line:1314
+        O0000O0OOOO000OOO .grid (row =2 )#line:1315
+        Label (O0000O0OOOO000OOO ,text ="Server").grid (padx =10 ,row =1 ,sticky ="NESW")#line:1316
         choice_server =StringVar ()#line:1317
         choice_server .set ("Inter.")#line:1318
-        OptionMenu (O0O00O000000OOOO0 ,choice_server ,"Inter.","Chn.").grid (padx =0 ,row =1 ,column =1 ,sticky ="WE")#line:1319
+        OptionMenu (O0000O0OOOO000OOO ,choice_server ,"Inter.","Chn.").grid (padx =0 ,row =1 ,column =1 ,sticky ="WE")#line:1319
         password_verify =StringVar ()#line:1322
         Label (login_screen ,text ="Password").grid (padx =40 ,row =7 ,sticky ="NESW")#line:1324
         password_login_entry =Entry (login_screen ,textvariable =password_verify ,show ='*')#line:1325
         password_login_entry .grid (padx =40 ,row =8 ,sticky ="NESW")#line:1326
         Label (login_screen ,text ="").grid (padx =40 ,row =9 ,sticky ="NESW")#line:1327
-        Button (login_screen ,text ="Login",width =10 ,height =1 ,command =O0O0O0O00000OOOO0 ).grid (padx =40 ,row =10 ,sticky ="NESW")#line:1328
+        Button (login_screen ,text ="Login",width =10 ,height =1 ,command =O00O00OO0OOOOO0O0 ).grid (padx =40 ,row =10 ,sticky ="NESW")#line:1328
         Label (login_screen ,text ="").grid (padx =40 ,row =11 ,sticky ="NESW")#line:1329
         Label (login_screen ,text ="개인문의 - 카톡 검색 \"다덴\"").grid (padx =40 ,row =49 ,column =0 ,columnspan =5 ,sticky ='NESW')#line:1330
         Label (login_screen ,text ="오픈챗 - 카톡 검색 \"다덴 헬퍼\"").grid (padx =40 ,row =50 ,column =0 ,columnspan =5 ,sticky ='NESW')#line:1331
         Label (login_screen ,text ="DK Helper v3 - made by.다덴").grid (padx =40 ,row =51 ,column =0 ,columnspan =5 ,sticky ='NESW')#line:1332
         login_screen .mainloop ()#line:1333
-    O00OO0000O000OOOO ()#line:1335
-    def OO0O0O0OO0O0O0000 ():#line:1339
-        OOO0OOO0OOOO0OOO0 =multiprocessing .Process (target =item_reader ,args =(user_server ,))#line:1340
-        OOO0OOO0OOOO0OOO0 .start ()#line:1341
+    O0000OO0O0O00O000 ()#line:1335
+    def O0OOO00O00O0O00O0 ():#line:1339
+        O000O0O0O0OO00OOO =multiprocessing .Process (target =item_reader ,args =(user_server ,))#line:1340
+        O000O0O0O0OO00OOO .start ()#line:1341
         return #line:1342
     """
     Create GUI from top to bottom
     """#line:1346
     user_server =choice_server .get ()#line:1348
     if user ==1 :#line:1350
-        OO0O000O0000O000O =Tk ()#line:1351
-        OO0O000O0000O000O .title ("DK Helper")#line:1352
-        Label (OO0O000O0000O000O ,text ="User").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1353
+        OO000OO0O00OOO000 =Tk ()#line:1351
+        OO000OO0O00OOO000 .title ("DK Helper")#line:1352
+        Label (OO000OO0O00OOO000 ,text ="User").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1353
         """temporarily disabled extra functions"""#line:1355
     elif user2 ==1 :#line:1362
-        OO0O000O0000O000O =Tk ()#line:1363
-        OO0O000O0000O000O .title ("DK Helper")#line:1364
-        Label (OO0O000O0000O000O ,text ="User2").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1365
+        OO000OO0O00OOO000 =Tk ()#line:1363
+        OO000OO0O00OOO000 .title ("DK Helper")#line:1364
+        Label (OO000OO0O00OOO000 ,text ="User2").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1365
     elif vip ==1 :#line:1368
-        OO0O000O0000O000O =Tk ()#line:1369
-        OO0O000O0000O000O .title ("DK Helper")#line:1370
-        Label (OO0O000O0000O000O ,text ="VIP").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1371
-        def O0OOOOOO000OO0O00 ():#line:1373
+        OO000OO0O00OOO000 =Tk ()#line:1369
+        OO000OO0O00OOO000 .title ("DK Helper")#line:1370
+        Label (OO000OO0O00OOO000 ,text ="VIP").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1371
+        def O0O0000O00OOO0OO0 ():#line:1373
             global process_id ,sight_first #line:1374
             try :#line:1375
                 if user_server =="Inter.":#line:1376
-                    OO0O000O00O00OO0O =0x00781384 #line:1377
-                    OOOO00O000000OO00 =1272 #line:1378
+                    OOOOOO0O00O000OO0 =0x00781384 #line:1377
+                    O000O00OO0O00O00O =1272 #line:1378
                 elif user_server =="Chn.":#line:1379
-                    OO0O000O00O00OO0O =0x00396FE4 #line:1380
-                    OOOO00O000000OO00 =1268 #line:1381
+                    OOOOOO0O00O000OO0 =0x00397024 #line:1380
+                    O000O00OO0O00O00O =1268 #line:1381
                 if sight_first ==0 :#line:1382
-                    OOO0OOOO0OO0O0OO0 =O0O0O0OO0000O0OO0 (0x00400000 +OO0O000O00O00OO0O ,process_id )#line:1383
-                    OOO0OOOO0OO0O0OO0 =O0O0O0OO0000O0OO0 (OOO0OOOO0OO0O0OO0 +OOOO00O000000OO00 ,process_id )#line:1384
-                    if OOO0OOOO0OO0O0OO0 !=9 :#line:1386
-                        O00000O0O00O000OO =0x00400000 +OO0O000O00O00OO0O #line:1387
-                        OO0OO00O0OOO00OOO =O0O0O0OO0000O0OO0 (O00000O0O00O000OO ,process_id )#line:1388
-                        O0000O0OOOOOOOO0O =OO0OO00O0OOO00OOO +OOOO00O000000OO00 #line:1389
-                        OOOOO000O0OO000O0 =9 #line:1390
-                        OOO0OO0OO00O0000O (O0000O0OOOOOOOO0O ,OOOOO000O0OO000O0 )#line:1391
+                    OOOO00O0O0OO00O00 =OO0O0OO00OO0OO0O0 (0x00400000 +OOOOOO0O00O000OO0 ,process_id )#line:1383
+                    OOOO00O0O0OO00O00 =OO0O0OO00OO0OO0O0 (OOOO00O0O0OO00O00 +O000O00OO0O00O00O ,process_id )#line:1384
+                    if OOOO00O0O0OO00O00 !=9 :#line:1386
+                        OO00O0OOOO000O0OO =0x00400000 +OOOOOO0O00O000OO0 #line:1387
+                        O0O00000000OO00OO =OO0O0OO00OO0OO0O0 (OO00O0OOOO000O0OO ,process_id )#line:1388
+                        OOO0OOOOOO0OO0000 =O0O00000000OO00OO +O000O00OO0O00O00O #line:1389
+                        OO00000O00O0O0OO0 =9 #line:1390
+                        O00O0O00OO000OOO0 (OOO0OOOOOO0OO0000 ,OO00000O00O0O0OO0 )#line:1391
                 elif sight_first ==1 :#line:1392
-                    OOOOOO00000O00OO0 ="darkeden.exe"#line:1393
-                    for OO00O0OOOOOOOO000 in psutil .process_iter ():#line:1394
-                        if OOOOOO00000O00OO0 in str (OO00O0OOOOOOOO000 .name ):#line:1395
-                            process_id =OO00O0OOOOOOOO000 .pid #line:1396
-                    O00000O0O00O000OO =0x00400000 +OO0O000O00O00OO0O #line:1397
-                    OO0OO00O0OOO00OOO =O0O0O0OO0000O0OO0 (O00000O0O00O000OO ,process_id )#line:1398
-                    O0000O0OOOOOOOO0O =OO0OO00O0OOO00OOO +OOOO00O000000OO00 #line:1399
-                    OOOOO000O0OO000O0 =9 #line:1400
-                    OOO0OO0OO00O0000O (O0000O0OOOOOOOO0O ,OOOOO000O0OO000O0 )#line:1401
+                    O0OOO00O00O00O00O ="darkeden.exe"#line:1393
+                    for O0OO00000OOOO00O0 in psutil .process_iter ():#line:1394
+                        if O0OOO00O00O00O00O in str (O0OO00000OOOO00O0 .name ):#line:1395
+                            process_id =O0OO00000OOOO00O0 .pid #line:1396
+                    OO00O0OOOO000O0OO =0x00400000 +OOOOOO0O00O000OO0 #line:1397
+                    O0O00000000OO00OO =OO0O0OO00OO0OO0O0 (OO00O0OOOO000O0OO ,process_id )#line:1398
+                    OOO0OOOOOO0OO0000 =O0O00000000OO00OO +O000O00OO0O00O00O #line:1399
+                    OO00000O00O0O0OO0 =9 #line:1400
+                    O00O0O00OO000OOO0 (OOO0OOOOOO0OO0000 ,OO00000O00O0O0OO0 )#line:1401
                     sight_first =0 #line:1402
             except :#line:1403
-                O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1404
-            OO0O000O0000O000O .after (1000 ,O0OOOOOO000OO0O00 )#line:1405
-        Button (OO0O000O0000O000O ,text ="Max Vision",command =lambda :O0OOOOOO000OO0O00 ()).grid (row =7 ,column =1 ,sticky ="EW")#line:1407
-        Button (OO0O000O0000O000O ,text ="Item Reader",command =lambda :OO0O0O0OO0O0O0000 ()).grid (row =8 ,column =1 ,sticky ="EW")#line:1409
+                O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1404
+            OO000OO0O00OOO000 .after (1000 ,O0O0000O00OOO0OO0 )#line:1405
+        Button (OO000OO0O00OOO000 ,text ="Max Vision",command =lambda :O0O0000O00OOO0OO0 ()).grid (row =7 ,column =1 ,sticky ="EW")#line:1407
+        Button (OO000OO0O00OOO000 ,text ="Item Reader",command =lambda :O0OOO00O00O0O00O0 ()).grid (row =8 ,column =1 ,sticky ="EW")#line:1409
     elif admin ==1 :#line:1411
-        OO0O000O0000O000O =Tk ()#line:1412
-        OO0O000O0000O000O .title ("DK Helper")#line:1413
-        Label (OO0O000O0000O000O ,text ="Admin").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1414
+        OO000OO0O00OOO000 =Tk ()#line:1412
+        OO000OO0O00OOO000 .title ("DK Helper")#line:1413
+        Label (OO000OO0O00OOO000 ,text ="Admin").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1414
     elif test ==1 :#line:1416
-        OO0O000O0000O000O =Tk ()#line:1417
-        OO0O000O0000O000O .title ("DK Helper")#line:1418
-        Label (OO0O000O0000O000O ,text ="Test").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1419
+        OO000OO0O00OOO000 =Tk ()#line:1417
+        OO000OO0O00OOO000 .title ("DK Helper")#line:1418
+        Label (OO000OO0O00OOO000 ,text ="Test").grid (padx =20 ,row =1 ,column =2 ,sticky ="EW")#line:1419
     else :#line:1420
         sys .exit ()#line:1421
     print ("DK Helper loaded")#line:1423
-    OO0000000000O0000 =PIL .Image .open (requests .get ('https://github.com/anonydev003/dh/raw/master/1.jpg',stream =True ).raw )#line:1426
-    OO0000000000O0000 =ImageTk .PhotoImage (OO0000000000O0000 )#line:1428
-    O00OOOOO0OO000OO0 =OO0000000000O0000 #line:1429
-    O00OO000O00O000O0 =Label (OO0O000O0000O000O ,image =O00OOOOO0OO000OO0 ).grid (row =9 ,column =1 ,columnspan =2 ,sticky =N +E +W +S )#line:1430
-    O00OO000O00000O0O =Label (OO0O000O0000O000O ,text ="Manager",font =("verdana",10 )).grid (padx =30 ,row =1 ,sticky ="W")#line:1433
-    OO00OO00OO0OOOOO0 =Frame (OO0O000O0000O000O )#line:1436
-    OO00OO00OO0OOOOO0 .grid (row =2 )#line:1437
-    OOO0OOO0O0O0O0O00 =IntVar ()#line:1440
-    OO000OO0O00O0O0O0 =Checkbutton (OO0O000O0000O000O ,text ="Turn on HP Manager",variable =OOO0OOO0O0O0O0O00 ).grid (padx =30 ,row =2 ,columnspan =3 ,sticky ='W')#line:1441
-    OO0000OO00OOO00OO =IntVar ()#line:1442
-    OOOO00O00O0O0O0OO =Checkbutton (OO0O000O0000O000O ,text ="Turn on MP Manager",variable =OO0000OO00OOO00OO ).grid (padx =30 ,row =4 ,columnspan =3 ,sticky ='W')#line:1443
-    O0000000OO0O00OO0 =IntVar ()#line:1444
-    O00O00OOO0000O00O =Checkbutton (OO0O000O0000O000O ,text ="Turn on Gun Manager",variable =O0000000OO0O00OO0 ).grid (padx =30 ,row =6 ,columnspan =3 ,sticky ='W')#line:1445
-    O00O00O0O00O000OO =Frame (OO0O000O0000O000O )#line:1448
-    O00O00O0O00O000OO .grid (row =3 ,column =0 )#line:1449
-    OO000OO0OOO00OOO0 =Label (O00O00O0O00O000OO ,text ="Threshold %").grid (padx =(30 ,0 ),row =0 ,column =0 ,sticky ="W")#line:1452
+    OO0OOO0O0O0O0O0OO =PIL .Image .open (requests .get ('https://github.com/anonydev003/dh/raw/master/1.jpg',stream =True ).raw )#line:1426
+    OO0OOO0O0O0O0O0OO =ImageTk .PhotoImage (OO0OOO0O0O0O0O0OO )#line:1428
+    OO0O0O0O000000O00 =OO0OOO0O0O0O0O0OO #line:1429
+    O00O000OO0000OO0O =Label (OO000OO0O00OOO000 ,image =OO0O0O0O000000O00 ).grid (row =9 ,column =1 ,columnspan =2 ,sticky =N +E +W +S )#line:1430
+    O000OO00O00OO00O0 =Label (OO000OO0O00OOO000 ,text ="Manager",font =("verdana",10 )).grid (padx =30 ,row =1 ,sticky ="W")#line:1433
+    OOO0000O0O0O0OO00 =Frame (OO000OO0O00OOO000 )#line:1436
+    OOO0000O0O0O0OO00 .grid (row =2 )#line:1437
+    OOOO0000O0OOO0O00 =IntVar ()#line:1440
+    OOO0OO000O000O0OO =Checkbutton (OO000OO0O00OOO000 ,text ="Turn on HP Manager",variable =OOOO0000O0OOO0O00 ).grid (padx =30 ,row =2 ,columnspan =3 ,sticky ='W')#line:1441
+    OO00OO00OO0OO00O0 =IntVar ()#line:1442
+    OOOOO000OOOO0000O =Checkbutton (OO000OO0O00OOO000 ,text ="Turn on MP Manager",variable =OO00OO00OO0OO00O0 ).grid (padx =30 ,row =4 ,columnspan =3 ,sticky ='W')#line:1443
+    O0O0000O000OO0OO0 =IntVar ()#line:1444
+    O0O00O000OO000O00 =Checkbutton (OO000OO0O00OOO000 ,text ="Turn on Gun Manager",variable =O0O0000O000OO0OO0 ).grid (padx =30 ,row =6 ,columnspan =3 ,sticky ='W')#line:1445
+    O000OOOO0OOO000O0 =Frame (OO000OO0O00OOO000 )#line:1448
+    O000OOOO0OOO000O0 .grid (row =3 ,column =0 )#line:1449
+    O00O00000O00000OO =Label (O000OOOO0OOO000O0 ,text ="Threshold %").grid (padx =(30 ,0 ),row =0 ,column =0 ,sticky ="W")#line:1452
     hp_threshold =StringVar ()#line:1455
     hp_threshold .set ("70")#line:1456
-    OO00OO0OO0OOOO000 =OptionMenu (O00O00O0O00O000OO ,hp_threshold ,"10","20","30","40","50","60","70","80","90").grid (padx =10 ,row =0 ,column =1 ,sticky ='W')#line:1457
-    O0OOO00O0000OOOO0 =Frame (OO0O000O0000O000O )#line:1460
-    O0OOO00O0000OOOO0 .grid (row =5 ,column =0 )#line:1461
-    O00OO0O0OO0O0OOOO =Label (O0OOO00O0000OOOO0 ,text ="Threshold %").grid (padx =(30 ,0 ),row =0 ,column =0 ,sticky ="W")#line:1464
+    OOO0OOO00OOOO0000 =OptionMenu (O000OOOO0OOO000O0 ,hp_threshold ,"10","20","30","40","50","60","70","80","90").grid (padx =10 ,row =0 ,column =1 ,sticky ='W')#line:1457
+    OOOO0000O0O00OO00 =Frame (OO000OO0O00OOO000 )#line:1460
+    OOOO0000O0O00OO00 .grid (row =5 ,column =0 )#line:1461
+    O0O0OOOO0OOO00OO0 =Label (OOOO0000O0O00OO00 ,text ="Threshold %").grid (padx =(30 ,0 ),row =0 ,column =0 ,sticky ="W")#line:1464
     mp_threshold =StringVar ()#line:1467
     mp_threshold .set ("70")#line:1468
-    OO0000O000OOO000O =OptionMenu (O0OOO00O0000OOOO0 ,mp_threshold ,"10","20","30","40","50","60","70","80","90").grid (padx =10 ,row =0 ,column =1 ,sticky ='W')#line:1469
-    O0O0000OOOO0O0O00 =Frame (OO0O000O0000O000O )#line:1472
-    O0O0000OOOO0O0O00 .grid (row =7 ,column =0 )#line:1473
-    OOO0OO0000O00O0O0 =Label (O0O0000OOOO0O0O00 ,text ="Threshold   ").grid (padx =(30 ,0 ),row =0 ,column =0 ,sticky ="W")#line:1476
+    OOOO0OO0OO0O00OOO =OptionMenu (OOOO0000O0O00OO00 ,mp_threshold ,"10","20","30","40","50","60","70","80","90").grid (padx =10 ,row =0 ,column =1 ,sticky ='W')#line:1469
+    O000O0OOO0O000OO0 =Frame (OO000OO0O00OOO000 )#line:1472
+    O000O0OOO0O000OO0 .grid (row =7 ,column =0 )#line:1473
+    O0OO0O0OOOO00O0OO =Label (O000O0OOO0O000OO0 ,text ="Threshold   ").grid (padx =(30 ,0 ),row =0 ,column =0 ,sticky ="W")#line:1476
     bullet_threshold =StringVar ()#line:1479
     bullet_threshold .set ("5")#line:1480
-    O00OOO0O000OOOOOO =OptionMenu (O0O0000OOOO0O0O00 ,bullet_threshold ,"3","4","5").grid (padx =10 ,row =0 ,column =1 ,sticky ='W')#line:1481
-    O00OO000O00000O0O =Label (OO0O000O0000O000O ,text ="Belt",font =("verdana",10 )).grid (padx =30 ,row =8 ,sticky ="W")#line:1484
-    O0OOOOO0OO0OO0000 =Frame (OO0O000O0000O000O )#line:1487
-    O0OOOOO0OO0OO0000 .grid (row =9 ,column =0 )#line:1488
-    O00OOOOO000O0O0OO =Label (O0OOOOO0OO0OO0000 ,text ="f1").grid (padx =(0 ,5 ),row =1 ,sticky ='W')#line:1491
-    OO0OO000O0OO0O0O0 =Label (O0OOOOO0OO0OO0000 ,text ="f2").grid (padx =(0 ,5 ),row =2 ,sticky ='W')#line:1492
-    OO00000000OOO00O0 =Label (O0OOOOO0OO0OO0000 ,text ="f3").grid (padx =(0 ,5 ),row =3 ,sticky ='W')#line:1493
-    O000000OO000OOO0O =Label (O0OOOOO0OO0OO0000 ,text ="f4").grid (padx =(0 ,5 ),row =4 ,sticky ='W')#line:1494
-    O0000000OOOOO0O00 =Label (O0OOOOO0OO0OO0000 ,text ="f5").grid (padx =(0 ,5 ),row =5 ,sticky ='W')#line:1495
-    O0O000O0O0O0O000O =Label (O0OOOOO0OO0OO0000 ,text ="f6").grid (padx =(0 ,5 ),row =6 ,sticky ='W')#line:1496
-    OOO0000O0OOO0OOOO =Label (O0OOOOO0OO0OO0000 ,text ="f7").grid (padx =(0 ,5 ),row =7 ,sticky ='W')#line:1497
-    O00OOOOO0O0OOOO0O =Label (O0OOOOO0OO0OO0000 ,text ="f8").grid (padx =(0 ,5 ),row =8 ,sticky ='W')#line:1498
-    Label (OO0O000O0000O000O ,text ="Mouse Hotkey",font =("verdana",10 )).grid (row =1 ,column =1 ,sticky ="W")#line:1501
-    Label (OO0O000O0000O000O ,text ="Mouse L-click").grid (row =2 ,column =1 ,sticky ="W")#line:1504
-    Label (OO0O000O0000O000O ,text ="Mouse L-down").grid (row =3 ,column =1 ,sticky ="W")#line:1505
-    Label (OO0O000O0000O000O ,text ="Mouse R-click").grid (row =4 ,column =1 ,sticky ="W")#line:1506
-    Label (OO0O000O0000O000O ,text ="Mouse R-down").grid (row =5 ,column =1 ,sticky ="W")#line:1507
-    Label (OO0O000O0000O000O ,text ="Switch Button").grid (row =6 ,column =1 ,sticky ="W")#line:1508
-    OOOO0OO0000OOOO00 =StringVar ();OOOO0OO0000OOOO00 .set ("a")#line:1511
-    OOO000OO00O0O0OOO =StringVar ();OOO000OO00O0O0OOO .set ("z")#line:1512
-    OO00O00O000O00OOO =StringVar ();OO00O00O000O00OOO .set ("0")#line:1513
-    O0000000OO00O000O =StringVar ();O0000000OO00O000O .set ("9")#line:1514
-    OOO000OOOOO00OO0O =StringVar ();OOO000OOOOO00OO0O .set ("-")#line:1515
-    Entry (OO0O000O0000O000O ,textvariable =OOOO0OO0000OOOO00 ,width =2 ).grid (row =2 ,column =2 ,sticky ="W")#line:1516
-    Entry (OO0O000O0000O000O ,textvariable =OOO000OO00O0O0OOO ,width =2 ).grid (row =3 ,column =2 ,sticky ="W")#line:1517
-    Entry (OO0O000O0000O000O ,textvariable =OO00O00O000O00OOO ,width =2 ).grid (row =4 ,column =2 ,sticky ="W")#line:1518
-    Entry (OO0O000O0000O000O ,textvariable =O0000000OO00O000O ,width =2 ).grid (row =5 ,column =2 ,sticky ="W")#line:1519
-    OptionMenu (OO0O000O0000O000O ,OOO000OOOOO00OO0O ,"-","=","insert","delete","home","end","page up","page down").grid (row =6 ,column =2 ,sticky ="W")#line:1520
-    def OOOOOO0O0O0O0OOO0 ():#line:1523
+    OOOO00000OO0OOO0O =OptionMenu (O000O0OOO0O000OO0 ,bullet_threshold ,"3","4","5").grid (padx =10 ,row =0 ,column =1 ,sticky ='W')#line:1481
+    O000OO00O00OO00O0 =Label (OO000OO0O00OOO000 ,text ="Belt",font =("verdana",10 )).grid (padx =30 ,row =8 ,sticky ="W")#line:1484
+    OO00OOOO00OO0O0O0 =Frame (OO000OO0O00OOO000 )#line:1487
+    OO00OOOO00OO0O0O0 .grid (row =9 ,column =0 )#line:1488
+    O00000O0O000OOO00 =Label (OO00OOOO00OO0O0O0 ,text ="f1").grid (padx =(0 ,5 ),row =1 ,sticky ='W')#line:1491
+    OOOO0OO0O00O0000O =Label (OO00OOOO00OO0O0O0 ,text ="f2").grid (padx =(0 ,5 ),row =2 ,sticky ='W')#line:1492
+    OOO0O000OOOO00OOO =Label (OO00OOOO00OO0O0O0 ,text ="f3").grid (padx =(0 ,5 ),row =3 ,sticky ='W')#line:1493
+    O0OOOOOO0OOO0O00O =Label (OO00OOOO00OO0O0O0 ,text ="f4").grid (padx =(0 ,5 ),row =4 ,sticky ='W')#line:1494
+    OO0000O0OOOOOO00O =Label (OO00OOOO00OO0O0O0 ,text ="f5").grid (padx =(0 ,5 ),row =5 ,sticky ='W')#line:1495
+    OOO0OOO0OO00000OO =Label (OO00OOOO00OO0O0O0 ,text ="f6").grid (padx =(0 ,5 ),row =6 ,sticky ='W')#line:1496
+    OO00O00O0O0O000O0 =Label (OO00OOOO00OO0O0O0 ,text ="f7").grid (padx =(0 ,5 ),row =7 ,sticky ='W')#line:1497
+    OO0OOOO000O00O0O0 =Label (OO00OOOO00OO0O0O0 ,text ="f8").grid (padx =(0 ,5 ),row =8 ,sticky ='W')#line:1498
+    Label (OO000OO0O00OOO000 ,text ="Mouse Hotkey",font =("verdana",10 )).grid (row =1 ,column =1 ,sticky ="W")#line:1501
+    Label (OO000OO0O00OOO000 ,text ="Mouse L-click").grid (row =2 ,column =1 ,sticky ="W")#line:1504
+    Label (OO000OO0O00OOO000 ,text ="Mouse L-down").grid (row =3 ,column =1 ,sticky ="W")#line:1505
+    Label (OO000OO0O00OOO000 ,text ="Mouse R-click").grid (row =4 ,column =1 ,sticky ="W")#line:1506
+    Label (OO000OO0O00OOO000 ,text ="Mouse R-down").grid (row =5 ,column =1 ,sticky ="W")#line:1507
+    Label (OO000OO0O00OOO000 ,text ="Switch Button").grid (row =6 ,column =1 ,sticky ="W")#line:1508
+    OO0O0OOOO0O0O000O =StringVar ();OO0O0OOOO0O0O000O .set ("a")#line:1511
+    O0000OO0OOOO0OOO0 =StringVar ();O0000OO0OOOO0OOO0 .set ("z")#line:1512
+    O000OO00OOOOO0O00 =StringVar ();O000OO00OOOOO0O00 .set ("0")#line:1513
+    O0000OOO00000OO00 =StringVar ();O0000OOO00000OO00 .set ("9")#line:1514
+    O000OO0OO0O0OOO0O =StringVar ();O000OO0OO0O0OOO0O .set ("-")#line:1515
+    Entry (OO000OO0O00OOO000 ,textvariable =OO0O0OOOO0O0O000O ,width =2 ).grid (row =2 ,column =2 ,sticky ="W")#line:1516
+    Entry (OO000OO0O00OOO000 ,textvariable =O0000OO0OOOO0OOO0 ,width =2 ).grid (row =3 ,column =2 ,sticky ="W")#line:1517
+    Entry (OO000OO0O00OOO000 ,textvariable =O000OO00OOOOO0O00 ,width =2 ).grid (row =4 ,column =2 ,sticky ="W")#line:1518
+    Entry (OO000OO0O00OOO000 ,textvariable =O0000OOO00000OO00 ,width =2 ).grid (row =5 ,column =2 ,sticky ="W")#line:1519
+    OptionMenu (OO000OO0O00OOO000 ,O000OO0OO0O0OOO0O ,"-","=","insert","delete","home","end","page up","page down").grid (row =6 ,column =2 ,sticky ="W")#line:1520
+    def OO00OOOO00OO0OOOO ():#line:1523
         global hotkey_on ,hotkey1 ,hotkey2 ,hotkey3 ,hotkey4 ,hotkey5 #line:1524
-        hotkey1 =OOOO0OO0000OOOO00 .get ()#line:1525
-        hotkey2 =OOO000OO00O0O0OOO .get ()#line:1526
-        hotkey3 =OO00O00O000O00OOO .get ()#line:1527
-        hotkey4 =O0000000OO00O000O .get ()#line:1528
-        hotkey5 =OOO000OOOOO00OO0O .get ()#line:1529
+        hotkey1 =OO0O0OOOO0O0O000O .get ()#line:1525
+        hotkey2 =O0000OO0OOOO0OOO0 .get ()#line:1526
+        hotkey3 =O000OO00OOOOO0O00 .get ()#line:1527
+        hotkey4 =O0000OOO00000OO00 .get ()#line:1528
+        hotkey5 =O000OO0OO0O0OOO0O .get ()#line:1529
         if hotkey_on ==1 :#line:1530
             try :#line:1531
                 keyboard .remove_hotkey (hotkey1 )#line:1532
@@ -1330,302 +1330,302 @@ def dk_helper ():#line:1273
             keyboard .add_hotkey (hotkey3 ,lambda :[pag .mouseUp (button ='right'),time .sleep (0.1 ),pag .rightClick (),time .sleep (0.01 )])#line:1542
             keyboard .add_hotkey (hotkey4 ,lambda :[pag .mouseUp (button ='right'),time .sleep (0.1 ),pag .mouseDown (button ='right')])#line:1543
             hotkey_on =1 #line:1544
-    def OO0O0O0OOO0000OO0 ():#line:1547
-        OOOOO00O0OOO0OO00 =Toplevel ()#line:1548
-        OOOOO00O0OOO0OO00 .title ("Help")#line:1549
-        Label (OOOOO00O0OOO0OO00 ,text ="한국어").grid (sticky ="W")#line:1550
-        Label (OOOOO00O0OOO0OO00 ,text ="1. 매니저 사용법").grid (sticky ="W")#line:1551
-        Label (OOOOO00O0OOO0OO00 ,text ="- 다크에덴 캐릭터에 로그인 후 다덴 헬퍼를 실행한다.").grid (sticky ="W")#line:1552
-        Label (OOOOO00O0OOO0OO00 ,text ="- 사용할 매니저를 체크한 후 임계치를 설정한다.").grid (sticky ="W")#line:1553
-        Label (OOOOO00O0OOO0OO00 ,text ="- 벨트 단축키에 들어갈 옵션을 선택한다.").grid (sticky ="W")#line:1554
-        Label (OOOOO00O0OOO0OO00 ,text ="- 스타트 버튼을 누른다.").grid (sticky ="W")#line:1555
-        Label (OOOOO00O0OOO0OO00 ,text ="2. 마우스 단축키 사용법").grid (sticky ="W")#line:1556
-        Label (OOOOO00O0OOO0OO00 ,text ="- 다크에덴 캐릭터에 로그인 후 다덴 헬퍼를 실행한다.").grid (sticky ="W")#line:1557
-        Label (OOOOO00O0OOO0OO00 ,text ="- 사용할 단축키 버튼을 설정한다.").grid (sticky ="W")#line:1558
-        Label (OOOOO00O0OOO0OO00 ,text ="- 이때 단축키 버튼은 하나의 키보드 버튼만 적용되며,").grid (sticky ="W")#line:1559
-        Label (OOOOO00O0OOO0OO00 ,text ="   게임상의 단축버튼과 동일되지 않도록 한다.").grid (sticky ="W")#line:1560
-        Label (OOOOO00O0OOO0OO00 ,text ="- 스타트 버튼을 누른다.").grid (sticky ="W")#line:1561
-        Label (OOOOO00O0OOO0OO00 ,text ="- 실행 후 스위치 버튼을 눌러 단축기능을 키고 끈다.").grid (sticky ="W")#line:1562
-        Label (OOOOO00O0OOO0OO00 ,text ="3. 문제해결").grid (sticky ="W")#line:1563
-        Label (OOOOO00O0OOO0OO00 ,text ="- 마우스 단축키가 안먹힐 때는 스타트 버튼을 누르거나,").grid (sticky ="W")#line:1564
-        Label (OOOOO00O0OOO0OO00 ,text ="   스위치 버튼을 눌러본다.").grid (sticky ="W")#line:1565
-        Label (OOOOO00O0OOO0OO00 ,text ="- 마우스 양쪽 클릭과 컨트롤, 알트 그리고 쉬프트 버튼등을 눌러본다.").grid (sticky ="W")#line:1566
-        Label (OOOOO00O0OOO0OO00 ,text ="4. 주의사항").grid (sticky ="W")#line:1567
-        Label (OOOOO00O0OOO0OO00 ,text ="- 마우스 단축키를 사용한 반복적인 움직임과 스킬사용은").grid (sticky ="W")#line:1568
-        Label (OOOOO00O0OOO0OO00 ,text ="   신고나 모니터링을 통해 벤을 당할 수 있으니 주의바람.").grid (sticky ="W")#line:1569
-        Label (OOOOO00O0OOO0OO00 ,text ="5. VIP 기능").grid (sticky ="W")#line:1570
-        Label (OOOOO00O0OOO0OO00 ,text ="- 시야확장").grid (sticky ="W")#line:1571
-        Label (OOOOO00O0OOO0OO00 ,text ="- 떨어진 아이템 읽기").grid (sticky ="W")#line:1572
-        Label (OOOOO00O0OOO0OO00 ,text =" ").grid (sticky ="W")#line:1573
-        Label (OOOOO00O0OOO0OO00 ,text ="*아이템읽기 기능은 영덴에서만 가능함").grid (sticky ="W")#line:1574
-    def OOOOO000OOOOO0O0O ():#line:1576
-        OO0OOOO0OO0O0OOOO =Toplevel ()#line:1577
-        OO0OOOO0OO0O0OOOO .title ("Help")#line:1578
-        Label (OO0OOOO0OO0O0OOOO ,text ="Englsih").grid (sticky ="W")#line:1579
-        Label (OO0OOOO0OO0O0OOOO ,text ="1. How to use Manager").grid (sticky ="W")#line:1580
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Run DK Helper after logging in to a character.").grid (sticky ="W")#line:1581
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Tick a manager to use and select a threshold.").grid (sticky ="W")#line:1582
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Select options for belt keys.").grid (sticky ="W")#line:1583
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Press Start to begin.").grid (sticky ="W")#line:1584
-        Label (OO0OOOO0OO0O0OOOO ,text ="2. How to use Mouse Hotkey").grid (sticky ="W")#line:1585
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Run DK Helper after logging in to a character.").grid (sticky ="W")#line:1586
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Choose a button for a hotkey.").grid (sticky ="W")#line:1587
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Note that only one keyboard button is applicable and").grid (sticky ="W")#line:1588
-        Label (OO0OOOO0OO0O0OOOO ,text ="   try not to use a button used as a in-game shortcut.").grid (sticky ="W")#line:1589
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Press Start to begin.").grid (sticky ="W")#line:1590
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Once started, press Switch key to toggle on and off.").grid (sticky ="W")#line:1591
-        Label (OO0OOOO0OO0O0OOOO ,text ="3. Troubleshooting").grid (sticky ="W")#line:1592
-        Label (OO0OOOO0OO0O0OOOO ,text ="- When the mouse hotkeys don't work, try pressing Start again").grid (sticky ="W")#line:1593
-        Label (OO0OOOO0OO0O0OOOO ,text ="   or Switch button.").grid (sticky ="W")#line:1594
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Also click on both mouse clicks and press ctrl, alt and shift buttons.").grid (sticky ="W")#line:1595
-        Label (OO0OOOO0OO0O0OOOO ,text ="4. Warning").grid (sticky ="W")#line:1596
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Repetitive movement or skill-use using mouse hotkeys may result in ban.").grid (sticky ="W")#line:1597
-        Label (OO0OOOO0OO0O0OOOO ,text ="5. VIP functions").grid (sticky ="W")#line:1598
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Vision maximiser").grid (sticky ="W")#line:1599
-        Label (OO0OOOO0OO0O0OOOO ,text ="- Dropped item reader").grid (sticky ="W")#line:1600
-        Label (OO0OOOO0OO0O0OOOO ,text =" ").grid (sticky ="W")#line:1601
-        Label (OO0OOOO0OO0O0OOOO ,text ="*Item reader function only available for Inter. server").grid (sticky ="W")#line:1602
-    Button (OO0O000O0000O000O ,text ="도움",command =lambda :OO0O0O0OOO0000OO0 ()).grid (row =7 ,column =2 )#line:1604
-    Button (OO0O000O0000O000O ,text ="Help",command =lambda :OOOOO000OOOOO0O0O ()).grid (row =8 ,column =2 )#line:1605
-    O00O0O0OO00OOOOO0 =StringVar ()#line:1608
-    O00O0O0OO00OOOOO0 .set ("None")#line:1609
-    OO0OOO0000O00O0O0 =OptionMenu (O0OOOOO0OO0OO0000 ,O00O0O0OO00OOOOO0 ,"HP","MP","Bullet","None").grid (padx =10 ,row =1 ,column =1 ,sticky ='W')#line:1610
-    OOO0O000000O00000 =StringVar ()#line:1611
-    OOO0O000000O00000 .set ("None")#line:1612
-    OOOO00000O0O000O0 =OptionMenu (O0OOOOO0OO0OO0000 ,OOO0O000000O00000 ,"HP","MP","Bullet","None").grid (padx =10 ,row =2 ,column =1 ,sticky ='W')#line:1613
-    O0O000O00O000OO00 =StringVar ()#line:1614
-    O0O000O00O000OO00 .set ("None")#line:1615
-    O0O00OO0O00OOOOOO =OptionMenu (O0OOOOO0OO0OO0000 ,O0O000O00O000OO00 ,"HP","MP","Bullet","None").grid (padx =10 ,row =3 ,column =1 ,sticky ='W')#line:1616
-    OO000O0O0OO0O0OO0 =StringVar ()#line:1617
-    OO000O0O0OO0O0OO0 .set ("None")#line:1618
-    O0O000OO0OO000OO0 =OptionMenu (O0OOOOO0OO0OO0000 ,OO000O0O0OO0O0OO0 ,"HP","MP","Bullet","None").grid (padx =10 ,row =4 ,column =1 ,sticky ='W')#line:1619
-    OO00O0OO0OOOOOO00 =StringVar ()#line:1620
-    OO00O0OO0OOOOOO00 .set ("None")#line:1621
-    OO0O00000OO0OO0OO =OptionMenu (O0OOOOO0OO0OO0000 ,OO00O0OO0OOOOOO00 ,"HP","MP","Bullet","None").grid (padx =10 ,row =5 ,column =1 ,sticky ='W')#line:1622
-    OOOO0OOOO0O00OOO0 =StringVar ()#line:1623
-    OOOO0OOOO0O00OOO0 .set ("None")#line:1624
-    OOOO00O0OOOOOO00O =OptionMenu (O0OOOOO0OO0OO0000 ,OOOO0OOOO0O00OOO0 ,"HP","MP","Bullet","None").grid (padx =10 ,row =6 ,column =1 ,sticky ='W')#line:1625
-    OO00000000OOO0O0O =StringVar ()#line:1626
-    OO00000000OOO0O0O .set ("None")#line:1627
-    O0O0OOO0OOO000O0O =OptionMenu (O0OOOOO0OO0OO0000 ,OO00000000OOO0O0O ,"HP","MP","Bullet","None").grid (padx =10 ,row =7 ,column =1 ,sticky ='W')#line:1628
-    O00OOOOO00000OO0O =StringVar ()#line:1629
-    O00OOOOO00000OO0O .set ("None")#line:1630
-    O00000OO00O00OO00 =OptionMenu (O0OOOOO0OO0OO0000 ,O00OOOOO00000OO0O ,"HP","MP","Bullet","None").grid (padx =10 ,row =8 ,column =1 ,sticky ='W')#line:1631
-    OOOO000000O0OOOOO =Frame (OO0O000O0000O000O )#line:1634
-    OOOO000000O0OOOOO .grid (row =13 ,column =0 ,columnspan =3 )#line:1635
-    O00OO0O0OO000OOOO =Button (OOOO000000O0OOOOO ,text ="Start",command =lambda :O000OOOO0OO0OOO00 (),width =12 ,font =("verdana",10 ))#line:1638
-    O00OO0O0OO000OOOO .pack (side =LEFT )#line:1639
-    O0O00O0OOO0OO0OOO =Button (OOOO000000O0OOOOO ,text ="Stop",command =lambda :O0O00OO00OOOOO0O0 (),width =12 ,font =("verdana",10 ))#line:1640
-    O0O00O0OOO0OO0OOO .pack (side =RIGHT )#line:1641
-    l_text =Label (OO0O000O0000O000O ,text ="Welcome to DK Helper",fg ="blue",font =("verdana",10 ))#line:1644
+    def O0OOO00000OOOO000 ():#line:1547
+        O000OOOO00O0OO00O =Toplevel ()#line:1548
+        O000OOOO00O0OO00O .title ("Help")#line:1549
+        Label (O000OOOO00O0OO00O ,text ="한국어").grid (sticky ="W")#line:1550
+        Label (O000OOOO00O0OO00O ,text ="1. 매니저 사용법").grid (sticky ="W")#line:1551
+        Label (O000OOOO00O0OO00O ,text ="- 다크에덴 캐릭터에 로그인 후 다덴 헬퍼를 실행한다.").grid (sticky ="W")#line:1552
+        Label (O000OOOO00O0OO00O ,text ="- 사용할 매니저를 체크한 후 임계치를 설정한다.").grid (sticky ="W")#line:1553
+        Label (O000OOOO00O0OO00O ,text ="- 벨트 단축키에 들어갈 옵션을 선택한다.").grid (sticky ="W")#line:1554
+        Label (O000OOOO00O0OO00O ,text ="- 스타트 버튼을 누른다.").grid (sticky ="W")#line:1555
+        Label (O000OOOO00O0OO00O ,text ="2. 마우스 단축키 사용법").grid (sticky ="W")#line:1556
+        Label (O000OOOO00O0OO00O ,text ="- 다크에덴 캐릭터에 로그인 후 다덴 헬퍼를 실행한다.").grid (sticky ="W")#line:1557
+        Label (O000OOOO00O0OO00O ,text ="- 사용할 단축키 버튼을 설정한다.").grid (sticky ="W")#line:1558
+        Label (O000OOOO00O0OO00O ,text ="- 이때 단축키 버튼은 하나의 키보드 버튼만 적용되며,").grid (sticky ="W")#line:1559
+        Label (O000OOOO00O0OO00O ,text ="   게임상의 단축버튼과 동일되지 않도록 한다.").grid (sticky ="W")#line:1560
+        Label (O000OOOO00O0OO00O ,text ="- 스타트 버튼을 누른다.").grid (sticky ="W")#line:1561
+        Label (O000OOOO00O0OO00O ,text ="- 실행 후 스위치 버튼을 눌러 단축기능을 키고 끈다.").grid (sticky ="W")#line:1562
+        Label (O000OOOO00O0OO00O ,text ="3. 문제해결").grid (sticky ="W")#line:1563
+        Label (O000OOOO00O0OO00O ,text ="- 마우스 단축키가 안먹힐 때는 스타트 버튼을 누르거나,").grid (sticky ="W")#line:1564
+        Label (O000OOOO00O0OO00O ,text ="   스위치 버튼을 눌러본다.").grid (sticky ="W")#line:1565
+        Label (O000OOOO00O0OO00O ,text ="- 마우스 양쪽 클릭과 컨트롤, 알트 그리고 쉬프트 버튼등을 눌러본다.").grid (sticky ="W")#line:1566
+        Label (O000OOOO00O0OO00O ,text ="4. 주의사항").grid (sticky ="W")#line:1567
+        Label (O000OOOO00O0OO00O ,text ="- 마우스 단축키를 사용한 반복적인 움직임과 스킬사용은").grid (sticky ="W")#line:1568
+        Label (O000OOOO00O0OO00O ,text ="   신고나 모니터링을 통해 벤을 당할 수 있으니 주의바람.").grid (sticky ="W")#line:1569
+        Label (O000OOOO00O0OO00O ,text ="5. VIP 기능").grid (sticky ="W")#line:1570
+        Label (O000OOOO00O0OO00O ,text ="- 시야확장").grid (sticky ="W")#line:1571
+        Label (O000OOOO00O0OO00O ,text ="- 떨어진 아이템 읽기").grid (sticky ="W")#line:1572
+        Label (O000OOOO00O0OO00O ,text =" ").grid (sticky ="W")#line:1573
+        Label (O000OOOO00O0OO00O ,text ="*아이템읽기 기능은 영덴에서만 가능함").grid (sticky ="W")#line:1574
+    def O00O00000O0OOOOO0 ():#line:1576
+        OO00O000000000O00 =Toplevel ()#line:1577
+        OO00O000000000O00 .title ("Help")#line:1578
+        Label (OO00O000000000O00 ,text ="Englsih").grid (sticky ="W")#line:1579
+        Label (OO00O000000000O00 ,text ="1. How to use Manager").grid (sticky ="W")#line:1580
+        Label (OO00O000000000O00 ,text ="- Run DK Helper after logging in to a character.").grid (sticky ="W")#line:1581
+        Label (OO00O000000000O00 ,text ="- Tick a manager to use and select a threshold.").grid (sticky ="W")#line:1582
+        Label (OO00O000000000O00 ,text ="- Select options for belt keys.").grid (sticky ="W")#line:1583
+        Label (OO00O000000000O00 ,text ="- Press Start to begin.").grid (sticky ="W")#line:1584
+        Label (OO00O000000000O00 ,text ="2. How to use Mouse Hotkey").grid (sticky ="W")#line:1585
+        Label (OO00O000000000O00 ,text ="- Run DK Helper after logging in to a character.").grid (sticky ="W")#line:1586
+        Label (OO00O000000000O00 ,text ="- Choose a button for a hotkey.").grid (sticky ="W")#line:1587
+        Label (OO00O000000000O00 ,text ="- Note that only one keyboard button is applicable and").grid (sticky ="W")#line:1588
+        Label (OO00O000000000O00 ,text ="   try not to use a button used as a in-game shortcut.").grid (sticky ="W")#line:1589
+        Label (OO00O000000000O00 ,text ="- Press Start to begin.").grid (sticky ="W")#line:1590
+        Label (OO00O000000000O00 ,text ="- Once started, press Switch key to toggle on and off.").grid (sticky ="W")#line:1591
+        Label (OO00O000000000O00 ,text ="3. Troubleshooting").grid (sticky ="W")#line:1592
+        Label (OO00O000000000O00 ,text ="- When the mouse hotkeys don't work, try pressing Start again").grid (sticky ="W")#line:1593
+        Label (OO00O000000000O00 ,text ="   or Switch button.").grid (sticky ="W")#line:1594
+        Label (OO00O000000000O00 ,text ="- Also click on both mouse clicks and press ctrl, alt and shift buttons.").grid (sticky ="W")#line:1595
+        Label (OO00O000000000O00 ,text ="4. Warning").grid (sticky ="W")#line:1596
+        Label (OO00O000000000O00 ,text ="- Repetitive movement or skill-use using mouse hotkeys may result in ban.").grid (sticky ="W")#line:1597
+        Label (OO00O000000000O00 ,text ="5. VIP functions").grid (sticky ="W")#line:1598
+        Label (OO00O000000000O00 ,text ="- Vision maximiser").grid (sticky ="W")#line:1599
+        Label (OO00O000000000O00 ,text ="- Dropped item reader").grid (sticky ="W")#line:1600
+        Label (OO00O000000000O00 ,text =" ").grid (sticky ="W")#line:1601
+        Label (OO00O000000000O00 ,text ="*Item reader function only available for Inter. server").grid (sticky ="W")#line:1602
+    Button (OO000OO0O00OOO000 ,text ="도움",command =lambda :O0OOO00000OOOO000 ()).grid (row =7 ,column =2 )#line:1604
+    Button (OO000OO0O00OOO000 ,text ="Help",command =lambda :O00O00000O0OOOOO0 ()).grid (row =8 ,column =2 )#line:1605
+    OO000OO00OO0O0O00 =StringVar ()#line:1608
+    OO000OO00OO0O0O00 .set ("None")#line:1609
+    OO00000OO00O00OO0 =OptionMenu (OO00OOOO00OO0O0O0 ,OO000OO00OO0O0O00 ,"HP","MP","Bullet","None").grid (padx =10 ,row =1 ,column =1 ,sticky ='W')#line:1610
+    O0000OO0OO0O0OOOO =StringVar ()#line:1611
+    O0000OO0OO0O0OOOO .set ("None")#line:1612
+    OOOO00O0OO0O00000 =OptionMenu (OO00OOOO00OO0O0O0 ,O0000OO0OO0O0OOOO ,"HP","MP","Bullet","None").grid (padx =10 ,row =2 ,column =1 ,sticky ='W')#line:1613
+    O0O00OOO00OO000OO =StringVar ()#line:1614
+    O0O00OOO00OO000OO .set ("None")#line:1615
+    OO0O00OOOOOOO000O =OptionMenu (OO00OOOO00OO0O0O0 ,O0O00OOO00OO000OO ,"HP","MP","Bullet","None").grid (padx =10 ,row =3 ,column =1 ,sticky ='W')#line:1616
+    O000O0OO0O00O0O0O =StringVar ()#line:1617
+    O000O0OO0O00O0O0O .set ("None")#line:1618
+    O0000O0O00OOOO000 =OptionMenu (OO00OOOO00OO0O0O0 ,O000O0OO0O00O0O0O ,"HP","MP","Bullet","None").grid (padx =10 ,row =4 ,column =1 ,sticky ='W')#line:1619
+    O0O0OO0OO0OO0O00O =StringVar ()#line:1620
+    O0O0OO0OO0OO0O00O .set ("None")#line:1621
+    OO0OOOO0OO0O00OO0 =OptionMenu (OO00OOOO00OO0O0O0 ,O0O0OO0OO0OO0O00O ,"HP","MP","Bullet","None").grid (padx =10 ,row =5 ,column =1 ,sticky ='W')#line:1622
+    OOOOOOO0OO0OO00O0 =StringVar ()#line:1623
+    OOOOOOO0OO0OO00O0 .set ("None")#line:1624
+    O0O00OOO000O00O00 =OptionMenu (OO00OOOO00OO0O0O0 ,OOOOOOO0OO0OO00O0 ,"HP","MP","Bullet","None").grid (padx =10 ,row =6 ,column =1 ,sticky ='W')#line:1625
+    OO0O00OO0OO000OOO =StringVar ()#line:1626
+    OO0O00OO0OO000OOO .set ("None")#line:1627
+    O00OO0000OOO0OO0O =OptionMenu (OO00OOOO00OO0O0O0 ,OO0O00OO0OO000OOO ,"HP","MP","Bullet","None").grid (padx =10 ,row =7 ,column =1 ,sticky ='W')#line:1628
+    OOO0000O0OO00O0OO =StringVar ()#line:1629
+    OOO0000O0OO00O0OO .set ("None")#line:1630
+    OOO0O0OO0OO00OOO0 =OptionMenu (OO00OOOO00OO0O0O0 ,OOO0000O0OO00O0OO ,"HP","MP","Bullet","None").grid (padx =10 ,row =8 ,column =1 ,sticky ='W')#line:1631
+    O0O00OO0O0O00O0OO =Frame (OO000OO0O00OOO000 )#line:1634
+    O0O00OO0O0O00O0OO .grid (row =13 ,column =0 ,columnspan =3 )#line:1635
+    O00OO00000O0OOOO0 =Button (O0O00OO0O0O00O0OO ,text ="Start",command =lambda :OO00O0O000O0OOO0O (),width =12 ,font =("verdana",10 ))#line:1638
+    O00OO00000O0OOOO0 .pack (side =LEFT )#line:1639
+    OO00O0O0O00OOOO00 =Button (O0O00OO0O0O00O0OO ,text ="Stop",command =lambda :OOO0000O0OOOO0O0O (),width =12 ,font =("verdana",10 ))#line:1640
+    OO00O0O0O00OOOO00 .pack (side =RIGHT )#line:1641
+    l_text =Label (OO000OO0O00OOO000 ,text ="Welcome to DK Helper",fg ="blue",font =("verdana",10 ))#line:1644
     l_text .grid (padx =30 ,row =48 ,column =0 ,columnspan =2 ,sticky ="EW")#line:1645
-    OOOOOOO00O0OOOOO0 =Label (OO0O000O0000O000O ,text ="개인 문의 - 카톡 검색 \"다덴\"").grid (padx =30 ,row =49 ,column =0 ,columnspan =5 ,sticky ='EW')#line:1648
-    OOOOOOO00O0OOOOO0 =Label (OO0O000O0000O000O ,text ="오픈챗 - 카톡 검색 \"다덴 헬퍼\"").grid (padx =30 ,row =50 ,column =0 ,columnspan =5 ,sticky ='EW')#line:1649
-    OOO0OOOOOO0000OO0 =Label (OO0O000O0000O000O ,text ="DK Helper v3 - made by.다덴 credit.KiBou").grid (padx =30 ,row =51 ,column =0 ,columnspan =5 ,sticky ='EW')#line:1650
-    def O00O000OO0OO00OO0 (O00OO0OOOOO00OO0O ,OOOO00O0OOOO0000O ="blue"):#line:1654
+    O0OOOOOOO00OOO0OO =Label (OO000OO0O00OOO000 ,text ="개인 문의 - 카톡 검색 \"다덴\"").grid (padx =30 ,row =49 ,column =0 ,columnspan =5 ,sticky ='EW')#line:1648
+    O0OOOOOOO00OOO0OO =Label (OO000OO0O00OOO000 ,text ="오픈챗 - 카톡 검색 \"다덴 헬퍼\"").grid (padx =30 ,row =50 ,column =0 ,columnspan =5 ,sticky ='EW')#line:1649
+    O000O00O00O0O0OO0 =Label (OO000OO0O00OOO000 ,text ="DK Helper v3 - made by.다덴 credit.KiBou").grid (padx =30 ,row =51 ,column =0 ,columnspan =5 ,sticky ='EW')#line:1650
+    def O0O00OOOO00OOO0O0 (OO00O0000OO00OO0O ,OOO00OOOOO0OO00O0 ="blue"):#line:1654
         global l_text #line:1655
         l_text .destroy ()#line:1656
-        l_text =Label (OO0O000O0000O000O ,text =O00OO0OOOOO00OO0O ,fg =OOOO00O0OOOO0000O ,font =("verdana",10 ))#line:1657
+        l_text =Label (OO000OO0O00OOO000 ,text =OO00O0000OO00OO0O ,fg =OOO00OOOOO0OO00O0 ,font =("verdana",10 ))#line:1657
         l_text .grid (padx =30 ,row =48 ,column =0 ,columnspan =2 ,sticky ="EW")#line:1658
-    def O00OO000O000O0O0O ():#line:1661
-        OO0O0OO0OO0O00O00 ="darkeden.exe"#line:1662
-        for OOOO0O0O0OOOOOO0O in psutil .process_iter ():#line:1663
-            if OO0O0OO0OO0O00O00 in str (OOOO0O0O0OOOOOO0O .name ):#line:1664
-                O00O000OO0OO00OO0 ("Welcome to DK Helper")#line:1665
-                return OOOO0O0O0OOOOOO0O .pid #line:1666
-    def O0O0O0OO0000O0OO0 (_OOO00O0000OOOOOOO ,O00O0OO00OOOO0OOO ):#line:1669
-        if O00O0OO00OOOO0OOO ==None :#line:1670
-            O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1671
+    def OO000O0O00OO00OOO ():#line:1661
+        OO000OO0OO0OOOO0O ="darkeden.exe"#line:1662
+        for OOOO0O000O00O0OOO in psutil .process_iter ():#line:1663
+            if OO000OO0OO0OOOO0O in str (OOOO0O000O00O0OOO .name ):#line:1664
+                O0O00OOOO00OOO0O0 ("Welcome to DK Helper")#line:1665
+                return OOOO0O000O00O0OOO .pid #line:1666
+    def OO0O0OO00OO0OO0O0 (_O00000000000OOO00 ,OO000OO0O0OOO00O0 ):#line:1669
+        if OO000OO0O0OOO00O0 ==None :#line:1670
+            O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1671
         else :#line:1672
-            O0OO0OO00O000O0O0 =0x0010 #line:1673
-            O00OO00O000000O00 =WinDLL ('kernel32')#line:1674
-            O00OO00O000000O00 .OpenProcess .argtypes =DWORD ,BOOL ,DWORD #line:1675
-            O00OO00O000000O00 .OpenProcess .restype =HANDLE #line:1676
-            O00OO00O000000O00 .ReadProcessMemory .argtypes =HANDLE ,LPVOID ,LPVOID ,c_size_t ,POINTER (c_size_t )#line:1677
-            O00OO00O000000O00 .ReadProcessMemory .restype =BOOL #line:1678
-            O0OO0OO0O0O00O000 =O00OO00O000000O00 .OpenProcess (O0OO0OO00O000O0O0 ,0 ,O00O0OO00OOOO0OOO )#line:1679
-            O0O00O00O0OO0O0OO =create_string_buffer (4 )#line:1680
-            OOOOO0000O000OOOO =c_size_t ()#line:1681
-            if O00OO00O000000O00 .ReadProcessMemory (O0OO0OO0O0O00O000 ,_OOO00O0000OOOOOOO ,O0O00O00O0OO0O0OO ,4 ,ctypes .byref (OOOOO0000O000OOOO )):#line:1682
-                O0O000OO0000OOOOO =0 #line:1683
-                O0O000OO0000OOOOO +=O0O00O00O0OO0O0OO .raw [0 ]<<8 *0 #line:1684
-                O0O000OO0000OOOOO +=O0O00O00O0OO0O0OO .raw [1 ]<<8 *1 #line:1685
-                O0O000OO0000OOOOO +=O0O00O00O0OO0O0OO .raw [2 ]<<8 *2 #line:1686
-                O0O000OO0000OOOOO +=O0O00O00O0OO0O0OO .raw [3 ]<<8 *3 #line:1687
-                return O0O000OO0000OOOOO #line:1688
+            OO0000000O0OOO0O0 =0x0010 #line:1673
+            OO000OO00O0O0OOOO =WinDLL ('kernel32')#line:1674
+            OO000OO00O0O0OOOO .OpenProcess .argtypes =DWORD ,BOOL ,DWORD #line:1675
+            OO000OO00O0O0OOOO .OpenProcess .restype =HANDLE #line:1676
+            OO000OO00O0O0OOOO .ReadProcessMemory .argtypes =HANDLE ,LPVOID ,LPVOID ,c_size_t ,POINTER (c_size_t )#line:1677
+            OO000OO00O0O0OOOO .ReadProcessMemory .restype =BOOL #line:1678
+            O0000OOOO0O0OOO0O =OO000OO00O0O0OOOO .OpenProcess (OO0000000O0OOO0O0 ,0 ,OO000OO0O0OOO00O0 )#line:1679
+            OOO0000OOOOOOO0O0 =create_string_buffer (4 )#line:1680
+            OOO0OO0O0O0O0O0O0 =c_size_t ()#line:1681
+            if OO000OO00O0O0OOOO .ReadProcessMemory (O0000OOOO0O0OOO0O ,_O00000000000OOO00 ,OOO0000OOOOOOO0O0 ,4 ,ctypes .byref (OOO0OO0O0O0O0O0O0 )):#line:1682
+                OO000OOO0OO00000O =0 #line:1683
+                OO000OOO0OO00000O +=OOO0000OOOOOOO0O0 .raw [0 ]<<8 *0 #line:1684
+                OO000OOO0OO00000O +=OOO0000OOOOOOO0O0 .raw [1 ]<<8 *1 #line:1685
+                OO000OOO0OO00000O +=OOO0000OOOOOOO0O0 .raw [2 ]<<8 *2 #line:1686
+                OO000OOO0OO00000O +=OOO0000OOOOOOO0O0 .raw [3 ]<<8 *3 #line:1687
+                return OO000OOO0OO00000O #line:1688
             else :#line:1689
-                O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1690
-    def O0O00O0OO00O00O0O (_O00OO0OOOOO0O00OO ,OOOOO0OO00OOOOO00 ):#line:1692
-        if OOOOO0OO00OOOOO00 ==None :#line:1693
-            O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1694
+                O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1690
+    def OO000O00O000OO000 (_OO00O00OOO00000O0 ,OO00O00O0000O0O00 ):#line:1692
+        if OO00O00O0000O0O00 ==None :#line:1693
+            O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1694
         else :#line:1695
-            OO0OO000OO0OO000O =0x0010 #line:1696
-            O00OOOOOOO000O0O0 =WinDLL ('kernel32')#line:1697
-            O00OOOOOOO000O0O0 .OpenProcess .argtypes =DWORD ,BOOL ,DWORD #line:1698
-            O00OOOOOOO000O0O0 .OpenProcess .restype =HANDLE #line:1699
-            O00OOOOOOO000O0O0 .ReadProcessMemory .argtypes =HANDLE ,LPVOID ,LPVOID ,c_size_t ,POINTER (c_size_t )#line:1700
-            O00OOOOOOO000O0O0 .ReadProcessMemory .restype =BOOL #line:1701
-            O00OOOO00O0OOOO00 =O00OOOOOOO000O0O0 .OpenProcess (OO0OO000OO0OO000O ,0 ,OOOOO0OO00OOOOO00 )#line:1702
-            OOO00O00OO000O0O0 =create_string_buffer (4 )#line:1703
-            OOO0OOO000000000O =c_size_t ()#line:1704
-            if O00OOOOOOO000O0O0 .ReadProcessMemory (O00OOOO00O0OOOO00 ,_O00OO0OOOOO0O00OO ,OOO00O00OO000O0O0 ,4 ,ctypes .byref (OOO0OOO000000000O )):#line:1705
-                OO00OOO0OO0OOO00O =0 #line:1706
-                OO00OOO0OO0OOO00O +=OOO00O00OO000O0O0 .raw [0 ]<<8 *0 #line:1707
-                OO00OOO0OO0OOO00O +=OOO00O00OO000O0O0 .raw [1 ]<<8 *1 #line:1708
-                OO00OOO0OO0OOO00O +=OOO00O00OO000O0O0 .raw [2 ]<<8 *2 #line:1709
-                OO00OOO0OO0OOO00O +=OOO00O00OO000O0O0 .raw [3 ]<<8 *3 #line:1710
-                O00O000OO0OO00OO0 ("DK Helper turned on")#line:1711
-                return OO00OOO0OO0OOO00O #line:1712
+            O0000OOO00OOOO0OO =0x0010 #line:1696
+            OOOO0O00OO000OOOO =WinDLL ('kernel32')#line:1697
+            OOOO0O00OO000OOOO .OpenProcess .argtypes =DWORD ,BOOL ,DWORD #line:1698
+            OOOO0O00OO000OOOO .OpenProcess .restype =HANDLE #line:1699
+            OOOO0O00OO000OOOO .ReadProcessMemory .argtypes =HANDLE ,LPVOID ,LPVOID ,c_size_t ,POINTER (c_size_t )#line:1700
+            OOOO0O00OO000OOOO .ReadProcessMemory .restype =BOOL #line:1701
+            OO00OO0OO0OOO0O0O =OOOO0O00OO000OOOO .OpenProcess (O0000OOO00OOOO0OO ,0 ,OO00O00O0000O0O00 )#line:1702
+            O00OOO000O000OO00 =create_string_buffer (4 )#line:1703
+            O0000000O0000OO0O =c_size_t ()#line:1704
+            if OOOO0O00OO000OOOO .ReadProcessMemory (OO00OO0OO0OOO0O0O ,_OO00O00OOO00000O0 ,O00OOO000O000OO00 ,4 ,ctypes .byref (O0000000O0000OO0O )):#line:1705
+                OO0OOO0OO0O00OOO0 =0 #line:1706
+                OO0OOO0OO0O00OOO0 +=O00OOO000O000OO00 .raw [0 ]<<8 *0 #line:1707
+                OO0OOO0OO0O00OOO0 +=O00OOO000O000OO00 .raw [1 ]<<8 *1 #line:1708
+                OO0OOO0OO0O00OOO0 +=O00OOO000O000OO00 .raw [2 ]<<8 *2 #line:1709
+                OO0OOO0OO0O00OOO0 +=O00OOO000O000OO00 .raw [3 ]<<8 *3 #line:1710
+                O0O00OOOO00OOO0O0 ("DK Helper turned on")#line:1711
+                return OO0OOO0OO0O00OOO0 #line:1712
             else :#line:1713
-                O00O000OO0OO00OO0 ("Error: Player has no gun","red")#line:1714
-    process_id =O00OO000O000O0O0O ()#line:1716
-    def OOO0OO0OO00O0000O (O00OO0OO0O00OOOOO ,O00OO000O00OO00OO ):#line:1718
-        O0OO0OO000O0OOO0O =0x1F0FFF #line:1719
-        OO0O0OOO0OOOO000O =O00OO000O000O0O0O ()#line:1720
-        O0000O0OOOO000OO0 =windll .kernel32 .OpenProcess (O0OO0OO000O0OOO0O ,False ,OO0O0OOO0OOOO000O )#line:1721
-        OO0O0O000O0O0OO00 =c_uint (O00OO000O00OO00OO )#line:1722
-        O0OO00O00O0O0OOOO =byref (OO0O0O000O0O0OO00 )#line:1723
-        O0OO000OOOOOOOO0O =sizeof (OO0O0O000O0O0OO00 )#line:1724
-        OOO00OO0OOO0000OO =c_long (0 )#line:1725
-        windll .kernel32 .WriteProcessMemory (O0000O0OOOO000OO0 ,O00OO0OO0O00OOOOO ,O0OO00O00O0O0OOOO ,O0OO000OOOOOOOO0O ,OOO00OO0OOO0000OO )#line:1726
-    def O0OO0O00000O0O0OO (O0O0O000O000OOO0O ):#line:1729
+                O0O00OOOO00OOO0O0 ("Error: Player has no gun","red")#line:1714
+    process_id =OO000O0O00OO00OOO ()#line:1716
+    def O00O0O00OO000OOO0 (OOO0OOO00OO0OO0O0 ,O000O0O0OOO0O0O0O ):#line:1718
+        OOOO00OO0OOOOOOO0 =0x1F0FFF #line:1719
+        OOOO0OO0OO00O0000 =OO000O0O00OO00OOO ()#line:1720
+        OO00O000000OOOOOO =windll .kernel32 .OpenProcess (OOOO00OO0OOOOOOO0 ,False ,OOOO0OO0OO00O0000 )#line:1721
+        OO000O0O0OOOO00O0 =c_uint (O000O0O0OOO0O0O0O )#line:1722
+        O0OOO0OO0OO0O0O0O =byref (OO000O0O0OOOO00O0 )#line:1723
+        O00O000000OOO00O0 =sizeof (OO000O0O0OOOO00O0 )#line:1724
+        OO00O000O00O0O0O0 =c_long (0 )#line:1725
+        windll .kernel32 .WriteProcessMemory (OO00O000000OOOOOO ,OOO0OOO00OO0OO0O0 ,O0OOO0OO0OO0O0O0O ,O00O000000OOO00O0 ,OO00O000O00O0O0O0 )#line:1726
+    def OOO000OO0OOOO0OO0 (OOO0O0O0OO0OO0OOO ):#line:1729
         try :#line:1730
             if user_server =="Inter.":#line:1731
-                O00OOOO00OO0000OO =O0O0O0OO0000O0OO0 (0x00B9AA20 ,O0O0O000O000OOO0O )#line:1732
-                O000OO000O0O000O0 =O0O0O0OO0000O0OO0 (0x00B9AA18 ,O0O0O000O000OOO0O )#line:1733
+                O0OO00OOOOO0OOO0O =OO0O0OO00OO0OO0O0 (0x00B9AA20 ,OOO0O0O0OO0OO0OOO )#line:1732
+                OOO0O000O000OOOO0 =OO0O0OO00OO0OO0O0 (0x00B9AA18 ,OOO0O0O0OO0OO0OOO )#line:1733
             elif user_server =="Chn.":#line:1734
-                O00OOOO00OO0000OO =O0O0O0OO0000O0OO0 (0x007B1FA8 ,O0O0O000O000OOO0O )#line:1735
-                O000OO000O0O000O0 =O0O0O0OO0000O0OO0 (0x007B1FA0 ,O0O0O000O000OOO0O )#line:1736
-            return ((O000OO000O0O000O0 /O00OOOO00OO0000OO )*100 )#line:1737
-        except :#line:1738
-            O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1739
-    def O00OOO000OOOO00OO (OO00O000O000O0O0O ):#line:1742
-        try :#line:1743
-            if user_server =="Inter.":#line:1744
-                OOO0OOOO0000OOO0O =O0O0O0OO0000O0OO0 (0x00B9AA24 ,OO00O000O000O0O0O )#line:1745
-                OOO0O0000O0O0O0OO =O0O0O0OO0000O0OO0 (0x00B9AA1C ,OO00O000O000O0O0O )#line:1746
-            elif user_server =="Chn.":#line:1747
-                OOO0OOOO0000OOO0O =O0O0O0OO0000O0OO0 (0x007B1FAC ,OO00O000O000O0O0O )#line:1748
-                OOO0O0000O0O0O0OO =O0O0O0OO0000O0OO0 (0x007B1FA4 ,OO00O000O000O0O0O )#line:1749
-            return ((OOO0O0000O0O0O0OO /OOO0OOOO0000OOO0O )*100 )#line:1751
-        except :#line:1752
-            O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1753
-    def O0O0O0O00OOOOO00O (O0OO00OO00OO0O000 ):#line:1757
-        try :#line:1758
-            if user_server =="Inter.":#line:1759
-                OOOO0O00O00OO000O =O0O00O0OO00O00O0O (0x00400000 +0x00765C38 ,O0OO00OO00OO0O000 )#line:1760
-                O0OOOO00O00O0OO00 =O0O00O0OO00O00O0O (OOOO0O00O00OO000O +0x0000003C ,O0OO00OO00OO0O000 )#line:1761
-            elif user_server =="Chn.":#line:1762
-                OOOO0O00O00OO000O =O0O00O0OO00O00O0O (0x00400000 +0x0037B928 ,O0OO00OO00OO0O000 )#line:1763
-                O0OOOO00O00O0OO00 =O0O00O0OO00O00O0O (OOOO0O00O00OO000O +0x0000003C ,O0OO00OO00OO0O000 )#line:1764
-            return O0OOOO00O00O0OO00 #line:1766
-        except :#line:1767
-            O00O000OO0OO00OO0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1768
-    hp_check =0 ;mp_check =0 #line:1771
-    def O0OO0O0OO000O00OO ():#line:1772
-        try :#line:1773
-            global hp_first ,hp_time ,mp_first ,mp_time ,hp_check ,mp_check #line:1774
-            global hp_threshold ,mp_threshold ,process_id #line:1775
-            global bullet_time ,bullet_first ,bullet_threshold #line:1776
-            OOO000O00OOO0000O =random .uniform (1.500 ,2.000 );O000OO0OO0O000OOO =random .uniform (1.500 ,2.000 )#line:1778
-            OOO0OOOOOO00OO00O =int (hp_threshold .get ())#line:1779
-            OOO0OOOOOO00OO00O =random .uniform (OOO0OOOOOO00OO00O -3.000 ,OOO0OOOOOO00OO00O +3.000 )#line:1780
-            O0OO00O000OOO0OO0 =int (mp_threshold .get ())#line:1781
-            O0OO00O000OOO0OO0 =random .uniform (O0OO00O000OOO0OO0 -3.000 ,O0OO00O000OOO0OO0 +3.000 )#line:1782
-            O0OO0O0O00O0O000O =int (bullet_threshold .get ())#line:1783
-            O0OO0O0O00O0O000O =random .uniform (O0OO0O0O00O0O000O -1 ,O0OO0O0O00O0O000O +1 )#line:1784
-            OOOO0000000OOO000 =[]#line:1787
-            OO00OOO0O00OO0OO0 =[]#line:1788
-            OOOOOO00O0OOOOOO0 =[]#line:1789
-            O00OO00OOOO0O0O00 =["f1","f2","f3","f4","f5","f6","f7","f8"]#line:1790
-            OO000OO0O0OO00O0O =[O00O0O0OO00OOOOO0 ,OOO0O000000O00000 ,O0O000O00O000OO00 ,OO000O0O0OO0O0OO0 ,OO00O0OO0OOOOOO00 ,OOOO0OOOO0O00OOO0 ,OO00000000OOO0O0O ,O00OOOOO00000OO0O ]#line:1791
-            O0O00OOOO0O0O00O0 =0 #line:1792
-            for OOOOOO000OOOOO0O0 in OO000OO0O0OO00O0O :#line:1793
-                OOO00O0O00000O0OO =OOOOOO000OOOOO0O0 .get ()#line:1794
-                if OOO00O0O00000O0OO =="HP":#line:1795
-                    OOOO0000000OOO000 .append (O00OO00OOOO0O0O00 [O0O00OOOO0O0O00O0 ])#line:1796
-                elif OOO00O0O00000O0OO =="MP":#line:1797
-                    OO00OOO0O00OO0OO0 .append (O00OO00OOOO0O0O00 [O0O00OOOO0O0O00O0 ])#line:1798
-                elif OOO00O0O00000O0OO =="Bullet":#line:1799
-                    OOOOOO00O0OOOOOO0 .append (O00OO00OOOO0O0O00 [O0O00OOOO0O0O00O0 ])#line:1800
-                O0O00OOOO0O0O00O0 +=1 #line:1801
-            O00OO0OOO0OO0000O =OOO0OOO0O0O0O0O00 .get ()#line:1803
-            OOO0OO0OO0OO000O0 =OO0000OO00OOO00OO .get ()#line:1804
-            O00OOO0O0O0OOO0O0 =O0000000OO0O00OO0 .get ()#line:1805
-            if (O00OO0OOO0OO0000O ==0 )&(OOO0OO0OO0OO000O0 ==0 )&(O00OOO0O0O0OOO0O0 ==0 ):#line:1808
-                O00O000OO0OO00OO0 ("DK Helper turned off")#line:1809
-                O00OO0O0OO000OOOO .configure (bg ='SystemButtonFace')#line:1810
-                OO0O0OO00O000O0OO =0 #line:1811
-                return #line:1812
-            if hp_check ==0 :#line:1814
-                hp_check =1 ;mp_check =0 #line:1815
-                if ((O00OO0OOO0OO0000O ==1 )&(hp_first ==1 ))or ((O00OO0OOO0OO0000O ==1 )&(time .time ()-hp_time >OOO000O00OOO0000O )):#line:1816
-                    O000O0000O00O0000 =O0OO0O00000O0O0OO (process_id )#line:1818
-                    if O000O0000O00O0000 <=OOO0OOOOOO00OO00O :#line:1820
-                        if "f4"in OOOO0000000OOO000 :#line:1822
-                            keyboard .release ('alt')#line:1823
-                            pag .hotkey (*OOOO0000000OOO000 )#line:1824
-                            keyboard .release ('alt')#line:1825
-                        else :#line:1826
-                            pag .hotkey (*OOOO0000000OOO000 )#line:1827
-                        hp_first =0 #line:1828
-                        hp_time =time .time ()#line:1829
-            elif mp_check ==0 :#line:1831
-                mp_check =1 ;hp_check =0 #line:1832
-                if ((OOO0OO0OO0OO000O0 ==1 )&(mp_first ==1 ))or ((OOO0OO0OO0OO000O0 ==1 )&(time .time ()-mp_time >O000OO0OO0O000OOO )):#line:1833
-                    mp_first =0 #line:1834
-                    OO0O0OOO0O0OOOO0O =O00OOO000OOOO00OO (process_id )#line:1836
-                    if OO0O0OOO0O0OOOO0O <=O0OO00O000OOO0OO0 :#line:1838
-                        if "f4"in OO00OOO0O00OO0OO0 :#line:1840
-                            keyboard .release ('alt')#line:1841
-                            pag .hotkey (*OO00OOO0O00OO0OO0 )#line:1842
-                            keyboard .release ('alt')#line:1843
-                        else :#line:1844
-                            pag .hotkey (*OO00OOO0O00OO0OO0 )#line:1845
-                        pag .hotkey (*OO00OOO0O00OO0OO0 )#line:1846
-                        mp_first =0 #line:1847
-                        mp_time =time .time ()#line:1848
-            if (O00OOO0O0O0OOO0O0 ==1 )&((time .time ()-bullet_time >3 )or bullet_first ==1 ):#line:1850
-                if O0O0O0O00OOOOO00O (process_id )!=None :#line:1851
-                    OO00O0O000OOO0O0O =int (O0O0O0O00OOOOO00O (process_id ))#line:1852
-                    if OO00O0O000OOO0O0O <=O0OO0O0O00O0O000O :#line:1853
-                        if "f4"in OO00OOO0O00OO0OO0 :#line:1854
-                            keyboard .release ('alt')#line:1855
-                            pag .hotkey (*OOOOOO00O0OOOOOO0 )#line:1856
-                            keyboard .release ('alt')#line:1857
-                        else :#line:1858
-                            pag .hotkey (*OOOOOO00O0OOOOOO0 )#line:1859
-                        bullet_time =time .time ()#line:1860
-                        bullet_first =0 #line:1861
-        except :#line:1862
-            pass #line:1863
-        OO0O000O0000O000O .after (500 ,O0OO0O0OO000O00OO )#line:1864
-    def O000OOOO0OO0OOO00 ():#line:1867
-        global manager_on ,process_id #line:1868
-        O00O000OO0OO00OO0 ("DK Helper turned on")#line:1870
-        O00OO0O0OO000OOOO .configure (bg ='green')#line:1871
-        try :#line:1873
-            global hotkey1 ,hotkey2 ,hotkey3 ,hotkey4 ,hotkey5 #line:1874
-            keyboard .remove_hotkey (hotkey1 )#line:1875
-            keyboard .remove_hotkey (hotkey2 )#line:1876
-            keyboard .remove_hotkey (hotkey3 )#line:1877
-            keyboard .remove_hotkey (hotkey4 )#line:1878
-            keyboard .remove_hotkey (hotkey5 )#line:1879
-        except :#line:1880
-            pass #line:1881
-        O00O00OO0O0OO000O =0 #line:1882
-        OOOOOO0O0O0O0OOO0 ()#line:1883
-        keyboard .add_hotkey (hotkey5 ,lambda :OOOOOO0O0O0O0OOO0 ())#line:1884
-        O0OO0O0OO000O00OO ()#line:1885
-    def O0O00OO00OOOOO0O0 ():#line:1888
-        global manager_on ,process_id #line:1889
-        O00O000OO0OO00OO0 ("DK Helper turned off")#line:1891
-        O00OO0O0OO000OOOO .configure (bg ='SystemButtonFace')#line:1892
-        OOO0OOO0O0O0O0O00 .set (0 )#line:1893
-        OO0000OO00OOO00OO .set (0 )#line:1894
-        O0000000OO0O00OO0 .set (0 )#line:1895
-    OO0O000O0000O000O .mainloop ()#line:1897
-if __name__ =="__main__":#line:1899
-    multiprocessing .freeze_support ()#line:1900
-    p1 =multiprocessing .Process (target =dk_helper )#line:1901
-    p1 .start ()#line:1902
+                O0OO00OOOOO0OOO0O =OO0O0OO00OO0OO0O0 (0x00007B2048 ,OOO0O0O0OO0OO0OOO )#line:1735
+                OOO0O000O000OOOO0 =OO0O0OO00OO0OO0O0 (0x00007B2040 ,OOO0O0O0OO0OO0OOO )#line:1736
+            return ((OOO0O000O000OOOO0 /O0OO00OOOOO0OOO0O )*100 )#line:1738
+        except :#line:1739
+            O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1740
+    def OOOOOOO00000O0O00 (O0O00OOOO00OO0OOO ):#line:1743
+        try :#line:1744
+            if user_server =="Inter.":#line:1745
+                O0000O0OOOO0O0000 =OO0O0OO00OO0OO0O0 (0x00B9AA24 ,O0O00OOOO00OO0OOO )#line:1746
+                OO00O0000000000O0 =OO0O0OO00OO0OO0O0 (0x00B9AA1C ,O0O00OOOO00OO0OOO )#line:1747
+            elif user_server =="Chn.":#line:1748
+                O0000O0OOOO0O0000 =OO0O0OO00OO0OO0O0 (0x007B204C ,O0O00OOOO00OO0OOO )#line:1749
+                OO00O0000000000O0 =OO0O0OO00OO0OO0O0 (0x007B2044 ,O0O00OOOO00OO0OOO )#line:1750
+            return ((OO00O0000000000O0 /O0000O0OOOO0O0000 )*100 )#line:1752
+        except :#line:1753
+            O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1754
+    def OOOO00O0OOOO0O00O (OOO0O000000OO00O0 ):#line:1758
+        try :#line:1759
+            if user_server =="Inter.":#line:1760
+                OO0OOOOO0OOO00OOO =OO000O00O000OO000 (0x00400000 +0x00765C38 ,OOO0O000000OO00O0 )#line:1761
+                OO00OO000000O0OOO =OO000O00O000OO000 (OO0OOOOO0OOO00OOO +0x0000003C ,OOO0O000000OO00O0 )#line:1762
+            elif user_server =="Chn.":#line:1763
+                OO0OOOOO0OOO00OOO =OO000O00O000OO000 (0x00400000 +0x0037B968 ,OOO0O000000OO00O0 )#line:1764
+                OO00OO000000O0OOO =OO000O00O000OO000 (OO0OOOOO0OOO00OOO +0x0000003C ,OOO0O000000OO00O0 )#line:1765
+            return OO00OO000000O0OOO #line:1767
+        except :#line:1768
+            O0O00OOOO00OOO0O0 ("Error: 다크에덴 키신 후 실행해주세요","red")#line:1769
+    hp_check =0 ;mp_check =0 #line:1772
+    def O00O0OO0OOOOOOO0O ():#line:1773
+        try :#line:1774
+            global hp_first ,hp_time ,mp_first ,mp_time ,hp_check ,mp_check #line:1775
+            global hp_threshold ,mp_threshold ,process_id #line:1776
+            global bullet_time ,bullet_first ,bullet_threshold #line:1777
+            O0OOO0000OOOO0OOO =random .uniform (1.500 ,2.000 );O00O000000OOO000O =random .uniform (1.500 ,2.000 )#line:1779
+            O00OO0OO00OOO0OOO =int (hp_threshold .get ())#line:1780
+            O00OO0OO00OOO0OOO =random .uniform (O00OO0OO00OOO0OOO -3.000 ,O00OO0OO00OOO0OOO +3.000 )#line:1781
+            OOO0O0000OOO00000 =int (mp_threshold .get ())#line:1782
+            OOO0O0000OOO00000 =random .uniform (OOO0O0000OOO00000 -3.000 ,OOO0O0000OOO00000 +3.000 )#line:1783
+            OO00O0O00O00OOOOO =int (bullet_threshold .get ())#line:1784
+            OO00O0O00O00OOOOO =random .uniform (OO00O0O00O00OOOOO -1 ,OO00O0O00O00OOOOO +1 )#line:1785
+            OO0OOOO0000O0O000 =[]#line:1788
+            OO00OOO00000O000O =[]#line:1789
+            O0O00O00OO0OOOO0O =[]#line:1790
+            O0OO0O0O0O000OO00 =["f1","f2","f3","f4","f5","f6","f7","f8"]#line:1791
+            O0O0OOO0OOO000O00 =[OO000OO00OO0O0O00 ,O0000OO0OO0O0OOOO ,O0O00OOO00OO000OO ,O000O0OO0O00O0O0O ,O0O0OO0OO0OO0O00O ,OOOOOOO0OO0OO00O0 ,OO0O00OO0OO000OOO ,OOO0000O0OO00O0OO ]#line:1792
+            O000O0OOOOO000OOO =0 #line:1793
+            for O0O00O0OOOO00O0OO in O0O0OOO0OOO000O00 :#line:1794
+                OO00OO000OOO0O00O =O0O00O0OOOO00O0OO .get ()#line:1795
+                if OO00OO000OOO0O00O =="HP":#line:1796
+                    OO0OOOO0000O0O000 .append (O0OO0O0O0O000OO00 [O000O0OOOOO000OOO ])#line:1797
+                elif OO00OO000OOO0O00O =="MP":#line:1798
+                    OO00OOO00000O000O .append (O0OO0O0O0O000OO00 [O000O0OOOOO000OOO ])#line:1799
+                elif OO00OO000OOO0O00O =="Bullet":#line:1800
+                    O0O00O00OO0OOOO0O .append (O0OO0O0O0O000OO00 [O000O0OOOOO000OOO ])#line:1801
+                O000O0OOOOO000OOO +=1 #line:1802
+            O0OO0OOO0000OOOOO =OOOO0000O0OOO0O00 .get ()#line:1804
+            O0000000OOO0000OO =OO00OO00OO0OO00O0 .get ()#line:1805
+            O00OO0O00O00000OO =O0O0000O000OO0OO0 .get ()#line:1806
+            if (O0OO0OOO0000OOOOO ==0 )&(O0000000OOO0000OO ==0 )&(O00OO0O00O00000OO ==0 ):#line:1809
+                O0O00OOOO00OOO0O0 ("DK Helper turned off")#line:1810
+                O00OO00000O0OOOO0 .configure (bg ='SystemButtonFace')#line:1811
+                O000O00O0OOOOOOO0 =0 #line:1812
+                return #line:1813
+            if hp_check ==0 :#line:1815
+                hp_check =1 ;mp_check =0 #line:1816
+                if ((O0OO0OOO0000OOOOO ==1 )&(hp_first ==1 ))or ((O0OO0OOO0000OOOOO ==1 )&(time .time ()-hp_time >O0OOO0000OOOO0OOO )):#line:1817
+                    O0O0OOO0OOO00OO00 =OOO000OO0OOOO0OO0 (process_id )#line:1819
+                    if O0O0OOO0OOO00OO00 <=O00OO0OO00OOO0OOO :#line:1821
+                        if "f4"in OO0OOOO0000O0O000 :#line:1823
+                            keyboard .release ('alt')#line:1824
+                            pag .hotkey (*OO0OOOO0000O0O000 )#line:1825
+                            keyboard .release ('alt')#line:1826
+                        else :#line:1827
+                            pag .hotkey (*OO0OOOO0000O0O000 )#line:1828
+                        hp_first =0 #line:1829
+                        hp_time =time .time ()#line:1830
+            elif mp_check ==0 :#line:1832
+                mp_check =1 ;hp_check =0 #line:1833
+                if ((O0000000OOO0000OO ==1 )&(mp_first ==1 ))or ((O0000000OOO0000OO ==1 )&(time .time ()-mp_time >O00O000000OOO000O )):#line:1834
+                    mp_first =0 #line:1835
+                    O000O0O0O00OOO0OO =OOOOOOO00000O0O00 (process_id )#line:1837
+                    if O000O0O0O00OOO0OO <=OOO0O0000OOO00000 :#line:1839
+                        if "f4"in OO00OOO00000O000O :#line:1841
+                            keyboard .release ('alt')#line:1842
+                            pag .hotkey (*OO00OOO00000O000O )#line:1843
+                            keyboard .release ('alt')#line:1844
+                        else :#line:1845
+                            pag .hotkey (*OO00OOO00000O000O )#line:1846
+                        pag .hotkey (*OO00OOO00000O000O )#line:1847
+                        mp_first =0 #line:1848
+                        mp_time =time .time ()#line:1849
+            if (O00OO0O00O00000OO ==1 )&((time .time ()-bullet_time >3 )or bullet_first ==1 ):#line:1851
+                if OOOO00O0OOOO0O00O (process_id )!=None :#line:1852
+                    O00O0OO000OOO0O0O =int (OOOO00O0OOOO0O00O (process_id ))#line:1853
+                    if O00O0OO000OOO0O0O <=OO00O0O00O00OOOOO :#line:1854
+                        if "f4"in OO00OOO00000O000O :#line:1855
+                            keyboard .release ('alt')#line:1856
+                            pag .hotkey (*O0O00O00OO0OOOO0O )#line:1857
+                            keyboard .release ('alt')#line:1858
+                        else :#line:1859
+                            pag .hotkey (*O0O00O00OO0OOOO0O )#line:1860
+                        bullet_time =time .time ()#line:1861
+                        bullet_first =0 #line:1862
+        except :#line:1863
+            pass #line:1864
+        OO000OO0O00OOO000 .after (500 ,O00O0OO0OOOOOOO0O )#line:1865
+    def OO00O0O000O0OOO0O ():#line:1868
+        global manager_on ,process_id #line:1869
+        O0O00OOOO00OOO0O0 ("DK Helper turned on")#line:1871
+        O00OO00000O0OOOO0 .configure (bg ='green')#line:1872
+        try :#line:1874
+            global hotkey1 ,hotkey2 ,hotkey3 ,hotkey4 ,hotkey5 #line:1875
+            keyboard .remove_hotkey (hotkey1 )#line:1876
+            keyboard .remove_hotkey (hotkey2 )#line:1877
+            keyboard .remove_hotkey (hotkey3 )#line:1878
+            keyboard .remove_hotkey (hotkey4 )#line:1879
+            keyboard .remove_hotkey (hotkey5 )#line:1880
+        except :#line:1881
+            pass #line:1882
+        OOO0OO000OO0OOO00 =0 #line:1883
+        OO00OOOO00OO0OOOO ()#line:1884
+        keyboard .add_hotkey (hotkey5 ,lambda :OO00OOOO00OO0OOOO ())#line:1885
+        O00O0OO0OOOOOOO0O ()#line:1886
+    def OOO0000O0OOOO0O0O ():#line:1889
+        global manager_on ,process_id #line:1890
+        O0O00OOOO00OOO0O0 ("DK Helper turned off")#line:1892
+        O00OO00000O0OOOO0 .configure (bg ='SystemButtonFace')#line:1893
+        OOOO0000O0OOO0O00 .set (0 )#line:1894
+        OO00OO00OO0OO00O0 .set (0 )#line:1895
+        O0O0000O000OO0OO0 .set (0 )#line:1896
+    OO000OO0O00OOO000 .mainloop ()#line:1898
+if __name__ =="__main__":#line:1900
+    multiprocessing .freeze_support ()#line:1901
+    p1 =multiprocessing .Process (target =dk_helper )#line:1902
+    p1 .start ()#line:1903
